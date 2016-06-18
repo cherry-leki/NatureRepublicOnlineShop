@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Basket.aspx.cs" Inherits="Basket" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Interest.aspx.cs" Inherits="Interest" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -102,55 +102,55 @@
             height: 235px;
             margin-left:-7px;
         }
-        .context
+        .context_interest
         {
-            margin-left:-7px;
+            position:relative;
+            top:-145px;
         }
         .style24
         {
             width: 495px;
-            height: 633px;
+            height: 748px;
         }
         .style25
         {
-            width: 810px;
-            height: 354px;
+            width: 791px;
+            height: 178px;
         }
         .style26
         {
-            width: 810px;
+            width: 791px;
             height: 61px;
+            position:relative;
+            top:-190px;
         }
         .style27
         {
-            width: 810px;
-            height: 218px;
+            width: 791px;
+            height: 2px;
+            position:relative;
+            top:-240px;
         }
         .style28
         {
-            width: 278px;
-            height: 633px;
-        }
-        .bottombutton
-        {
-            position:relative;
-            top:-150px;
-            left:-22px;
-        }
-        #imageButtonDelete
-        {
-            position:relative;
-            left:-230px;
+            width: 297px;
+            height: 748px;
         }
         .style29
         {
-            font-size: 2px;
+            position:relative;
+            top:-420px;
+        }
+        #imageButtonSelectedCancel
+        {
+            position:relative;
+            left:-380px;
         }
         </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+     <div>
     
         <table class="style1">
             <tr>
@@ -236,40 +236,38 @@
             </tr>
             </table>
             <div class="context">
-            <table class="context_table">
+            <table>
             <tr>
             <td rowspan="4">
-                <img alt="" class="style24" src="Images/Basket/Basket_Menu.png" /></td>
-            <td>
-                <img alt="" class="style25" src="Images/Basket/Basket_Basket.png" /></td>
+                <img alt="" class="style24" src="Images/Interest/Interest_Menu.png" /></td>
+            <td class="context_interest">
+                <img alt="" class="style25" src="Images/Interest/Interest_Interest.png" /></td>
             <td rowspan="4">
-                <img alt="" class="style28" src="Images/Basket/Basket_Blank.png" /></td>
+                <img alt="" class="style28" src="Images/Interest/Interest_Blank.png" /></td>
             </tr>
             <tr>
-            <td>
-                <img alt="" class="style26" src="Images/Basket/Basket_BasketEmpty.png" /></td>
+            <td class="context_interest">
+                <img alt="" class="style26" src="Images/Interest/Interest_InterestEmpty.png" /></td>
             </tr>
             <tr>
-            <td>
-                <img alt="" class="style27" src="Images/Basket/Basket_Price.png" /></td>
+            <td class="context_interest">
+                <img alt="" class="style27" src="Images/Interest/Interest_Bottomline.png" /></td>
             </tr>
             <tr>
-            <td class="bottombutton">
-                <asp:ImageButton ID="imageButtonDelete" runat="server" 
-                    ImageUrl="~/Images/Basket/Basket_DeleteButton.png" style="text-align: right" />
-&nbsp;&nbsp;
-                <asp:ImageButton ID="imageButtonPurchaseAll" runat="server" 
-                    ImageUrl="~/Images/Basket/Basket_PurchaseAll.png" />
-                <span class="style29">&nbsp;</span><asp:ImageButton ID="imageButtonPurchaseSelected" runat="server" 
-                    ImageUrl="~/Images/Basket/Basket_PurchaseSelected.png" />
-                <span class="style29">&nbsp;</span><asp:ImageButton ID="imageButtonShopping" runat="server" 
-                    ImageUrl="~/Images/Basket/Basket_ShoppingButton.png" />
-                </td>
+            <td class="context_interest style29">
+                <asp:ImageButton ID="imageButtonSelectedCancel" runat="server" 
+                    ImageUrl="~/Images/Interest/Interest_SelectedCancel.png" />
+                &nbsp;<asp:ImageButton ID="imageButtonPutBasket" runat="server" 
+                    ImageUrl="~/Images/Interest/Interest_PutBasket.png" />
+                &nbsp;<asp:ImageButton ID="imageButtonSelectedDelete" runat="server" 
+                    ImageUrl="~/Images/Interest/Interest_SelectedDelete.png" />
+            </td>
             </tr>
             </table>
             </div>
         <br />
         <img alt="" class="style23" src="Images/Common/staticBanner_Bottom.png" />
+    
     </div>
     </form>
 </body>

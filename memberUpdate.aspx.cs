@@ -69,7 +69,7 @@ public partial class memberUpdate : System.Web.UI.Page
 
         string sql;
 
-        sql = " UPDATE [NatureRepublicDB].[dbo].[tableMemeber] SET ";
+        sql = " UPDATE [NatureRepublicDB].[dbo].[tableMember] SET ";
         sql = sql + string.Format("[memberPW] = '{0}', ", textBoxPW.Text);
         sql = sql + string.Format("[memberName] = '{0}', ", textBoxName.Text);
         sql = sql + string.Format("[memberBirth] = '1993-01-09', ");

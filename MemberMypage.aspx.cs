@@ -18,7 +18,7 @@ public partial class MemberMypage : System.Web.UI.Page
         string[] sqlResult;
 
         sql = " SELECT memberPW";
-        sql = sql + " FROM tableMemeber ";
+        sql = sql + " FROM tableMember ";
         sql = sql + string.Format(" WHERE  (memberID = '{0}')", Session["MemberID"].ToString());
 
 

@@ -20,7 +20,6 @@ public partial class Home_1 : System.Web.UI.Page
             imgButtonLogin.ImageUrl = "./images/Common/staticBanner_Top_Login.png";
             imgButtonJoin.ImageUrl = "./images/Common/staticBanner_Top_Signup.png";
         }
-
     }
 
     protected void LoginButton_Click(object sender, ImageClickEventArgs e)

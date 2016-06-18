@@ -196,7 +196,7 @@
             position:relative;
             top:125px;
         }
-        #DDLTel, #textBoxTel1, #textBoxTel2, #DDLPhone, #textBoxPhone1, #textBoxPhone2
+        #DDLTel, #textBoxTel1, #textBoxTel2, #dropdownlistPhone, #textBoxPhone1, #textBoxPhone2
         {
             width:60px;
         }
@@ -238,17 +238,20 @@
             position:relative;
             top:85px;
         }
-        #ButtonCancel
+        #imgButtonCancel
         {
             position:absolute;
             top:1080px;
             left:540px;
         }
-        #ButtonSignup
+        #imgButtonSignup
         {
             position:absolute;
             top:1080px;
             left:1168px;
+        }
+        .auto-style1 {
+            height: 23px;
         }
         </style>
 </head>
@@ -355,14 +358,14 @@
                 <td class="style25">
                     <br />
                     <div class="SignupForm">
-                    <asp:TextBox ID="textBoxName" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="textBoxName" runat="server" MaxLength="20"></asp:TextBox>
                     <br />
-                    <asp:TextBox ID="textBoxBirth" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="textBoxBirth" runat="server" MaxLength="10"></asp:TextBox>
                     <br />
-                    <asp:TextBox ID="textBoxID" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="textBoxID" runat="server" MaxLength="20"></asp:TextBox>
                     <br />
-                    <asp:TextBox ID="textBoxPW" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="textBoxPWConfigure" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="textBoxPW" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="textBoxPWConfigure" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>
                     <br />
                     <asp:DropDownList ID="DDLPWHint" runat="server">
                     <asp:ListItem></asp:ListItem>
@@ -372,11 +375,11 @@
                     <br />
                     <asp:TextBox ID="textBoxPWHintAns" runat="server"></asp:TextBox>
                     <br />
-                    <asp:TextBox ID="textBoxAddress" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="textBoxAddress" runat="server" MaxLength="50"></asp:TextBox>
                     <br />
                         <table class="style26">
                             <tr>
-                                <td>
+                                <td class="auto-style1">
                         <asp:DropDownList ID="DDLTel" runat="server">
                         <asp:ListItem>02</asp:ListItem>
                         <asp:ListItem>031</asp:ListItem>
@@ -385,15 +388,15 @@
                         <asp:ListItem>032</asp:ListItem>
                         <asp:ListItem>032</asp:ListItem>
                         </asp:DropDownList>
-                        - <asp:TextBox ID="textBoxTel1" runat="server"></asp:TextBox>
-                        - <asp:TextBox ID="textBoxTel2" runat="server"></asp:TextBox>
+                        - <asp:TextBox ID="textBoxTel1" runat="server" MaxLength="4"></asp:TextBox>
+                        - <asp:TextBox ID="textBoxTel2" runat="server" MaxLength="4"></asp:TextBox>
                                 </td>
                             </tr>
                         </table>
                         <table class="style27">
                             <tr>
                                 <td>
-                        <asp:DropDownList ID="DDLPhone" runat="server">
+                        <asp:DropDownList ID="dropdownlistPhone" runat="server">
                         <asp:ListItem>010</asp:ListItem>
                         <asp:ListItem>011</asp:ListItem>
                         <asp:ListItem>012</asp:ListItem>
@@ -405,8 +408,8 @@
                         <asp:ListItem>018</asp:ListItem>
                         <asp:ListItem>019</asp:ListItem>
                         </asp:DropDownList>
-                        - <asp:TextBox ID="textBoxPhone1" runat="server"></asp:TextBox>
-                        - <asp:TextBox ID="textBoxPhone2" runat="server"></asp:TextBox>
+                        - <asp:TextBox ID="textBoxPhone1" runat="server" MaxLength="4"></asp:TextBox>
+                        - <asp:TextBox ID="textBoxPhone2" runat="server" MaxLength="4"></asp:TextBox>
                                 </td>
                             </tr>
                         </table>
@@ -415,17 +418,17 @@
                            <table class="style29">
                             <tr>
                                 <td>
-                                    <asp:RadioButton ID="RBMsgOk" Groupname="RBMsg" runat="server" Text="받음" />
+                                    <asp:RadioButton ID="radioButtonMsgOk" Groupname="RBMsg" runat="server" Text="받음" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:RadioButton ID="RBMsgNo" Groupname="RBMsg" runat="server" Text="받지않음" />
+                                    <asp:RadioButton ID="radioButtonMsgNo" Groupname="RBMsg" runat="server" Text="받지않음" />
                                 </td>
                             </tr>
                         </table>
                         <table class="style28">
                             <tr>
                                 <td>
-                                    <asp:TextBox ID="textBoxEmail1" runat="server"></asp:TextBox>
-                                    @ <asp:TextBox ID="textBoxEmail2" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="textBoxEmail1" runat="server" MaxLength="20"></asp:TextBox>
+                                    @ <asp:TextBox ID="textBoxEmail2" runat="server" MaxLength="10"></asp:TextBox>
                                 </td>
                             </tr>
                         </table>
@@ -433,9 +436,9 @@
                         <table class="style30">
                             <tr>
                                 <td>
-                                    <asp:RadioButton ID="RBEmailOk" Groupname="RBEmail" runat="server" Text="예" />
+                                    <asp:RadioButton ID="radioButtonMailOk" Groupname="RBEmail" runat="server" Text="예" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:RadioButton ID="RBEmailNo" Groupname="RBEmail" runat="server" Text="아니오" />
+                                    <asp:RadioButton ID="radioButtonMailNo" Groupname="RBEmail" runat="server" Text="아니오" />
                                 </td>
                             </tr>
                         </table>
@@ -450,17 +453,17 @@
                         <table class="style31">
                             <tr>
                                 <td>
-                                    <asp:RadioButton ID="RBMarriageNo" Groupname="RBMarriage" runat="server" Text="미혼" />
+                                    <asp:RadioButton ID="radioButtonMarriageNo" Groupname="RBMarriage" runat="server" Text="미혼" />
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <asp:RadioButton ID="RBMarriageOk" Groupname="RBMarriage" runat="server" Text="기혼" />
+                                    <asp:RadioButton ID="radioButtonMarriageOk" Groupname="RBMarriage" runat="server" Text="기혼" />
                                 </td>
                             </tr>
                         </table>
                         <br />
                     </div>
-                      <asp:ImageButton ID="ButtonCancel" runat="server" 
+                      <asp:ImageButton ID="imgButtonCancel" runat="server" 
                         ImageUrl="~/Images/Signup_Info/Signup_Info_CancelButton.png" OnClick="ButtonCancel_Click" />
-                        <asp:ImageButton ID="ButtonSignup" runat="server" 
+                        <asp:ImageButton ID="imgButtonSignup" runat="server" 
                         ImageUrl="~/Images/Signup_Info/Signup_Info_SignupButton.png" OnClick="ButtonSignup_Click" />
                 </td>
             </tr>

@@ -19,6 +19,7 @@ public partial class Login : System.Web.UI.Page
             if (Request.Cookies["CookieID"] != null)
             {
                 textBoxID.Text = Request.Cookies["CookieID"].Value;
+                CheckboxID.Checked = true;
             }
         }
     }
@@ -27,7 +28,7 @@ public partial class Login : System.Web.UI.Page
     {
         string sql;
         sql = " SELECT  memberPW, memberName ";
-        sql = sql + " FROM tableMemeber ";
+        sql = sql + " FROM tableMember ";
         sql = sql + string.Format(" WHERE  (memberID = '{0}')", textBoxID.Text);
 
         string[] sqlResult;
@@ -50,7 +51,8 @@ public partial class Login : System.Web.UI.Page
 
         // 세션은 인터넷 익스플로러를 닫으면 없어진다.
         // 쿠키 값 관련 // 쿠키는 익스플로러를 닫아도 없어지지 않는다.
-        if(CheckboxID.Checked)
+        
+        if (CheckboxID.Checked)
         {
             HttpCookie ckID = new HttpCookie("CookieID");
             DateTime now = DateTime.Now;
@@ -60,6 +62,13 @@ public partial class Login : System.Web.UI.Page
             ckID.Expires = now + span;
             Response.Cookies.Add(ckID);
         }
+        if(!CheckboxID.Checked)
+        {
+            HttpCookie ckID = new HttpCookie("CookieID");
+            ckID.Expires = DateTime.Now.AddDays(-1d);
+            Response.Cookies.Add(ckID);
+        }
+
         Session.Add("MemberID", textBoxID.Text.Trim());
         Response.Redirect("Home.aspx");
     }

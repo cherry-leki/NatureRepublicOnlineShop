@@ -102,10 +102,9 @@
             height: 235px;
             margin-left:-7px;
         }
-        .context_interest
+        .menu
         {
-            position:relative;
-            top:-145px;
+            vertical-align:top;
         }
         .style24
         {
@@ -121,30 +120,30 @@
         {
             width: 791px;
             height: 61px;
-            position:relative;
-            top:-190px;
         }
         .style27
         {
             width: 791px;
             height: 2px;
-            position:relative;
-            top:-240px;
         }
         .style28
         {
             width: 297px;
             height: 748px;
         }
-        .style29
-        {
-            position:relative;
-            top:-420px;
-        }
         #imageButtonSelectedCancel
         {
             position:relative;
             left:-380px;
+        }
+        .style29
+        {
+            width: 791px;
+            height: 450px;
+        }
+        .style30
+        {
+            text-align: justify;
         }
         </style>
 </head>
@@ -238,23 +237,23 @@
             <div class="context">
             <table>
             <tr>
-            <td rowspan="4">
+            <td class="menu" rowspan="5">
                 <img alt="" class="style24" src="Images/Interest/Interest_Menu.png" /></td>
             <td class="context_interest">
                 <img alt="" class="style25" src="Images/Interest/Interest_Interest.png" /></td>
-            <td rowspan="4">
+            <td rowspan="5">
                 <img alt="" class="style28" src="Images/Interest/Interest_Blank.png" /></td>
             </tr>
             <tr>
-            <td class="context_interest">
+            <td class="style30">
                 <img alt="" class="style26" src="Images/Interest/Interest_InterestEmpty.png" /></td>
             </tr>
             <tr>
-            <td class="context_interest">
+            <td>
                 <img alt="" class="style27" src="Images/Interest/Interest_Bottomline.png" /></td>
             </tr>
             <tr>
-            <td class="context_interest style29">
+            <td>
                 <asp:ImageButton ID="imageButtonSelectedCancel" runat="server" 
                     ImageUrl="~/Images/Interest/Interest_SelectedCancel.png" />
                 &nbsp;<asp:ImageButton ID="imageButtonPutBasket" runat="server" 
@@ -262,6 +261,11 @@
                 &nbsp;<asp:ImageButton ID="imageButtonSelectedDelete" runat="server" 
                     ImageUrl="~/Images/Interest/Interest_SelectedDelete.png" />
             </td>
+            </tr>
+            <tr>
+            <td>
+            
+                <img alt="" class="style29" src="Images/Interest/Interest_BottomBlank.png" /></td>
             </tr>
             </table>
             </div>

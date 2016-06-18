@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Basket.aspx.cs" Inherits="Basket" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Purchase.aspx.cs" Inherits="Purchase" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -14,7 +14,7 @@
         th, td
         {
             padding: 0px;
-            text-align: right;
+            text-align: justify;
         }
         .margin_left
         {
@@ -102,57 +102,120 @@
             height: 235px;
             margin-left:-7px;
         }
-        .context
-        {
-            margin-left:-7px;
-        }
         .menu
         {
             vertical-align:top;
         }
         .style24
         {
-            width: 495px;
-            height: 633px;
+            width: 496px;
+            height: 1148px;
         }
         .style25
         {
-            width: 810px;
-            height: 354px;
+            width: 811px;
+            height: 268px;
         }
         .style26
         {
-            width: 810px;
-            height: 61px;
+            width: 811px;
+            height: 116px;
         }
         .style27
         {
-            width: 810px;
-            height: 218px;
+            width: 811px;
+            height: 86px;
+        }
+        .OrderForm
+        {
+            background: url('Images/Purchase/Purchase_OrderForm.png') no-repeat;
+            width:100%;
+            height:678px;
+        }
+        .OrderFormdiv
+        {
+            position:relative;
+            left:148px;
         }
         .style28
         {
+            position:relative;
             width: 278px;
-            height: 633px;
-        }
-        .bottombutton
-        {
-            position:relative;
-            top:-150px;
-            left:-22px;
-        }
-        #imageButtonDelete
-        {
-            position:relative;
-            left:-230px;
-        }
-        .style29
-        {
-            font-size: 2px;
+            height: 1148px;
+            top:0px;
         }
         .style30
         {
-            text-align: justify;
+            height: 23px;
+        }
+        #labelName
+        {    
+            position:relative;
+            top:-108px;
+        }
+        #labelEmail
+        {
+            position:relative;
+            top:-108px;
+            left:244px;
+        }
+        #labelPhone
+        {
+            position:relative;
+            top:-95px;
+        }
+        #labelAddress
+        {
+            position:relative;
+            top:-81px;
+        }
+        .DeliveryAddressRadioButton
+        {
+            position:relative;
+            top:-45px;
+            left:-7px;
+        }
+        #textBoxReceiverName
+        {
+            position:relative;
+            top:-56px;
+            width:130px;
+        }
+        .Phone
+        {
+            position:relative;
+            top:-44px;
+            left:-9px;
+        }
+        #dropdownlistPhone, #textBoxPhone1, #textBoxPhone2
+        {
+            width:60px;
+        }
+        .MsgRadioButton
+        {
+            position:relative;
+            top:-57px;
+            left:-7px;
+        }
+        #textBoxAddress
+        {
+            width:500px;
+            height:55px;
+            position:relative;
+            top:-60px;
+        }
+        #textBoxMemo
+        {
+            position:relative;
+            top:-13px;
+            width:380px;
+        }
+        .PurchaseButton
+        {
+            position:relative;
+            top:-160px;
+            left:-23px;
+            text-align: right;
         }
         </style>
 </head>
@@ -244,40 +307,103 @@
             </tr>
             </table>
             <div class="context">
-            <table class="context_table">
+            <table>
             <tr>
-            <td class="menu" rowspan="4">
-                <img alt="" class="style24" src="Images/Basket/Basket_Menu.png" /></td>
-            <td>
-                <img alt="" class="style25" src="Images/Basket/Basket_Basket.png" /></td>
-            <td rowspan="4">
-                <img alt="" class="style28" src="Images/Basket/Basket_Blank.png" /></td>
-            </tr>
-            <tr>
-            <td class="style30">
-                <img alt="" class="style26" src="Images/Basket/Basket_BasketEmpty.png" /></td>
-            </tr>
-            <tr>
-            <td>
-                <img alt="" class="style27" src="Images/Basket/Basket_Price.png" /></td>
-            </tr>
-            <tr>
-            <td class="bottombutton">
-                <asp:ImageButton ID="imageButtonDelete" runat="server" 
-                    ImageUrl="~/Images/Basket/Basket_DeleteButton.png" style="text-align: right" />
-&nbsp;&nbsp;
-                <asp:ImageButton ID="imageButtonPurchaseAll" runat="server" 
-                    ImageUrl="~/Images/Basket/Basket_PurchaseAll.png" />
-                <span class="style29">&nbsp;</span><asp:ImageButton ID="imageButtonPurchaseSelected" runat="server" 
-                    ImageUrl="~/Images/Basket/Basket_PurchaseSelected.png" />
-                <span class="style29">&nbsp;</span><asp:ImageButton ID="imageButtonShopping" runat="server" 
-                    ImageUrl="~/Images/Basket/Basket_ShoppingButton.png" />
+            <td class="menu" rowspan="5">
+                <img alt="" class="style24" src="Images/Purchase/Purchase_Menu.png" />
                 </td>
+            <td>
+                <img alt="" class="style25" src="Images/Purchase/Purchase_Purchase.png" /></td>
+            <td rowspan="5">
+                <img alt="" class="style28" src="Images/Purchase/Purchase_Blank.png" /></td>
+            </tr>
+            <tr>
+            <td>
+                <img alt="" class="style26" src="Images/Purchase/Purchase_Demo.png" /><br />
+                </td>
+            </tr>
+            <tr>
+            <td>
+                <img alt="" class="style27" src="Images/Purchase/Purchase_Price.png" /></td>
+            </tr>
+            <tr>
+            <td class="OrderForm">
+            <div class="OrderFormdiv">
+                <asp:Label ID="labelName" runat="server" Text="a"></asp:Label>
+                <asp:Label ID="labelEmail" runat="server" Text="b"></asp:Label>
+                <br />
+                <asp:Label ID="labelPhone" runat="server" Text="c"></asp:Label>
+                <br />
+                <asp:Label ID="labelAddress" runat="server" Text="dddddddddd"></asp:Label>
+                <br />
+                <br />
+                <table class="DeliveryAddressRadioButton">
+                    <tr>
+                        <td>
+                            <asp:RadioButton ID="radioButtonIdentical" runat="server" 
+                                GroupName="DeliveryAddress" Text="주문 고객과 동일한 주소" checked/>
+&nbsp;&nbsp;
+                            <asp:RadioButton ID="radioButtonNew" runat="server" GroupName="DeliveryAddress" 
+                                Text="새로운 배송지" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <asp:TextBox ID="textBoxReceiverName" runat="server"></asp:TextBox>
+                <br />
+                <table class="Phone">
+                    <tr>
+                        <td>
+&nbsp;<asp:DropDownList ID="dropdownlistPhone" runat="server">
+                                <asp:ListItem>010</asp:ListItem>
+                                <asp:ListItem>011</asp:ListItem>
+                                <asp:ListItem>012</asp:ListItem>
+                                <asp:ListItem>016</asp:ListItem>
+                                <asp:ListItem>017</asp:ListItem>
+                                <asp:ListItem>018</asp:ListItem>
+                                <asp:ListItem>019</asp:ListItem>
+                                <asp:ListItem>0502</asp:ListItem>
+                                <asp:ListItem>0505</asp:ListItem>
+                                <asp:ListItem>0506</asp:ListItem>
+                            </asp:DropDownList>
+                            -
+                            <asp:TextBox ID="textBoxPhone1" runat="server"></asp:TextBox>
+&nbsp;-
+                            <asp:TextBox ID="textBoxPhone2" runat="server"></asp:TextBox>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <table class="MsgRadioButton">
+                    <tr>
+                        <td class="style30">
+                            <asp:RadioButton ID="radioButtonMsgOk" runat="server" GroupName="Msg" 
+                                Text="받음" />
+&nbsp;&nbsp;
+                            <asp:RadioButton ID="radioButtonMsgNo" runat="server" GroupName="Msg" 
+                                Text="받지 않음" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <asp:TextBox ID="textBoxAddress" runat="server"></asp:TextBox>
+                <br />
+                <asp:TextBox ID="textBoxMemo" runat="server"></asp:TextBox>
+                </div>
+                </td>
+            </tr>
+            <tr>
+            <td class="PurchaseButton">
+                <asp:ImageButton ID="imageButtonPay" runat="server" 
+                    ImageUrl="~/Images/Purchase/Purchase_Paybutton.png" />
+                &nbsp;<asp:ImageButton ID="imageButtonBack" runat="server" 
+                    ImageUrl="~/Images/Purchase/Purchase_Backbutton.png" />
+            </td>
             </tr>
             </table>
             </div>
-        <br />
-        <img alt="" class="style23" src="Images/Common/staticBanner_Bottom.png" />
+            <img alt="" class="style23" src="Images/Common/staticBanner_Bottom.png" />
+    
     </div>
     </form>
 </body>

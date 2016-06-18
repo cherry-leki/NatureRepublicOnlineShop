@@ -113,13 +113,13 @@
             position:relative;
             left:540px;
         }
-        #txtID
+        #textBoxID
         {
             position:relative;
             left:78px;
             top:-22px;
         }
-        #txtPW
+        #textBoxPW
         {
             position:relative;
             left:78px;
@@ -255,12 +255,12 @@
             <tr>
             <td class="style14">
             <div class="LoginForm">
-                <asp:TextBox ID="txtID" runat="server"></asp:TextBox>
+                <asp:TextBox ID="textBoxID" runat="server"></asp:TextBox>
                 <br />
-                <asp:TextBox ID="txtPW" runat="server"></asp:TextBox>
+                <asp:TextBox ID="textBoxPW" runat="server"></asp:TextBox>
                 <br />
                 <asp:ImageButton ID="ImgButtonLogin" runat="server" 
-                    ImageUrl="~/Images/Login/LoginButton.png" />
+                    ImageUrl="~/Images/Login/LoginButton.png" OnClick="ImgButtonLogin_Click" />
                 <br />
                 <div class="CheckboxID">
                 <asp:CheckBox ID="CheckboxID" runat="server" Text="아이디 저장" />

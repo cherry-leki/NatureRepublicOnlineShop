@@ -136,18 +136,6 @@
         {
             width: 100%;
         }
-        #ButtonCancel
-        {
-            position:absolute;
-            top:1080px;
-            left:540px;
-        }
-        #ButtonSignup
-        {
-            position:absolute;
-            top:1080px;
-            left:1168px;
-        }
     </style>
 </head>
 <body>
@@ -216,8 +204,8 @@
                         ImageUrl="~/Images/Common/staticBanner_Menu_Journey.png" />
                 </td>
                 <td>
-                    <asp:ImageButton class="margin_left" ID="ImageButton8" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Menu_Shopping.png" />
+                    <asp:ImageButton class="margin_left" ID="imgButtonShopping" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Menu_Shopping.png" OnClick="imgButtonShopping_Click" />
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="ImageButton9" runat="server" 

@@ -114,13 +114,11 @@ public partial class SignupInfo : System.Web.UI.Page
             MessageBox.Show("결혼 여부를 확인해 주세요.", this);
             return;
         }
-
-
-
+        
         sql = " INSERT INTO [NatureRepublicDB].[dbo].[tableMember] ";
         sql = sql + " ([memberID], [memberPW], [memberName], [memberBirth], [memberAddr], [memberTel], [memberEmail], [memberSkin], [memberPoint]) ";
-        sql = sql + string.Format(" VALUES ('{0}', '{1}', '{2}', {3}, '{4}', '{5}', '{6}', '아리따움', 0 )", textBoxID.Text, textBoxPW.Text, textBoxName.Text, textBoxBirth.Text, textBoxAddress.Text,
-            dropdownlistPhone.SelectedValue.ToString() + "-" + textBoxPhone1.Text + "-" + textBoxPhone2.Text, textBoxEmail1.Text + "@" + textBoxEmail2.Text);
+        sql = sql + string.Format(" VALUES ('{0}', '{1}', '{2}', {3}, '{4}', '{5}', '{6}', '{7}', 0 )", textBoxID.Text, textBoxPW.Text, textBoxName.Text, textBoxBirth.Text, textBoxAddress.Text,
+            dropdownlistPhone.SelectedValue.ToString() + "-" + textBoxPhone1.Text + "-" + textBoxPhone2.Text, textBoxEmail1.Text + "@" + textBoxEmail2.Text, downdroplistSkinType.SelectedValue.ToString());
 
         OleDbSqlServerQueryRun recordData = new OleDbSqlServerQueryRun(sql);
         recordData.RunNonQuery();
@@ -139,6 +137,6 @@ public partial class SignupInfo : System.Web.UI.Page
 
     protected void ButtonCancel_Click(object sender, ImageClickEventArgs e)
     {
-
+        Response.Redirect("Home.aspx");
     }
 }

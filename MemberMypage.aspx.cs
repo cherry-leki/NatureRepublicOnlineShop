@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -29,5 +30,33 @@ public partial class MemberMypage : System.Web.UI.Page
         {
             Response.Redirect("MemberUpdate.aspx");
         }
+    }
+
+    private bool SessionExist(string SV)
+    {
+        IEnumerator SL = Session.GetEnumerator();
+        while (SL.MoveNext())
+        {
+            if (SL.Current.ToString() == SV)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private bool SessionRemove(string SV)
+    {
+        int i = 0;
+        IEnumerator SL = Session.GetEnumerator();
+        while (SL.MoveNext())
+        {
+            if (SL.Current.ToString() == SV)
+            {
+                Session.RemoveAll();
+                return true;
+            }
+        }
+        return false;
     }
 }

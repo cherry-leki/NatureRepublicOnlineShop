@@ -191,11 +191,11 @@
                 <td>
                     <img alt="" class="style2" src="Images/Common/staticBanner_Top_1.png" /></td>
                 <td class="test">
-                    <asp:ImageButton class="margin_left" ID="ImageButton1" runat="server" 
+                    <asp:ImageButton class="margin_left" ID="imgButtonLogin_top" runat="server" 
                         ImageUrl="~/Images/Common/staticBanner_Top_Login.png"/>
                 </td>
                 <td>
-                    <asp:ImageButton class="margin_left" ID="ImageButton2" runat="server" 
+                    <asp:ImageButton class="margin_left" ID="imgButtonJoin" runat="server" 
                         ImageUrl="~/Images/Common/staticBanner_Top_Signup.png" />
                 </td>
                 <td>
@@ -284,7 +284,7 @@
                 <br />
                 <div class="CheckboxID">
                 <asp:CheckBox ID="CheckboxID" runat="server" Text="아이디 저장" />
-                <asp:Label ID="labelCheck" runat="server" Text="aaa"></asp:Label>
+                <asp:Label ID="labelCheck" runat="server" Font-Size="Small" ForeColor="Red"></asp:Label>
                 <br />
                 </div>
                 <asp:ImageButton ID="ImgButtonSignup" runat="server" 

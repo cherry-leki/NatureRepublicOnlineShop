@@ -13,6 +13,7 @@ public partial class Home_1 : System.Web.UI.Page
         if(SessionExist("MemberID"))
         {
             imgButtonLogin.ImageUrl = "./images/Common/staticBanner_Top_Login_Logout.png";
+            imgButtonLogin.Enabled = false;
             imgButtonJoin.ImageUrl = "./images/Common/staticBanner_Top_Signup_Logout.png";
         }
         else
@@ -40,12 +41,27 @@ public partial class Home_1 : System.Web.UI.Page
 
     protected void BucketButton_Click(object sender, ImageClickEventArgs e)
     {
+        if (SessionExist("MemberID"))
+        {
+            Response.Redirect("Basket.aspx");
+        }
+
         Response.Redirect("Login.aspx");
     }
 
     protected void MyShopButton_Click(object sender, ImageClickEventArgs e)
     {
+        if (SessionExist("MemberID"))
+        {
+            Response.Redirect("MemberMypage.aspx");
+        }
+
         Response.Redirect("Login.aspx");
+    }
+
+    protected void imgButtonShopping_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Shopping.aspx");
     }
 
     private bool SessionExist(string SV)
@@ -75,4 +91,6 @@ public partial class Home_1 : System.Web.UI.Page
         }
         return false;
     }
+
+    
 }

@@ -108,4 +108,19 @@ public partial class memberUpdate : System.Web.UI.Page
         return false;
     }
 
+    private bool SessionRemove(string SV)
+    {
+        int i = 0;
+        IEnumerator SL = Session.GetEnumerator();
+        while (SL.MoveNext())
+        {
+            if (SL.Current.ToString() == SV)
+            {
+                Session.RemoveAll();
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

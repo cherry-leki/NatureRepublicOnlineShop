@@ -165,20 +165,20 @@
                 <td>
                     <img alt="" class="style2" src="Images/Common/staticBanner_Top_1.png" /></td>
                 <td class="test">
-                    <asp:ImageButton class="margin_left" ID="ImageButton1" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Login.png"/>
+                    <asp:ImageButton class="margin_left" ID="imgButtonLogin" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Top_Login.png" OnClick="LoginButton_Click"/>
                 </td>
                 <td>
-                    <asp:ImageButton class="margin_left" ID="ImageButton2" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Signup.png" />
+                    <asp:ImageButton class="margin_left" ID="imgButtonJoin" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Top_Signup.png" OnClick="JoinButton_Click"/>
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="ImageButton3" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Basket.png" />
+                        ImageUrl="~/Images/Common/staticBanner_Top_Basket.png" OnClick="BucketButton_Click" />
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="ImageButton4" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Myshop.png" />
+                        ImageUrl="~/Images/Common/staticBanner_Top_Myshop.png" OnClick="MyShopButton_Click"/>
                 </td>
                 <td>
                     <img alt="" class="style3" src="Images/Common/staticBanner_Top_2.png" /></td>

@@ -233,7 +233,7 @@
             top:80px;
             font-size:13px;
         }
-        #DDLSkinType
+        #downdroplistSkinType
         {
             position:relative;
             width:100px;
@@ -274,11 +274,11 @@
                 <td>
                     <img alt="" class="style2" src="Images/Common/staticBanner_Top_1.png" /></td>
                 <td class="test">
-                    <asp:ImageButton class="margin_left" ID="ImageButton1" runat="server" 
+                    <asp:ImageButton class="margin_left" ID="imgButtonLogin" runat="server" 
                         ImageUrl="~/Images/Common/staticBanner_Top_Login.png"/>
                 </td>
                 <td>
-                    <asp:ImageButton class="margin_left" ID="ImageButton2" runat="server" 
+                    <asp:ImageButton class="margin_left" ID="imgButtonJoin" runat="server" 
                         ImageUrl="~/Images/Common/staticBanner_Top_Signup.png" />
                 </td>
                 <td>
@@ -460,7 +460,7 @@
                         <asp:Label ID="lblEmail" runat="server" 
                             Text="이메일 수신거부시 아래의 혜택을 누리실 수 없습니다.<br>- 무료영화, 연극 시사회 증정 정보<br>- 알짜배기 이벤트 정보(무료 샘플 신청, 경품 이벤트)<br>- 신상품정보, 피부미용 강좌"></asp:Label>
                         <br />
-                        <asp:DropDownList ID="DDLSkinType" runat="server">
+                        <asp:DropDownList ID="downdroplistSkinType" runat="server">
                         <asp:ListItem>모든피부</asp:ListItem>
                         <asp:ListItem>악건성</asp:ListItem>
                         <asp:ListItem>건성</asp:ListItem>

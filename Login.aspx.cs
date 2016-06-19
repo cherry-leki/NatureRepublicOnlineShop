@@ -40,12 +40,12 @@ public partial class Login : System.Web.UI.Page
         {
             if (!textBoxPW.Text.Equals(sqlResult[0]))
             {
-                Response.Write("패스워드를 확인해 주세요");
+                labelCheck.Text = "패스워드를 확인해 주세요";
                 return;
             }
         }
         else {
-            Response.Write("아이디 를 확인해 주세요");
+            labelCheck.Text = "아이디 를 확인해 주세요";
             return;
         }
 

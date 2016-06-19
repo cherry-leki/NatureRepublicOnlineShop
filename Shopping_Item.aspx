@@ -102,79 +102,67 @@
         .auto-style33 {
             width: 1254px;
         }
+        .style1
+        {
+            width: 100%;
+            margin-top:-10px;
+            margin-left:-7px;
+        }
+        .style2
+        {
+            width: 638px;
+            height: 27px;
+        }
+        .margin_left
+        {
+            margin-left:-2px;
+        }
+        .style3
+        {
+            width: 662px;
+            height: 27px;
+            margin-left:-2px;
+        }
+        .style4
+        {
+            width: 1583px;
+            height: 17px;
+            margin-top:-2px;
+        }
+        .auto-style34 {
+            padding: 0px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <table class="auto-style1">
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
     <p>
+    
+        <table class="style1">
+            <tr>
+                <td>
+                    <img alt="" class="style2" src="Images/Common/staticBanner_Top_1.png" /></td>
+                <td class="auto-style34">
+                    <asp:ImageButton class="margin_left" ID="imgButtonLogin" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Top_Login.png" OnClick="LoginButton_Click"/>
+                </td>
+                <td>
+                    <asp:ImageButton class="margin_left" ID="imgButtonJoin" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Top_Signup.png" OnClick="JoinButton_Click" />
+                </td>
+                <td>
+                    <asp:ImageButton class="margin_left" ID="imgButtonBucket" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Top_Basket.png" OnClick="BucketButton_Click" />
+                </td>
+                <td>
+                    <asp:ImageButton class="margin_left" ID="imgButtonMyshop" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Top_Myshop.png" OnClick="MyShopButton_Click" />
+                </td>
+                <td>
+                    <img alt="" class="style3" src="Images/Common/staticBanner_Top_2.png" /></td>
+            </tr>
+            </table>
+    
         <br />
     </p>
     <table class="auto-style5">

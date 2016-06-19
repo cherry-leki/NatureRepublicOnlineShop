@@ -87,7 +87,7 @@ public partial class Item : System.Web.UI.Page
     {
         if (SessionExist("MemberID"))
         {
-            Response.Redirect("MemberMypage.aspx");
+            Response.Redirect("Mypage.aspx");
         }
 
         Response.Redirect("Login.aspx");

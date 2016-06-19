@@ -197,19 +197,19 @@
                     <img alt="" class="style2" src="Images/Common/staticBanner_Top_1.png" /></td>
                 <td class="test">
                     <asp:ImageButton class="margin_left" ID="imgButtonLogin" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Login.png"/>
+                        ImageUrl="~/Images/Common/staticBanner_Top_Login.png" OnClick= "LoginButton_Click"/>
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="imgButtonJoin" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Signup.png"/>
+                        ImageUrl="~/Images/Common/staticBanner_Top_Signup.png" OnClick="JoinButton_Click"/>
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="ImageButton3" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Basket.png"/>
+                        ImageUrl="~/Images/Common/staticBanner_Top_Basket.png" OnClick="BucketButton_Click"/>
                 </td>
                 <td>
-                    <asp:ImageButton class="margin_left" ID="ImageButton4" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Myshop.png"/>
+                    <asp:ImageButton class="margin_left" ID="ImageButton4" runat="server"
+                        ImageUrl="~/Images/Common/staticBanner_Top_Myshop.png" OnClick="MyShopButton_Click" />
                 </td>
                 <td>
                     <img alt="" class="style3" src="Images/Common/staticBanner_Top_2.png" /></td>
@@ -225,8 +225,8 @@
                 <td>
                     <img alt="" class="style6" src="Images/Common/staticBanner_Second_1.png" /></td>
                 <td>
-                    <asp:ImageButton ID="ImageButton5" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Second_Logo.png" />
+                    <asp:ImageButton ID="imgButtonLogo" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Second_Logo.png" OnClick="imgButtonLogo_Click" />
                 </td>
                 <td>
                     <img alt="" class="style7" src="Images/Common/staticBanner_Second_Search.png" /></td>
@@ -281,15 +281,15 @@
             <td>
                 <img alt="" class="style25" src="Images/Mypage/Mypage_Information.png" /><br />
                 <asp:ImageButton ID="imageButtonModify" runat="server" 
-                    ImageUrl="~/Images/Mypage/Mypage_ModifyButton.png" />
+                    ImageUrl="~/Images/Mypage/Mypage_ModifyButton.png" OnClick="buttonUpdate_Click" />
                 <br />
                 <div class="informationForm">
                 <asp:Label ID="labelName" runat="server" Text="염광호"></asp:Label>
                 <br />
                 <asp:Label ID="labelID" runat="server" Text="rhkdgh93"></asp:Label>
                 <br />
-                <asp:TextBox ID="textBoxPW" runat="server"></asp:TextBox>
-                    <asp:TextBox ID="textBoxPWConfigure" runat="server"></asp:TextBox>
+                <asp:TextBox ID="textBoxPW" runat="server" TextMode="Password"></asp:TextBox>
+                    <asp:TextBox ID="textBoxPWConfigure" runat="server" TextMode="Password"></asp:TextBox>
                 <br />
                     <asp:TextBox ID="textBoxAddress" runat="server"></asp:TextBox>
                 <br />

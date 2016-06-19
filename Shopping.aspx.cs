@@ -90,4 +90,9 @@ public partial class Shoping : System.Web.UI.Page
     {
         Response.Redirect(string.Format("Shopping_Item.aspx?itemNumber=00001"));
     }
+
+    protected void imgButtonLogo_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Home.aspx");
+    }
 }

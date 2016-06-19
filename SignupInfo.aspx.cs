@@ -139,4 +139,9 @@ public partial class SignupInfo : System.Web.UI.Page
     {
         Response.Redirect("Home.aspx");
     }
+
+    protected void imgButtonLogo_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Home.aspx");
+    }
 }

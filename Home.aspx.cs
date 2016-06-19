@@ -53,7 +53,7 @@ public partial class Home_1 : System.Web.UI.Page
     {
         if (SessionExist("MemberID"))
         {
-            Response.Redirect("MemberMypage.aspx");
+            Response.Redirect("Mypage.aspx");
         }
 
         Response.Redirect("Login.aspx");
@@ -92,5 +92,10 @@ public partial class Home_1 : System.Web.UI.Page
         return false;
     }
 
-    
+
+
+    protected void imgButtonLogo_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Home.aspx");
+    }
 }

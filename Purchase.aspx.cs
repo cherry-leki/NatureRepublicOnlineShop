@@ -85,4 +85,9 @@ public partial class Purchase : System.Web.UI.Page
         }
         return false;
     }
+
+    protected void imgButtonLogo_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Home.aspx");
+    }
 }

@@ -42,18 +42,22 @@ public partial class Basket : System.Web.UI.Page
 
         //OleDbSqlServerQueryReader RecordData = new OleDbSqlServerQueryReader(sql, 5);
         //sqlResult = RecordData.RunQueryCol();
-
-        foreach( GridViewRow row in gridViewBasket.Rows)
+        
+        if(!IsPostBack)
         {
-            CheckBox chkRow = (row.Cells[0].FindControl("chkRow") as CheckBox);
-
-            if (chkRow.Checked)
+            foreach (GridViewRow row in gridViewBasket.Rows)
             {
-                
+                CheckBox chkRow = (row.Cells[0].FindControl("chkRow") as CheckBox);
+
+                if (chkRow.Checked)
+                {
+
+                }
             }
+            gridViewBasket.DataSource = sdsSource;
+            gridViewBasket.DataBind();
         }
-        gridViewBasket.DataSource = sdsSource;
-        gridViewBasket.DataBind();
+        
     }
 
     protected void LoginButton_Click(object sender, ImageClickEventArgs e)
@@ -86,7 +90,7 @@ public partial class Basket : System.Web.UI.Page
     {
         if (SessionExist("MemberID"))
         {
-            Response.Redirect("MemberMypage.aspx");
+            Response.Redirect("Mypage.aspx");
         }
 
         Response.Redirect("Login.aspx");
@@ -118,5 +122,10 @@ public partial class Basket : System.Web.UI.Page
             }
         }
         return false;
+    }
+
+    protected void imgButtonLogo_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Home.aspx");
     }
 }

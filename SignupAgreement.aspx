@@ -206,8 +206,8 @@
                 <td>
                     <img alt="" class="style6" src="Images/Common/staticBanner_Second_1.png" /></td>
                 <td>
-                    <asp:ImageButton ID="ImageButton5" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Second_Logo.png" />
+                    <asp:ImageButton ID="imgButtonLogo" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Second_Logo.png" OnClick="imgButtonLogo_Click" />
                 </td>
                 <td>
                     <img alt="" class="style7" src="Images/Common/staticBanner_Second_Search.png" /></td>

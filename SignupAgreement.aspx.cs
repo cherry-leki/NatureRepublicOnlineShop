@@ -11,4 +11,9 @@ public partial class SignupAgreement : System.Web.UI.Page
     {
 
     }
+
+    protected void imgButtonLogo_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Home.aspx");
+    }
 }

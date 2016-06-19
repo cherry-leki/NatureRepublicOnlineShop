@@ -72,4 +72,9 @@ public partial class Login : System.Web.UI.Page
         Session.Add("MemberID", textBoxID.Text.Trim());
         Response.Redirect("Home.aspx");
     }
+
+    protected void imgButtonLogo_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Home.aspx");
+    }
 }

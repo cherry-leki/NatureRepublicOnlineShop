@@ -246,7 +246,34 @@
             </tr>
             <tr>
             <td class="style30">
-                <img alt="" class="style26" src="Images/Interest/Interest_InterestEmpty.png" /></td>
+                <img alt="" class="style26" src="Images/Interest/Interest_InterestEmpty.png" /><br />
+                <asp:GridView ID="gridViewInterest" runat="server" AutoGenerateColumns="False" DataSourceID="sdsSource">
+                    <Columns>
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:CheckBox ID="CheckBox1" runat="server" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="itemName" HeaderText="itemName" SortExpression="itemName" />
+                        <asp:BoundField DataField="itemPrice" HeaderText="itemPrice" SortExpression="itemPrice" />
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:ImageButton ID="ImageButton1" runat="server" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:ImageButton ID="ImageButton2" runat="server" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="sdsSource" runat="server" ConnectionString="<%$ ConnectionStrings:NatureRepublicDBConnectionString %>" SelectCommand="SELECT tableItem.itemName, tableItem.itemPrice FROM tableInterest INNER JOIN tableItem ON tableInterest.itemNumber = tableItem.itemNumber WHERE (tableInterest.memberID = @Param1)">
+                    <SelectParameters>
+                        <asp:SessionParameter Name="Param1" SessionField="MemberID" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                </td>
             </tr>
             <tr>
             <td>

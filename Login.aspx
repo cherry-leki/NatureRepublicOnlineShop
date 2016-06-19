@@ -10,7 +10,6 @@
         {
             width:100%;
             height:100%;
-            overflow-x:hidden;
         }
         th, td
         {
@@ -98,7 +97,7 @@
         }
         .context
         {
-            width: 100%;
+            width: 1583px;
             margin-left:-7px;
             
         }
@@ -111,7 +110,8 @@
         .LoginForm
         {
             position:relative;
-            left:540px;
+            left:50px;
+            top:-48px;
         }
         #textBoxID
         {
@@ -135,6 +135,12 @@
         {
             position:relative;
             top:-60px;
+            left:5px;
+        }
+        #labelCheck
+        {
+            position:relative;
+            top:0px;
             left:30px;
         }
         #ImgButtonSignup
@@ -161,6 +167,18 @@
             width: 1583px;
             height: 235px;
             margin-left:-7px;
+        }
+        .style24
+        {
+            width: 494px;
+            height: 825px;
+            position:relative;
+            margin-left:-15px;
+        }
+        .style25
+        {
+            width: 303px;
+            height: 825px;
         }
         </style>
 </head>
@@ -253,6 +271,8 @@
             </table>
             <table class="context">
             <tr>
+            <td>
+                <img alt="" class="style24" src="Images/Login/Login_Menu.png" /></td>
             <td class="style14">
             <div class="LoginForm">
                 <asp:TextBox ID="textBoxID" runat="server"></asp:TextBox>
@@ -264,6 +284,7 @@
                 <br />
                 <div class="CheckboxID">
                 <asp:CheckBox ID="CheckboxID" runat="server" Text="아이디 저장" />
+                <asp:Label ID="labelCheck" runat="server" Text="aaa"></asp:Label>
                 <br />
                 </div>
                 <asp:ImageButton ID="ImgButtonSignup" runat="server" 
@@ -274,11 +295,13 @@
                     ImageUrl="~/Images/Login/FindPWButton.png" />
                     </div>
             </td>
+            <td>
+                <img alt="" class="style25" src="Images/Login/Login_Blank.png" /></td>
             </tr>
             </table>
             <img alt="" class="style22" src="Images/Signup_Info/Signup_Info_Bottom.png" /><br />
         <br />
-        <img alt="" class="style23" src="Images/Common/staticBanner_Bottom.png" /></div>
+        <img alt="" class="style23" src="Images/Common/staticBanner_Bottom.png" />
     </div>
     </form>
 </body>

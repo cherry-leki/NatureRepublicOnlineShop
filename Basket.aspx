@@ -262,13 +262,13 @@
             </tr>
             <tr>
             <td class="auto-style1">
-                <img alt="" class="style26" src="Images/Basket/Basket_BasketEmpty.png" /><br />
+                <img alt="" class="style26" src="Images/Basket/Basket_BasketEmpty.png" id="basketBlank" /><br />
                 <br />
                 <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px">
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:CheckBox ID="CheckBox1" runat="server" />
+                                <asp:CheckBox ID="checkBox" runat="server" />
                             </ItemTemplate>
                         </asp:TemplateField>
                         <asp:BoundField DataField="itemName" SortExpression="itemName">
@@ -276,15 +276,16 @@
                         </asp:BoundField>
                         <asp:BoundField DataField="itemPrice" SortExpression="itemPrice" />
                         <asp:BoundField DataField="basketCount" SortExpression="basketCount" />
+
                         <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="labelTotalPrice" runat="server" Text="Label"></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
 
                          <asp:TemplateField>
                             <ItemTemplate>
-                                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                                <asp:Label ID="labelPoint" runat="server" Text="Label"></asp:Label>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>

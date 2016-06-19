@@ -45,17 +45,27 @@ public partial class Basket : System.Web.UI.Page
         
         if(!IsPostBack)
         {
+
+            gridViewBasket.DataSource = sdsSource;
+            gridViewBasket.DataBind();
+
             foreach (GridViewRow row in gridViewBasket.Rows)
             {
-                CheckBox chkRow = (row.Cells[0].FindControl("chkRow") as CheckBox);
+                
+                CheckBox chkRow = (row.Cells[0].FindControl("checkBox") as CheckBox);
+                Label labelTotalPrice = (row.Cells[4].FindControl("labelTotalPrice") as Label);
+                Label labelPoint = (row.Cells[5].FindControl("labelPoint") as Label);
+
+                labelTotalPrice.Text = (Convert.ToInt32(row.Cells[2].Text) * Convert.ToInt32(row.Cells[3].Text)).ToString();
+                labelPoint.Text = (Convert.ToInt32(row.Cells[2].Text) / 10).ToString();
+
 
                 if (chkRow.Checked)
                 {
 
                 }
             }
-            gridViewBasket.DataSource = sdsSource;
-            gridViewBasket.DataBind();
+
         }
         
     }
@@ -73,7 +83,7 @@ public partial class Basket : System.Web.UI.Page
             Response.Redirect("Home.aspx");
         }
 
-        Response.Redirect("SignUpIntro.aspx");
+        Response.Redirect("SignUpAgreement.aspx");
     }
 
     protected void BucketButton_Click(object sender, ImageClickEventArgs e)

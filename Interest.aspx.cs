@@ -35,7 +35,7 @@ public partial class Interest : System.Web.UI.Page
             Response.Redirect("Home.aspx");
         }
 
-        Response.Redirect("SignUpIntro.aspx");
+        Response.Redirect("SignUpAgreement.aspx");
     }
 
     protected void BucketButton_Click(object sender, ImageClickEventArgs e)

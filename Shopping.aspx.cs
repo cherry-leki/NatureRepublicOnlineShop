@@ -35,7 +35,7 @@ public partial class Shoping : System.Web.UI.Page
             Response.Redirect("Home.aspx");
         }
 
-        Response.Redirect("SignUpIntro.aspx");
+        Response.Redirect("SignUpAgreement.aspx");
     }
 
     protected void BucketButton_Click(object sender, ImageClickEventArgs e)
@@ -52,7 +52,7 @@ public partial class Shoping : System.Web.UI.Page
     {
         if (SessionExist("MemberID"))
         {
-            Response.Redirect("MemberMypage.aspx");
+            Response.Redirect("Mypage.aspx");
         }
 
         Response.Redirect("Login.aspx");

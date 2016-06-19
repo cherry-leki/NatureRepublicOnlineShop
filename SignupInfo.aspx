@@ -10,7 +10,6 @@
         {
             width:100%;
             height:100%;
-            overflow-x:hidden;
         }
         th, td
         {
@@ -99,7 +98,7 @@
         .style14
         {
             width: 100%;
-            margin-left:-6px;
+            margin-left:-8px;
             height: 1003px;
         }
         .style18
@@ -131,17 +130,18 @@
         }
         .style24
         {
-            width: 93%;
+            width: 103%;
         }
         .style25
         {
-            background: url('Images/Signup_Info/Signup_Info_Information.png') no-repeat;
-            width: 93%;
+            background: url('Images/Signup_Info/Signup_Info_Information.png') no-repeat left 50%;
+            width: 100%;
             height: 100%;
-        }
+            }
         .SignupForm
         {
             position:relative;
+            top:2px;
             left:170px;
         }
         #textBoxName
@@ -153,6 +153,12 @@
         {
             position:relative;
             top:18px;
+        }
+        #labelBirth
+        {
+            position:relative;
+            top:18px;
+            left:25px;
         }
         #textBoxID
         {
@@ -253,6 +259,11 @@
         .auto-style1 {
             height: 23px;
         }
+        .style32
+        {
+            width: 290px;
+            height: 994px;
+        }
         </style>
 </head>
 <body>
@@ -352,7 +363,7 @@
                 <td class="style24">
                     <img alt="" class="style18" src="Images/Signup_Info/Signup_Info_Top.png" /></td>
                 <td rowspan="2">
-                    &nbsp;</td>
+                    <img alt="" class="style32" src="Images/Signup_Info/Signup_Info_Blank2.png" /></td>
             </tr>
             <tr>
                 <td class="style25">
@@ -361,6 +372,7 @@
                     <asp:TextBox ID="textBoxName" runat="server" MaxLength="20"></asp:TextBox>
                     <br />
                     <asp:TextBox ID="textBoxBirth" runat="server" MaxLength="10"></asp:TextBox>
+                    <asp:Label ID="labelBirth" runat="server" Text="예) 1999-01-01"></asp:Label>
                     <br />
                     <asp:TextBox ID="textBoxID" runat="server" MaxLength="20"></asp:TextBox>
                     <br />
@@ -368,9 +380,11 @@
                     <asp:TextBox ID="textBoxPWConfigure" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>
                     <br />
                     <asp:DropDownList ID="DDLPWHint" runat="server">
-                    <asp:ListItem></asp:ListItem>
-                    <asp:ListItem></asp:ListItem>
-                    <asp:ListItem></asp:ListItem>
+                    <asp:ListItem>내가 태어난 곳은?</asp:ListItem>
+                    <asp:ListItem>존경하는 위인은?</asp:ListItem>
+                    <asp:ListItem>추억의 장소는?</asp:ListItem>
+                    <asp:ListItem>내가 태어난 해의 띠는?</asp:ListItem>
+                    <asp:ListItem>가장 감명깊은 책은?</asp:ListItem>
                     </asp:DropDownList>
                     <br />
                     <asp:TextBox ID="textBoxPWHintAns" runat="server"></asp:TextBox>
@@ -382,11 +396,11 @@
                                 <td class="auto-style1">
                         <asp:DropDownList ID="DDLTel" runat="server">
                         <asp:ListItem>02</asp:ListItem>
-                        <asp:ListItem>031</asp:ListItem>
-                        <asp:ListItem>032</asp:ListItem>
-                        <asp:ListItem>053</asp:ListItem>
-                        <asp:ListItem>032</asp:ListItem>
-                        <asp:ListItem>032</asp:ListItem>
+                        <asp:ListItem>031</asp:ListItem><asp:ListItem>032</asp:ListItem><asp:ListItem>033</asp:ListItem>
+                        <asp:ListItem>041</asp:ListItem><asp:ListItem>042</asp:ListItem><asp:ListItem>043</asp:ListItem><asp:ListItem>044</asp:ListItem>
+                        <asp:ListItem>051</asp:ListItem><asp:ListItem>052</asp:ListItem><asp:ListItem>053</asp:ListItem><asp:ListItem>054</asp:ListItem><asp:ListItem>055</asp:ListItem>
+                        <asp:ListItem>061</asp:ListItem><asp:ListItem>062</asp:ListItem><asp:ListItem>063</asp:ListItem><asp:ListItem>064</asp:ListItem>
+                        <asp:ListItem>0505</asp:ListItem><asp:ListItem>070</asp:ListItem>
                         </asp:DropDownList>
                         - <asp:TextBox ID="textBoxTel1" runat="server" MaxLength="4"></asp:TextBox>
                         - <asp:TextBox ID="textBoxTel2" runat="server" MaxLength="4"></asp:TextBox>
@@ -400,13 +414,13 @@
                         <asp:ListItem>010</asp:ListItem>
                         <asp:ListItem>011</asp:ListItem>
                         <asp:ListItem>012</asp:ListItem>
-                        <asp:ListItem>013</asp:ListItem>
-                        <asp:ListItem>014</asp:ListItem>
-                        <asp:ListItem>015</asp:ListItem>
                         <asp:ListItem>016</asp:ListItem>
                         <asp:ListItem>017</asp:ListItem>
                         <asp:ListItem>018</asp:ListItem>
                         <asp:ListItem>019</asp:ListItem>
+                        <asp:ListItem>0502</asp:ListItem>
+                        <asp:ListItem>0505</asp:ListItem>
+                        <asp:ListItem>0506</asp:ListItem>
                         </asp:DropDownList>
                         - <asp:TextBox ID="textBoxPhone1" runat="server" MaxLength="4"></asp:TextBox>
                         - <asp:TextBox ID="textBoxPhone2" runat="server" MaxLength="4"></asp:TextBox>
@@ -447,6 +461,14 @@
                             Text="이메일 수신거부시 아래의 혜택을 누리실 수 없습니다.<br>- 무료영화, 연극 시사회 증정 정보<br>- 알짜배기 이벤트 정보(무료 샘플 신청, 경품 이벤트)<br>- 신상품정보, 피부미용 강좌"></asp:Label>
                         <br />
                         <asp:DropDownList ID="DDLSkinType" runat="server">
+                        <asp:ListItem>모든피부</asp:ListItem>
+                        <asp:ListItem>악건성</asp:ListItem>
+                        <asp:ListItem>건성</asp:ListItem>
+                        <asp:ListItem>복합성</asp:ListItem>
+                        <asp:ListItem>지성</asp:ListItem>
+                        <asp:ListItem>악지성</asp:ListItem>
+                        <asp:ListItem>아크네</asp:ListItem>
+                        <asp:ListItem>민감성</asp:ListItem>
                         </asp:DropDownList>
                         <br />
                     <br />

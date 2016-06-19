@@ -28,10 +28,6 @@
         .auto-style11 {
             width: 201px;
         }
-        .auto-style12 {
-            width: 110px;
-            height: 32px;
-        }
         .auto-style13 {
             width: 170px;
         }
@@ -132,6 +128,18 @@
         .auto-style34 {
             padding: 0px;
         }
+        .auto-style35 {
+            width: 200px;
+            height: 20px;
+        }
+        .auto-style36 {
+            width: 201px;
+            height: 20px;
+        }
+        .auto-style37 {
+            width: 170px;
+            height: 20px;
+        }
     </style>
 </head>
 <body>
@@ -199,16 +207,23 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style10">적립금</td>
-            <td class="auto-style10">
+            <td class="auto-style35">적립금</td>
+            <td class="auto-style35">
                 <asp:Label ID="labelPoint" runat="server" Text="Point"></asp:Label>
             </td>
-            <td class="auto-style11">구매수량</td>
-            <td class="auto-style13">&nbsp;</td>
+            <td class="auto-style36">구매수량</td>
+            <td class="auto-style37">
+                <asp:ImageButton ID="imgButtonDecrease" runat="server" ImageUrl="~/images/Item/item_decreaseCounter.png" OnClick="imgButtonDecrease_Click" style="width: 7px" />
+&nbsp;<asp:TextBox ID="textBoxCounter" runat="server" Enabled="False" Width="20px">1</asp:TextBox>
+&nbsp;<asp:ImageButton ID="imgButtonIncrease" runat="server" ImageUrl="~/images/Item/item_increaseCounterCounter.png" OnClick="imgButtonIncrease_Click" style="width: 8px" />
+            </td>
         </tr>
         <tr>
-            <td class="auto-style3" colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <img class="auto-style12" src="file:///C:/Users/염광호/Documents/Visual%20Studio%202015/고급프로그래밍%20실습/NatureRepublicOnlineShop/images/Item/item_inBaket.png" /><img src="images/Item/item_inBuy.png" /><img src="images/Item/item_inInterest.png" /></td>
+            <td class="auto-style3" colspan="4" style="text-align:center">
+                <asp:ImageButton ID="imgButtonInBacket" runat="server" ImageUrl="~/images/Item/item_inBaket.png" OnClick="imgButtonInBacket_Click" />
+&nbsp;<asp:ImageButton ID="imgButtonPurchase" runat="server" ImageUrl="~/images/Item/item_inBuy.png" />
+&nbsp;<asp:ImageButton ID="ImageButtonInInterest" runat="server" ImageUrl="~/images/Item/item_inInterest.png" OnClick="ImageButtonInInterest_Click" />
+            </td>
         </tr>
         <tr>
             <td colspan="4">&nbsp;</td>
@@ -220,10 +235,10 @@
             <td class="auto-style17"></td>
         </tr>
         <tr>
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style11">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
+            <td class="auto-style35"></td>
+            <td class="auto-style35"></td>
+            <td class="auto-style36"></td>
+            <td class="auto-style37"></td>
         </tr>
         <tr>
             <td class="auto-style10">&nbsp;</td>

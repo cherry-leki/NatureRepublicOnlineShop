@@ -47,7 +47,7 @@ public class OleDbSqlServerConnectionString
 public class OleDbSqlServerQueryReader : OleDbSqlServerConnectionString
 {
     public OleDbDataReader rd;
-
+    public int counter = 0;
     public OleDbSqlServerQueryReader(string _Sql, int _FieldCnt)
         : base(_Sql, _FieldCnt)
     {
@@ -91,11 +91,18 @@ public class OleDbSqlServerQueryReader : OleDbSqlServerConnectionString
         {
             ResultExist = true;
             rd_Data[i++] = rd[0].ToString();
+
+            counter++;
         }
 
         rd.Close();
         cn.Close();
         return rd_Data;
+    }
+
+    public int Counter()
+    {
+        return counter;
     }
 }
 

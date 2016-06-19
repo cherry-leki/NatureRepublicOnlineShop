@@ -88,7 +88,6 @@ public partial class Shoping : System.Web.UI.Page
 
     protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
     {
-
-        Response.Redirect(string.Format("Item.aspx?itemNumber=00001"));
+        Response.Redirect(string.Format("Shopping_Item.aspx?itemNumber=00001"));
     }
 }

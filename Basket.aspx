@@ -154,6 +154,13 @@
         {
             text-align: justify;
         }
+        .auto-style1 {
+            text-align: justify;
+            height: 152px;
+        }
+        .auto-style2 {
+            margin-left: 6px;
+        }
         </style>
 </head>
 <body>
@@ -254,8 +261,41 @@
                 <img alt="" class="style28" src="Images/Basket/Basket_Blank.png" /></td>
             </tr>
             <tr>
-            <td class="style30">
-                <img alt="" class="style26" src="Images/Basket/Basket_BasketEmpty.png" /></td>
+            <td class="auto-style1">
+                <img alt="" class="style26" src="Images/Basket/Basket_BasketEmpty.png" /><br />
+                <br />
+                <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px">
+                    <Columns>
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:CheckBox ID="CheckBox1" runat="server" />
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                        <asp:BoundField DataField="itemName" SortExpression="itemName">
+                        <ItemStyle Width="400px" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="itemPrice" SortExpression="itemPrice" />
+                        <asp:BoundField DataField="basketCount" SortExpression="basketCount" />
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+
+                         <asp:TemplateField>
+                            <ItemTemplate>
+                                <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+                <br />
+                <asp:SqlDataSource ID="sdsSource" runat="server" ConnectionString="<%$ ConnectionStrings:NatureRepublicDBConnectionString %>" SelectCommand="SELECT tableItem.itemPrice, tableItem.itemName, tableBasket.memberID, tableBasket.basketCount FROM tableItem INNER JOIN tableBasket ON tableItem.itemNumber = tableBasket.itemNumber WHERE (tableBasket.memberID = @Param1)">
+                    <SelectParameters>
+                        <asp:SessionParameter Name="Param1" SessionField="MemberID" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                </td>
             </tr>
             <tr>
             <td>

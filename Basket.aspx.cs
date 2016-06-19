@@ -8,6 +8,8 @@ using System.Web.UI.WebControls;
 
 public partial class Basket : System.Web.UI.Page
 {
+    ArrayList list = new ArrayList();
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (SessionExist("MemberID"))
@@ -19,7 +21,39 @@ public partial class Basket : System.Web.UI.Page
         {
             imgButtonLogin.ImageUrl = "./images/Common/staticBanner_Top_Login.png";
             imgButtonJoin.ImageUrl = "./images/Common/staticBanner_Top_Signup.png";
+            return;
         }
+
+        //string sql1;
+        //sql1 = " SELECT basketNumber";
+        //sql1 = sql1 + " FROM tableBasket";
+        //sql1 = sql1 + string.Format(" WHERE  (memberID = '{0}')", Session["MemberID"].ToString());
+        //OleDbSqlServerQueryReader writing = new OleDbSqlServerQueryReader(sql1, 10);
+        //writing.RunQueryRow();
+        //int counter = writing.Counter();
+
+
+        //string sql;
+        //sql = " SELECT itemImage, itemName, itemPrice, basketCount, basketDeadline";
+        //sql = sql + " FROM tableBasket INNER JOIN tableItem ON tableBasket.itemNumber = tableItem.itemNumber";
+        //sql = sql + string.Format(" WHERE  (tableBasket.memberID = '{0}')", Session["MemberID"].ToString());
+
+        //string[] sqlResult;
+
+        //OleDbSqlServerQueryReader RecordData = new OleDbSqlServerQueryReader(sql, 5);
+        //sqlResult = RecordData.RunQueryCol();
+
+        foreach( GridViewRow row in gridViewBasket.Rows)
+        {
+            CheckBox chkRow = (row.Cells[0].FindControl("chkRow") as CheckBox);
+
+            if (chkRow.Checked)
+            {
+                
+            }
+        }
+        gridViewBasket.DataSource = sdsSource;
+        gridViewBasket.DataBind();
     }
 
     protected void LoginButton_Click(object sender, ImageClickEventArgs e)

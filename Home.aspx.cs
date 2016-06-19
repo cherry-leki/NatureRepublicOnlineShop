@@ -10,7 +10,7 @@ public partial class Home_1 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if(SessionExist("MemberID"))
+        if (SessionExist("MemberID"))
         {
             imgButtonLogin.ImageUrl = "./images/Common/staticBanner_Top_Login_Logout.png";
             imgButtonLogin.Enabled = false;

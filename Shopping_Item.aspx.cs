@@ -120,4 +120,72 @@ public partial class Item : System.Web.UI.Page
         }
         return false;
     }
+
+    protected void imgButtonInBacket_Click(object sender, ImageClickEventArgs e)
+    {
+        DateTime time = DateTime.Now + new TimeSpan(7, 0, 0, 0);
+     
+        string sql;
+        sql = " INSERT INTO [NatureRepublicDB].[dbo].[tableBasket] ";
+        sql = sql + " ([basketNumber], [memberID], [itemNumber], [basketCount], [basketDeadline]) ";
+        sql = sql + string.Format(" VALUES ('{0}', '{1}', '{2}', {3}, '{4}')", "B1001", Session["MemberID"], Request["itemNumber"], textBoxCounter.Text, time.ToString("yyyy-MM-dd"));
+
+        OleDbSqlServerQueryRun recordData = new OleDbSqlServerQueryRun(sql);
+        recordData.RunNonQuery();
+
+        if (recordData.ChangeRecordCount > 0)
+        {
+            MessageBox.Show("장바구니에 등록 하였습니다..", this);
+            return;
+        }
+        else
+        {
+            MessageBox.Show("장바구니 등록에 오류가 발생했습니다.", this);
+            return;
+        }
+    }
+
+    protected void imgButtonIncrease_Click(object sender, ImageClickEventArgs e)
+    {
+        int counter = Convert.ToInt32(textBoxCounter.Text);
+        if (counter < 99)
+        {
+            counter++;
+            textBoxCounter.Text = counter.ToString();
+        }
+    }
+
+    protected void imgButtonDecrease_Click(object sender, ImageClickEventArgs e)
+    {
+        int counter = Convert.ToInt32(textBoxCounter.Text);
+        if(counter > 0)
+        {
+            counter--;
+            textBoxCounter.Text = counter.ToString();
+        }
+    }
+
+    protected void ImageButtonInInterest_Click(object sender, ImageClickEventArgs e)
+    {
+        DateTime time = DateTime.Now + new TimeSpan(30, 0, 0, 0);
+
+        string sql;
+        sql = " INSERT INTO [NatureRepublicDB].[dbo].[tableInterest] ";
+        sql = sql + " ([interestNumber], [memberID], [itemNumber], [itemDeadLine]) ";
+        sql = sql + string.Format(" VALUES ('{0}', '{1}', '{2}', '{3}')", "I1001", Session["MemberID"], Request["itemNumber"], time.ToString("yyyy-MM-dd"));
+
+        OleDbSqlServerQueryRun recordData = new OleDbSqlServerQueryRun(sql);
+        recordData.RunNonQuery();
+
+        if (recordData.ChangeRecordCount > 0)
+        {
+            MessageBox.Show("관심상품에 등록 하였습니다..", this);
+            return;
+        }
+        else
+        {
+            MessageBox.Show("관심상품 등록에 오류가 발생했습니다.", this);
+            return;
+        }
+    }
 }

@@ -58,12 +58,6 @@ public partial class Basket : System.Web.UI.Page
 
                 labelTotalPrice.Text = (Convert.ToInt32(row.Cells[2].Text) * Convert.ToInt32(row.Cells[3].Text)).ToString();
                 labelPoint.Text = (Convert.ToInt32(row.Cells[2].Text) / 10).ToString();
-
-
-                if (chkRow.Checked)
-                {
-
-                }
             }
 
         }
@@ -137,5 +131,23 @@ public partial class Basket : System.Web.UI.Page
     protected void imgButtonLogo_Click(object sender, ImageClickEventArgs e)
     {
         Response.Redirect("Home.aspx");
+    }
+
+    protected void imageButtonPurchaseSelected_Click(object sender, ImageClickEventArgs e)
+    {
+        string buf = "";
+        Session.Remove("PurchaseItem");
+
+        foreach (GridViewRow row in gridViewBasket.Rows)
+        {
+            CheckBox chkRow = (row.Cells[0].FindControl("checkBox") as CheckBox);
+
+            if (chkRow.Checked)
+            {
+                 buf = buf + row.Cells[1].Text + "-" + row.Cells[2].Text + "-" +row.Cells[3].Text + "@";
+            }
+        }
+        Session.Add("PurchaseItem", buf);
+        Response.Redirect("Purchase.aspx");
     }
 }

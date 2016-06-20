@@ -310,7 +310,7 @@
                 <asp:ImageButton ID="imageButtonPurchaseAll" runat="server" 
                     ImageUrl="~/Images/Basket/Basket_PurchaseAll.png" />
                 <span class="style29">&nbsp;</span><asp:ImageButton ID="imageButtonPurchaseSelected" runat="server" 
-                    ImageUrl="~/Images/Basket/Basket_PurchaseSelected.png" />
+                    ImageUrl="~/Images/Basket/Basket_PurchaseSelected.png" OnClick="imageButtonPurchaseSelected_Click" />
                 <span class="style29">&nbsp;</span><asp:ImageButton ID="imageButtonShopping" runat="server" 
                     ImageUrl="~/Images/Basket/Basket_ShoppingButton.png" />
                 </td>

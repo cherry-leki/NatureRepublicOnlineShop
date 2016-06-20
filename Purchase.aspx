@@ -217,6 +217,9 @@
             left:-23px;
             text-align: right;
         }
+        .auto-style2 {
+            margin-left: 6px;
+        }
         </style>
 </head>
 <body>
@@ -320,6 +323,26 @@
             <tr>
             <td>
                 <img alt="" class="style26" src="Images/Purchase/Purchase_Demo.png" /><br />
+                <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px">
+                    <Columns>
+                         <asp:BoundField DataField="Name" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                         </asp:BoundField>
+                         <asp:BoundField DataField="Price" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                         </asp:BoundField>
+                         <asp:BoundField DataField="Count" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                         </asp:BoundField>
+                         <asp:BoundField DataField="TotalPrice" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                         </asp:BoundField>
+                         <asp:BoundField DataField="Point" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                         </asp:BoundField>
+                    </Columns>
+                </asp:GridView>
+                <br />
                 </td>
             </tr>
             <tr>

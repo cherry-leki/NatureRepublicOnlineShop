@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -20,6 +21,20 @@ public partial class Purchase : System.Web.UI.Page
             imgButtonLogin.ImageUrl = "./images/Common/staticBanner_Top_Login.png";
             imgButtonJoin.ImageUrl = "./images/Common/staticBanner_Top_Signup.png";
         }
+
+        string[] item = System.Text.RegularExpressions.Regex.Split(Session["PurchaseItem"].ToString(), "@");
+
+        DataTable dt = new DataTable();
+        dt.Columns.AddRange(new DataColumn[5] { new DataColumn("Name"), new DataColumn("Price"), new DataColumn("Count"), new DataColumn("TotalPrice"), new DataColumn("Point") });
+
+        for (int i = 0; i < item.Length - 1; i++)
+        {
+            string[] unitance = System.Text.RegularExpressions.Regex.Split(item[i], "-");
+            dt.Rows.Add(unitance[0], unitance[1], unitance[2], (Convert.ToInt32(unitance[1]) * Convert.ToInt32(unitance[2])).ToString(), (Convert.ToInt32(unitance[1]) / 10).ToString());
+        }
+
+        gridViewBasket.DataSource = dt;
+        gridViewBasket.DataBind();
     }
 
     protected void LoginButton_Click(object sender, ImageClickEventArgs e)

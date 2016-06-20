@@ -7,6 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
+        a,a:hover
+        {
+            border:0px;
+        }
         .auto-style1 {
             width: 100%;
         }
@@ -258,30 +262,29 @@
             <tr>
                 <td class="auto-style30" rowspan="3">&nbsp;</td>
                 <td class="auto-style23">
-                    <asp:ImageButton ID="imageButtonFirstSpecific" runat="server" 
-                        ImageUrl="~/images/Item/menu_specificOn.png" Width="247px"
-                        href="#imageButtonFirstSpecific" />
+                    <a href="#imageButtonFirstSpecific">
+                    <img alt="" id="imageButtonFirstSpecific" src="Images/Item/menu_specificOn.png" width="247px"/>
+                    </a>
                 </td>
                 <td class="auto-style24">
-                    <asp:ImageButton ID="imageButtonFirstSummary" runat="server" 
-                        ImageUrl="~/images/Item/menu_SummaryOff.png" Width="246px" 
-                        href="#imageButtonSecondSummary" />
+                    <a href="#imageButtonSecondSummary">
+                    <img alt="" id="imageButtonFirstSummary" src="Images/Item/menu_SummaryOff.png" width="246px"/>
+                    </a>
                 </td>
                 <td class="auto-style25">
-                    <asp:ImageButton ID="imageButtonFirstDuration" runat="server" 
-                        ImageUrl="~/images/Item/menu_DeadlineOff.png" Width="246px" 
-                        href="#imageButtonThirdDuration" />
+                    <a href="#imageButtonThirdDuration">
+                    <img alt="" id="imageButtonFirstDuration" src="Images/Item/menu_DeadlineOff.png" width="246px"/>
+                    </a>
                 </td>
                 <td class="auto-style26">
-                    <asp:ImageButton ID="imageButtonFirstPhoto" runat="server" 
-                        ImageUrl="~/images/Item/menu_PhotoOff.png" Width="247px" 
-                        href="#imageButtonFourthPhoto" />
+                    <a href="#imageButtonFourthPhoto">
+                    <img alt="" id="imageButtonFirstPhoto" src="Images/Item/menu_PhotoOff.png" width="247px"/>
+                    </a>
                 </td>
                 <td class="auto-style27">
-                    <asp:ImageButton ID="imageButtonFirstComment" runat="server" 
-                        ImageUrl="~/images/Item/menu_CommentOff.png" Width="249px"
-                        href="#imageButtonFifthComment" />
-                    </asp:ImageButton>
+                    <a href="#imageButtonFifthComment">
+                    <img alt="" id="imageButtonFirstComment" src="Images/Item/menu_CommentOff.png" width="249px"/>
+                    </a>
                 </td>
                 <td class="auto-style18" rowspan="3">&nbsp;</td>
             </tr>
@@ -306,30 +309,29 @@
             <tr>
                 <td class="auto-style30" rowspan="3">&nbsp;</td>
                 <td class="auto-style23">
-                    <asp:ImageButton ID="imageButtonSecondSpecific" runat="server" 
-                        ImageUrl="~/images/Item/menu_specificOff.png" Width="247px"
-                        href="#imageButtonFirstSpecific" />
+                    <a href="#imageButtonFirstSpecific">
+                    <img alt="" id="imageButtonSecondSpecific" src="Images/Item/menu_specificOff.png" width="247px"/>
+                    </a>
                 </td>
                 <td class="auto-style24">
-                    <asp:ImageButton ID="imageButtonSecondSummary" runat="server" 
-                        ImageUrl="~/images/Item/menu_SummaryOn.png" Width="246px"
-                        href="#imageButtonSecondSummary" />
+                    <a href="#imageButtonSecondSummary">
+                    <img alt="" id="imageButtonSecondSummary" src="Images/Item/menu_SummaryOn.png" width="246px"/>
+                    </a>
                 </td>
                 <td class="auto-style25">
-                    <asp:ImageButton ID="imageButtonSecondDuration" runat="server" 
-                        ImageUrl="~/images/Item/menu_DeadlineOff.png" Width="246px"
-                        href="#imageButtonThirdDuration" />
+                    <a href="#imageButtonThirdDuration">
+                    <img alt="" id="imageButtonSecondDuration" src="Images/Item/menu_DeadlineOff.png" width="246px"/>
+                    </a>
                 </td>
                 <td class="auto-style26">
-                    <asp:ImageButton ID="imageButtonSecondPhoto" runat="server" 
-                        ImageUrl="~/images/Item/menu_PhotoOff.png" Width="247px"
-                        href="#imageButtonFourthPhoto" />
+                    <a href="#imageButtonFourthPhoto">
+                    <img alt="" id="imageButtonSecondPhoto" src="Images/Item/menu_PhotoOff.png" width="247px"/>
+                    </a>
                 </td>
                 <td class="auto-style27">
-                    <asp:ImageButton ID="imageButtonSecondComment" runat="server" 
-                        ImageUrl="~/images/Item/menu_CommentOff.png" Width="249px"
-                        href="#imageButtonFifthComment" />
-                    </asp:ImageButton>
+                    <a href="#imageButtonFifthComment">
+                    <img alt="" id="imageButtonSecondComment" src="Images/Item/menu_CommentOff.png" width="249px"/>
+                    </a>
                 </td>
                 <td class="auto-style18" rowspan="3">&nbsp;</td>
             </tr>
@@ -401,30 +403,29 @@
             <tr>
                 <td class="auto-style30" rowspan="3">&nbsp;</td>
                 <td class="auto-style23">
-                    <asp:ImageButton ID="imageButtonThirdSpecific" runat="server" 
-                        ImageUrl="~/images/Item/menu_specificOff.png" Width="247px"
-                        href="#imageButtonFirstSpecific" />
+                    <a href="#imageButtonFirstSpecific">
+                    <img alt="" id="imageButtonThirdSpecific" src="Images/Item/menu_specificOff.png" width="247px"/>
+                    </a>
                 </td>
                 <td class="auto-style24">
-                    <asp:ImageButton ID="imageButtonThirdSummary" runat="server" 
-                        ImageUrl="~/images/Item/menu_SummaryOff.png" Width="246px"
-                        href="#imageButtonSecondSummary" />
+                    <a href="#imageButtonSecondSummary">
+                    <img alt="" id="imageButtonThirdSummary" src="Images/Item/menu_SummaryOff.png" width="246px"/>
+                    </a>
                 </td>
                 <td class="auto-style25">
-                    <asp:ImageButton ID="imageButtonThirdDuration" runat="server" 
-                        ImageUrl="~/images/Item/menu_DeadlineOn.png" Width="246px" 
-                        href="#imageButtonThirdDuration" />
+                    <a href="#imageButtonThirdDuration">
+                    <img alt="" id="imageButtonThirdDuration" src="Images/Item/menu_DeadlineOn.png" width="246px"/>
+                    </a>
                 </td>
                 <td class="auto-style26">
-                    <asp:ImageButton ID="imageButtonThirdPhoto" runat="server" 
-                        ImageUrl="~/images/Item/menu_PhotoOff.png" Width="247px"
-                        href="#imageButtonFourthPhoto" />
+                    <a href="#imageButtonFourthPhoto">
+                    <img alt="" id="imageButtonThirdPhoto" src="Images/Item/menu_PhotoOff.png" width="247px"/>
+                    </a>
                 </td>
                 <td class="auto-style27">
-                    <asp:ImageButton ID="imageButtonThirdComment" runat="server" 
-                        ImageUrl="~/images/Item/menu_CommentOff.png" Width="249px"
-                        href="#imageButtonFifthComment" />
-                    </asp:ImageButton>
+                    <a href="#imageButtonFifthComment">
+                    <img alt="" id="imageButtonThirdComment" src="Images/Item/menu_CommentOff.png" width="249px"/>
+                    </a>
                 </td>
                 <td class="auto-style18" rowspan="3">&nbsp;</td>
             </tr>
@@ -435,30 +436,29 @@
             <tr>
                 <td class="auto-style30" rowspan="3">&nbsp;</td>
                 <td class="auto-style23">
-                    <asp:ImageButton ID="imageButtonFourthSpecific" runat="server" 
-                        ImageUrl="~/images/Item/menu_specificOff.png" Width="247px"
-                        href="#imageButtonFirstSpecific" />
+                    <a href="#imageButtonFirstSpecific">
+                    <img alt="" id="imageButtonFourthSpecific" src="Images/Item/menu_specificOff.png" width="247px"/>
+                    </a>
                 </td>
                 <td class="auto-style24">
-                    <asp:ImageButton ID="imageButtonFourthSummary" runat="server" 
-                        ImageUrl="~/images/Item/menu_SummaryOff.png" Width="246px"
-                        href="#imageButtonSecondSummary" />
+                    <a href="#imageButtonSecondSummary">
+                    <img alt="" id="imageButtonFourthSummary" src="Images/Item/menu_SummaryOff.png" width="246px"/>
+                    </a>
                 </td>
                 <td class="auto-style25">
-                    <asp:ImageButton ID="imageButtonFourthDuration" runat="server" 
-                        ImageUrl="~/images/Item/menu_DeadlineOff.png" Width="246px"
-                        href="#imageButtonThirdDuration" />
+                    <a href="#imageButtonThirdDuration">
+                    <img alt="" id="imageButtonFourthDuration" src="Images/Item/menu_DeadlineOff.png" width="246px"/>
+                    </a>
                 </td>
                 <td class="auto-style26">
-                    <asp:ImageButton ID="imageButtonFourthPhoto" runat="server" 
-                        ImageUrl="~/images/Item/menu_PhotoOn.png" Width="247px"
-                        href="#imageButtonFourthPhoto" />
+                    <a href="#imageButtonFourthPhoto">
+                    <img alt="" id="imageButtonFourthPhoto" src="Images/Item/menu_PhotoOn.png" width="247px"/>
+                    </a>
                 </td>
                 <td class="auto-style27">
-                    <asp:ImageButton ID="imageButtonFourthComment" runat="server" 
-                        ImageUrl="~/images/Item/menu_CommentOff.png" Width="249px"
-                        href="#imageButtonFifthComment" />
-                    </asp:ImageButton>
+                    <a href="#imageButtonFifthComment">
+                    <img alt="" id="imageButtonFourthComment" src="Images/Item/menu_CommentOff.png" width="249px"/>
+                    </a>
                 </td>
                 <td class="auto-style18" rowspan="3">&nbsp;</td>
             </tr>
@@ -469,30 +469,29 @@
             <tr>
                 <td class="auto-style30" rowspan="3">&nbsp;</td>
                 <td class="auto-style23">
-                    <asp:ImageButton ID="imageButtonFifthSpecific" runat="server" 
-                        ImageUrl="~/images/Item/menu_specificOff.png" Width="247px"
-                        href="#imageButtonFirstSpecific" />
+                    <a href="#imageButtonFirstSpecific">
+                    <img alt="" id="imageButtonFifthSpecific" src="Images/Item/menu_specificOff.png" width="247px"/>
+                    </a>
                 </td>
                 <td class="auto-style24">
-                    <asp:ImageButton ID="imageButtonFifthSummary" runat="server" 
-                        ImageUrl="~/images/Item/menu_SummaryOff.png" Width="246px"
-                        href="#imageButtonSecondSummary" />
+                    <a href="#imageButtonSecondSummary">
+                    <img alt="" id="imageButtonFifthSummary" src="Images/Item/menu_SummaryOff.png" width="246px"/>
+                    </a>
                 </td>
                 <td class="auto-style25">
-                    <asp:ImageButton ID="imageButtonFifthDuration" runat="server" 
-                        ImageUrl="~/images/Item/menu_DeadlineOff.png" Width="246px"
-                        href="#imageButtonThirdDuration" />
+                    <a href="#imageButtonThirdDuration">
+                    <img alt="" id="imageButtonFifthDuration" src="Images/Item/menu_DeadlineOff.png" width="246px"/>
+                    </a>
                 </td>
                 <td class="auto-style26">
-                    <asp:ImageButton ID="imageButtonFifthPhoto" runat="server" 
-                        ImageUrl="~/images/Item/menu_PhotoOff.png" Width="247px"
-                        href="#imageButtonFourthPhoto" />
+                    <a href="#imageButtonFourthPhoto">
+                    <img alt="" id="imageButtonFifthPhoto" src="Images/Item/menu_PhotoOff.png" width="247px"/>
+                    </a>
                 </td>
                 <td class="auto-style27">
-                    <asp:ImageButton ID="imageButtonFifthComment" runat="server" 
-                        ImageUrl="~/images/Item/menu_CommentOn.png" Width="249px"
-                        href="#imageButtonFifthComment" />
-                    </asp:ImageButton>
+                    <a href="#imageButtonFifthComment">
+                    <img alt="" id="imageButtonFifthComment" src="Images/Item/menu_CommentOn.png" width="249px"/>
+                    </a>
                 </td>
                 <td class="auto-style18" rowspan="3">&nbsp;</td>
             </tr>

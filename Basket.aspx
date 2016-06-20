@@ -262,29 +262,39 @@
             </tr>
             <tr>
             <td class="auto-style1">
-                <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px" BorderColor="White" BorderStyle="None" BorderWidth="0px">
+                <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" 
+                    CssClass="auto-style2" Width="782px" BorderColor="White" BorderStyle="None" 
+                    BorderWidth="0px">
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:CheckBox ID="checkBox" runat="server" />
                             </ItemTemplate>
+                            <ItemStyle Width="54px" />
                         </asp:TemplateField>
                         <asp:BoundField DataField="itemName" SortExpression="itemName">
-                        <ItemStyle Width="400px" />
+                        <ItemStyle Width="407px" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="itemPrice" SortExpression="itemPrice" />
-                        <asp:BoundField DataField="basketCount" SortExpression="basketCount" />
+                        <asp:BoundField DataField="itemPrice" SortExpression="itemPrice" >
+                        <ItemStyle Width="78px" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="basketCount" SortExpression="basketCount" >
+
+                        <ItemStyle Width="78px" />
+                        </asp:BoundField>
 
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:Label ID="labelTotalPrice" runat="server" Text="Label"></asp:Label>
                             </ItemTemplate>
+                            <ItemStyle Width="79px" />
                         </asp:TemplateField>
 
                          <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:Label ID="labelPoint" runat="server" Text="Label"></asp:Label>
                             </ItemTemplate>
+                             <ItemStyle Width="78px" />
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>

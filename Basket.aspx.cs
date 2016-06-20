@@ -114,17 +114,28 @@ public partial class Basket : System.Web.UI.Page
     protected void imageButtonPurchaseSelected_Click(object sender, ImageClickEventArgs e)
     {
         string buf = "";
+        string sql;
+        int counter = 0;
         Session.Remove("PurchaseItem");
 
         foreach (GridViewRow row in gridViewBasket.Rows)
         {
             CheckBox chkRow = (row.Cells[0].FindControl("checkBox") as CheckBox);
 
+            counter++;
             if (chkRow.Checked)
             {
                  buf = buf + row.Cells[1].Text + "-" + row.Cells[2].Text + "-" +row.Cells[3].Text + "@";
+
+                sql = "DELETE from tableBasket";
+                sql = sql + string.Format(" WHERE ([memberID] = '{0}' AND[basketNumber] = '{1}') ", Session["MemberID"].ToString(), "B000" + counter);
+
+                OleDbSqlServerQueryRun recorddata = new OleDbSqlServerQueryRun(sql);
+                recorddata.RunNonQuery();
             }
         }
+
+        DBSort();
 
         Session.Add("PurchaseItem", buf);
         Response.Redirect("Purchase.aspx");
@@ -132,9 +143,8 @@ public partial class Basket : System.Web.UI.Page
 
     protected void imageButtonDelete_Click(object sender, ImageClickEventArgs e)
     {
-        int deleteCounter = 0;
-        int counter = 0;
         string sql;
+        int counter = 0;
 
         foreach (GridViewRow row in gridViewBasket.Rows)
         {
@@ -152,6 +162,15 @@ public partial class Basket : System.Web.UI.Page
             }
         }
 
+        DBSort();
+        Response.Redirect("Basket.aspx");
+    }
+
+    public void DBSort()
+    {
+        string sql;
+        int counter = 0;
+
         sql = "SELECT basketNumber FROM tableBasket";
         sql = sql + string.Format(" WHERE memberID = '{0}'", Session["MemberID"].ToString());
 
@@ -159,17 +178,17 @@ public partial class Basket : System.Web.UI.Page
         string[] strResult = counterMethod.RunQueryRow();
         counter = counterMethod.Counter();
 
-        
-        for(int i = 1; i <= counter; i++)
+
+        for (int i = 1; i <= counter; i++)
         {
             int Ccounter = 0;
-            for(;Ccounter < 10;Ccounter++)
+            for (; Ccounter < 10; Ccounter++)
             {
-                if(strResult[i-1].Equals("B000"+Ccounter))
+                if (strResult[i - 1].Equals("B000" + Ccounter))
                 {
                     sql = " UPDATE [NatureRepublicDB].[dbo].[tableBasket] SET ";
                     sql = sql + string.Format("[basketNumber] = '{0}'", "B000" + i);
-                    sql = sql + string.Format(" WHERE memberID = '{0}' AND basketNumber = '{1}'", Session["MemberID"].ToString(), strResult[i-1]);
+                    sql = sql + string.Format(" WHERE memberID = '{0}' AND basketNumber = '{1}'", Session["MemberID"].ToString(), strResult[i - 1]);
 
                     OleDbSqlServerQueryRun recordData = new OleDbSqlServerQueryRun(sql);
                     recordData.RunNonQuery();
@@ -179,6 +198,5 @@ public partial class Basket : System.Web.UI.Page
             }
         }
 
-        Response.Redirect("Basket.aspx");
     }
 }

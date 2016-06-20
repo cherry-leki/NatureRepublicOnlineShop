@@ -1,109 +1,24 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Shopping.aspx.cs" Inherits="Shoping" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Shopping.aspx.cs" Inherits="ShoppingNew" %>
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
-        .auto-style1 {
-            width: 1442px;
+    body
+        {
+            width:100%;
+            height:100%;
         }
-        .auto-style4 {
-            height: 180px;
-            width: 136px;
+        th, td
+        {
+            padding: 0px;
+            text-align: right;
         }
-        .auto-style19 {
-            width: 135px;
-        }
-        .auto-style28 {
-            width: 144px;
-        }
-        .auto-style31 {
-            width: 174px;
-        }
-        .auto-style32 {
-            width: 111px;
-        }
-        .auto-style33 {
-            height: 20px;
-            width: 144px;
-        }
-        .auto-style36 {
-            width: 150px;
-        }
-        .auto-style37 {
-            width: 151px;
-        }
-        .auto-style38 {
-            height: 20px;
-            width: 150px;
-        }
-        .auto-style39 {
-            height: 20px;
-            width: 151px;
-        }
-        .auto-style41 {
-            height: 20px;
-        }
-        .auto-style48 {
-            width: 174px;
-            height: 55px;
-        }
-        .auto-style75 {
-            width: 196px;
-        }
-        .auto-style77 {
-            width: 122px;
-        }
-        .auto-style82 {
-            height: 20px;
-            width: 248px;
-        }
-        .auto-style83 {
-            width: 73px;
-        }
-        .auto-style87 {
-            height: 20px;
-            width: 247px;
-        }
-        .auto-style88 {
-            width: 247px;
-        }
-        .auto-style89 {
-            width: 248px;
-        }
-        .auto-style90 {
-            width: 1433px;
-            height: 111px;
-        }
-        .auto-style91 {
-            width: 247px;
-            height: 24px;
-        }
-        .auto-style92 {
-            width: 248px;
-            height: 24px;
-        }
-        .auto-style93 {
-            width: 245px;
-            height: 42px;
-        }
-        .auto-style94 {
-            width: 245px;
-        }
-        .auto-style96 {
-            width: 109px;
-        }
-        .auto-style98 {
-            width: 66px;
-        }
-        .auto-style101 {
-            width: 314px;
-        }
-        .auto-style102 {
-            width: 315px;
+        .margin_left
+        {
+            margin-left:-2px;
         }
         .style1
         {
@@ -115,10 +30,6 @@
         {
             width: 638px;
             height: 27px;
-        }
-        .margin_left
-        {
-            margin-left:-2px;
         }
         .style3
         {
@@ -185,14 +96,119 @@
             height: 41px;
             margin-left:-2px;
         }
-        .auto-style103 {
-            width: 1430px;
+        .style14
+        {
+            width: 1583px;
+            height: 439px;
+            margin-left:-7px;
         }
-        </style>
+        .contents
+        {
+            margin-left:-7px;
+        }
+        .tdfix
+        {
+            vertical-align:top;
+        }
+        .style15
+        {
+            width: 1583px;
+            height: 143px;
+            position:relative;
+            top:-4px;
+            left:-7px;
+        }
+        .style16
+        {
+            width: 302px;
+            height: 1390px;
+        }
+        .style17
+        {
+            width: 980px;
+            height: 61px;
+        }
+        .style18
+        {
+            width: 301px;
+            height: 1390px;
+        }
+        .style20
+        {
+            text-align: center;
+        }
+        .style21
+        {
+            width: 980px;
+            height: 23px;
+        }
+        .style22
+        {
+            width: 980px;
+            height: 22px;
+        }
+        .style23
+        {
+            width: 773px;
+            height: 254px;
+        }
+        .style24
+        {
+            width: 207px;
+            height: 254px;
+        }
+        .style25
+        {
+            width: 980px;
+            height: 21px;
+        }
+        .style26
+        {
+            width: 100%;
+        }
+        .style27
+        {
+            width: 980px;
+            height: 56px;
+        }
+        #imageButtonMenu2Foam, #imageButtonMenu2Cream,#imageButtonMenu2Oil,#imageButtonMenu2Jel,
+        #imageButtonMenu2Tissue,#imageButtonMenu2Etc
+        {
+            margin-left:-6px;
+        }
+        #imageButtonOrderSell, #imageButtonOrderComment, #imageButtonOrderLowPrice, #imageButtonOrderHighPrice
+        {
+            margin-left:-6px;
+        }
+        .Itemtd
+        {
+            text-align:center;
+            padding-top:49px;
+            padding-bottom:49px;
+            width:245px;
+        }
+        .ItemlabelTable
+        {
+            text-align: left;
+            font-size:13px;
+        }
+        .Itemlabeltd
+        {
+            text-align:left;
+        }
+        .auto-style1 {
+            text-align: center;
+            height: 412px;
+        }
+        .auto-style2 {
+            text-align: left;
+            width: 119px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-            <div>
+    <div>
     
         <table class="style1">
             <tr>
@@ -207,11 +223,11 @@
                         ImageUrl="~/Images/Common/staticBanner_Top_Signup.png" OnClick="JoinButton_Click"/>
                 </td>
                 <td>
-                    <asp:ImageButton class="margin_left" ID="imagebuttonBaket" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Basket.png" OnClick="BucketButton_Click"/>
+                    <asp:ImageButton class="margin_left" ID="ImageButton3" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Top_Basket.png" OnClick="BucketButton_Click" />
                 </td>
                 <td>
-                    <asp:ImageButton class="margin_left" ID="imagebuttonMyShop" runat="server" 
+                    <asp:ImageButton class="margin_left" ID="ImageButton4" runat="server" 
                         ImageUrl="~/Images/Common/staticBanner_Top_Myshop.png" OnClick="MyShopButton_Click"/>
                 </td>
                 <td>
@@ -277,241 +293,231 @@
                     <img alt="" class="style13" src="Images/Common/staticBanner_Menu_2.png" /></td>
             </tr>
             </table>
-        <table class="auto-style103">
+            <table class="contents">
             <tr>
-                <td colspan="10">
-                    <img class="auto-style90" src="images/Shopping/Cleansing/Shopping_Cleansing_Top.png" /></td>
+            <td colspan="3">
+                <img alt="" class="style15" 
+                    src="Images/Shopping/Cleansing/Shopping_Cleansing.png" /></td>
             </tr>
             <tr>
-                <td rowspan="9" class="auto-style75">&nbsp;</td>
-                <td class="auto-style33">
-                    <img class="auto-style4" src="images/Shopping/Cleansing/Shopping_Menu_CleansingOn.png" /></td>
-                <td class="auto-style38">
-                    <img class="auto-style19" src="images/Shopping/Cleansing/Shopping_Menu_SkinCareOff.png" /></td>
-                <td class="auto-style41">
-                    <img src="images/Shopping/Cleansing/Shopping_Menu_FackOff.png" /></td>
-                <td class="auto-style38">
-                    <img src="images/Shopping/Cleansing/Shopping_Menu_MakeupOff.png" /></td>
-                <td class="auto-style41">
-                    <img src="images/Shopping/Cleansing/Shopping_Menu_BodyHairOff.png" /></td>
-                <td class="auto-style39">
-                    <img src="images/Shopping/Cleansing/Shopping_Menu_ManOff.png" /></td>
-                <td class="auto-style39">
-                    <img src="images/Shopping/Cleansing/Shopping_Menu_bloOff.png" /></td>
-                <td class="auto-style31" rowspan="4"></td>
-                <td rowspan="9" class="auto-style32"></td>
+            <td class="tdfix" rowspan="11">
+                <img alt="" class="style16" src="Images/Shopping/Shop/Shopping_BlankLeft.png" /></td>
+            <td class="style20">
+                <img alt="" class="style17" 
+                    src="Images/Shopping/Shop/Shopping_BlankCenter1.png" /></td>
+            <td class="tdfix" rowspan="11">
+                <img alt="" class="style18" 
+                    src="Images/Shopping/Shop/Shopping_BlankRight.png" /></td>
             </tr>
             <tr>
-                <td class="auto-style28">&nbsp;</td>
-                <td class="auto-style36">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td class="auto-style36">&nbsp;</td>
-                <td>&nbsp;</td>
-                <td class="auto-style37">&nbsp;</td>
-                <td class="auto-style37">&nbsp;</td>
+            <td class="style20">
+                <asp:ImageButton ID="imageButtonMenu1Cleansing" runat="server" 
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_CleansingOn.png" OnClick="imageButtonMenu1Cleansing_Click" />
+                &nbsp;&nbsp;
+                <asp:ImageButton ID="imageButtonMenu1SkinCare" runat="server" 
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_SkinCareOff.png" OnClick="imageButtonMenu1SkinCare_Click" />
+                &nbsp;&nbsp;
+                <asp:ImageButton ID="imageButtonMenu1PackMask" runat="server" 
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_PackMaskOff.png" OnClick="imageButtonMenu1PackMask_Click" />
+                &nbsp;&nbsp;
+                <asp:ImageButton ID="imageButtonMenu1Makeup" runat="server" 
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_MakeupOff.png" OnClick="imageButtonMenu1Makeup_Click" />
+                &nbsp;&nbsp;
+                <asp:ImageButton ID="imageButtonMenu1Bodyhair" runat="server" 
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_BodyHairOff.png" OnClick="imageButtonMenu1Bodyhair_Click" />
+                &nbsp;&nbsp;
+                <asp:ImageButton ID="imageButtonMenu1Man" runat="server" 
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_ManOff.png" OnClick="imageButtonMenu1Man_Click" />
+                &nbsp;&nbsp;
+                <asp:ImageButton ID="imageButtonMenu1Blo" runat="server" 
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_bloOff.png" OnClick="imageButtonMenu1Blo_Click" />
+                </td>
             </tr>
             <tr>
-                <td class="auto-style28">
-                    <img src="images/Shopping/Cleansing/Shopping_Cleansing_Menu2_allOn.png" /></td>
-                <td class="auto-style36">
-                    <img src="images/Shopping/Cleansing/Shopping_Cleansing_Menu2_CleansingOff.png" /></td>
-                <td>
-                    <img src="images/Shopping/Cleansing/Shopping_Cleansing_Menu2_CleansingCreamOff.png" /></td>
-                <td class="auto-style36">
-                    <img src="images/Shopping/Cleansing/Shopping_Cleansing_Menu2_CleansingOilOff.png" /></td>
-                <td>
-                    <img src="images/Shopping/Cleansing/Shopping_Cleansing_Menu2_CleansingJellOff.png" /></td>
-                <td class="auto-style37">
-                    <img src="images/Shopping/Cleansing/Shopping_Cleansing_Menu2_CleansingJTisueOff.png" /></td>
-                <td class="auto-style37">
-                    <img src="images/Shopping/Cleansing/Shopping_Cleansing_Menu2_CleansingJETCOff.png" /></td>
+            <td class="style20">
+                <img alt="" class="style21" 
+                    src="Images/Shopping/Shop/Shopping_BlankCenter2.png" /></td>
             </tr>
             <tr>
-                <td class="auto-style33"></td>
-                <td class="auto-style38"></td>
-                <td class="auto-style41"></td>
-                <td class="auto-style38"></td>
-                <td class="auto-style41"></td>
-                <td class="auto-style39"></td>
-                <td class="auto-style39"></td>
+            <td class="style20">
+                <asp:ImageButton ID="imageButtonMenu2All" runat="server"
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Cleansing_Menu2_allOn.png" />
+                <asp:ImageButton ID="imageButtonMenu2Foam" runat="server" 
+                    
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Cleansing_Menu2_CleansingFoamOff.png" />
+                <asp:ImageButton ID="imageButtonMenu2Cream" runat="server" 
+                    
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Cleansing_Menu2_CleansingCreamOff.png" />
+                <asp:ImageButton ID="imageButtonMenu2Oil" runat="server" 
+                    
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Cleansing_Menu2_CleansingOilOff.png" />
+                <asp:ImageButton ID="imageButtonMenu2Jel" runat="server" 
+                    
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Cleansing_Menu2_CleansingJellOff.png" />
+                <asp:ImageButton ID="imageButtonMenu2Tissue" runat="server" 
+                    
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Cleansing_Menu2_CleansingTisueOff.png" />
+                <asp:ImageButton ID="imageButtonMenu2Etc" runat="server" 
+                    
+                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Cleansing_Menu2_CleansingETCOff.png" />
+                </td>
             </tr>
             <tr>
-                <td colspan="7" rowspan="5">&nbsp;</td>
-                <td class="auto-style31">
-                    <img src="images/Shopping/Cleansing/Shopping_Cleansing_side_MEN`s%20SHOP.png" /></td>
+            <td class="style20">
+                <img alt="" class="style22" 
+                    src="Images/Shopping/Shop/Shopping_BlankCenter3.png" /></td>
             </tr>
             <tr>
-                <td class="auto-style31">
-                    <img src="images/Shopping/Cleansing/Shopping_Cleansing_side_NEW%20PRODUCT.png" /></td>
+            <td class="style20">
+                <img alt="" class="style23" 
+                    src="Images/Shopping/Cleansing/Shopping_Cleansing_WeeklyHotNine.png" /><img 
+                    alt="" class="style24" 
+                    src="Images/Shopping/Cleansing/Shopping_Cleansing_WeeklyMenu.png" /></td>
             </tr>
             <tr>
-                <td class="auto-style31">
-                    <img src="images/Shopping/Cleansing/Shopping_Cleansing_side_PRODUCT%20LINE.png" /></td>
+            <td class="style20">
+                <img alt="" class="style25" 
+                    src="Images/Shopping/Shop/Shopping_BlankCenter4.png" /></td>
             </tr>
             <tr>
-                <td class="auto-style31">
-                    <img src="images/Shopping/Cleansing/Shopping_Cleansing_side_ONLY%20ONLINE.png" /></td>
+            <td class="style20">
+                <asp:ImageButton ID="imageButtonOrderNew" runat="server" 
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_Order_NewOn.png" />
+                <asp:ImageButton ID="imageButtonOrderSell" runat="server" 
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_Order_SellOff.png" />
+                <asp:ImageButton ID="imageButtonOrderComment" runat="server" 
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_Order_CommentOff.png" />
+                <asp:ImageButton ID="imageButtonOrderLowPrice" runat="server" 
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_Order_LowPriceOff.png" />
+                <asp:ImageButton ID="imageButtonOrderHighPrice" runat="server" 
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_Order_HighPriceOff.png" />
+                </td>
             </tr>
             <tr>
-                <td class="auto-style48">
-                    <img src="images/Shopping/Cleansing/Shopping_Cleansing_side_SHOPPING%20AWARD.png" /></td>
+            <td class="auto-style1">
+                <table class="style26">
+                    <tr>
+                        <td class="Itemtd">
+                            <div>
+                                <asp:ImageButton ID="imgButtonFirst" runat="server"  OnClick="imageButtonFirst_Click" />
+                                <br/>
+
+                                <br />
+                                <table class="ItemlabelTable">
+                                    <tr>
+                                        <td class="auto-style2">
+                                            <asp:Label ID="labelFirstItemName" runat="server" Text="제주 탄산 폼클렌저"></asp:Label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="auto-style2">
+                                            <asp:Label ID="labelFirstItemPrice" runat="server" Text="12,000원"></asp:Label>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </td>
+                        <td class="Itemtd">
+                            <div>
+                                <asp:ImageButton ID="imgButtonSecond" runat="server"  OnClick="imageButtonFirst_Click" />
+                                <br/>
+
+                                <br />
+                                <table class="ItemlabelTable">
+                                    <tr>
+                                        <td class="Itemlabeltd">
+                                            <asp:Label ID="labelSecondItemName" runat="server" Text="제주 탄산 폼클렌저"></asp:Label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="Itemlabeltd">
+                                            <asp:Label ID="labelSecondItemPrice" runat="server" Text="12,000원"></asp:Label>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </td>
+                        <td class="Itemtd">
+                            <div>
+                                <asp:ImageButton ID="imgButtonThird" runat="server"  OnClick="imageButtonFirst_Click" />
+                                <br/>
+
+                                <br />
+                                <table class="ItemlabelTable">
+                                    <tr>
+                                        <td class="Itemlabeltd">
+                                            <asp:Label ID="labelThirdItemName" runat="server" Text="제주 탄산 폼클렌저"></asp:Label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="Itemlabeltd">
+                                            <asp:Label ID="labelThirdItemPrice" runat="server" Text="12,000원"></asp:Label>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </td>
+                        <td class="Itemtd">
+                            <div>
+                                <asp:ImageButton ID="imgButtonForth" runat="server"  OnClick="imageButtonFirst_Click" />
+                                <br/>
+
+                                <br />
+                                <table class="ItemlabelTable">
+                                    <tr>
+                                        <td class="Itemlabeltd">
+                                            <asp:Label ID="labelForthItemName" runat="server" Text="제주 탄산 폼클렌저"></asp:Label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="Itemlabeltd">
+                                            <asp:Label ID="labelForthItemPrice" runat="server" Text="12,000원"></asp:Label>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="Itemtd">
+                            &nbsp;</td>
+                        <td class="Itemtd">
+                            &nbsp;</td>
+                        <td class="Itemtd">
+                            &nbsp;</td>
+                        <td class="Itemtd">
+                            &nbsp;</td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+            <tr>
+            <td class="style20">
+                <img alt="" class="style27" 
+                    src="Images/Shopping/Shop/Shopping_BottomLine.png" /></td>
+            </tr>
+            <tr>
+            <td class="style20">
+                <asp:ImageButton ID="ImageButton31" runat="server" 
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_ButtonLeftEnd.png" />
+                <asp:ImageButton ID="ImageButton32" runat="server" 
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_ButtonLeft.png" />
+&nbsp;1 2 3
+                <asp:ImageButton ID="ImageButton33" runat="server" 
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_ButtonRight.png" />
+                <asp:ImageButton ID="ImageButton34" runat="server" 
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_ButtonRightEnd.png" />
+                </td>
             </tr>
             </table>
-        <br />
-    
+            <br />
+        <img alt="" class="style14" 
+            src="Images/Shopping/Shop/Shopping_bottom.png" />
     </div>
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style77" rowspan="10"></td>
-                <td class="auto-style87">기능별 검색</td>
-                <td class="auto-style87">
-                    <asp:CheckBox ID="CheckBox1" runat="server" Text="보습/수분" />
-                </td>
-                <td class="auto-style87">
-                    <asp:CheckBox ID="CheckBox2" runat="server" Text="탄력강화/주름개선" />
-                </td>
-                <td class="auto-style82">
-                    <asp:CheckBox ID="CheckBox3" runat="server" Text="화이트닝/피부톤개선" />
-                </td>
-                <td class="auto-style82">
-                    <asp:CheckBox ID="CheckBox4" runat="server" Text="각질제거/피부결개선" />
-                </td>
-                <td class="auto-style83" rowspan="10"></td>
-            </tr>
-            <tr>
-                <td class="auto-style88">&nbsp;</td>
-                <td class="auto-style88">
-                    <asp:CheckBox ID="CheckBox8" runat="server" Text="피지/블랙헤드/모공" />
-                </td>
-                <td class="auto-style88">
-                    <asp:CheckBox ID="CheckBox7" runat="server" Text="트러블/여드름" />
-                </td>
-                <td class="auto-style89">
-                    <asp:CheckBox ID="CheckBox6" runat="server" Text="피부진정" />
-                </td>
-                <td class="auto-style89">
-                    <asp:CheckBox ID="CheckBox5" runat="server" Text="자외선차단" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style88">자연 성분별 검색</td>
-                <td class="auto-style88">
-                    <asp:CheckBox ID="CheckBox9" runat="server" Text="알로에" />
-                </td>
-                <td class="auto-style88">
-                    <asp:CheckBox ID="CheckBox10" runat="server" Text="그린티" />
-                </td>
-                <td class="auto-style89">
-                    <asp:CheckBox ID="CheckBox11" runat="server" Text="해양심층수" />
-                </td>
-                <td class="auto-style89">
-                    <asp:CheckBox ID="CheckBox12" runat="server" Text="자연발효" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style88">&nbsp;</td>
-                <td class="auto-style88">
-                    <asp:CheckBox ID="CheckBox16" runat="server" Text="스네일" />
-                </td>
-                <td class="auto-style88">
-                    <asp:CheckBox ID="CheckBox15" runat="server" Text="비베놈" />
-                </td>
-                <td class="auto-style89">
-                    <asp:CheckBox ID="CheckBox14" runat="server" Text="아르간" />
-                </td>
-                <td class="auto-style89">
-                    <asp:CheckBox ID="CheckBox13" runat="server" Text="콜라겐" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style88">&nbsp;</td>
-                <td class="auto-style88">
-                    <asp:CheckBox ID="CheckBox17" runat="server" Text="식물 줄기세포" />
-                </td>
-                <td class="auto-style88">
-                    <asp:CheckBox ID="CheckBox18" runat="server" Text="히비스커스" />
-                </td>
-                <td class="auto-style89">
-                    <asp:CheckBox ID="CheckBox19" runat="server" Text="바오밥" />
-                </td>
-                <td class="auto-style89">
-                    <asp:CheckBox ID="CheckBox20" runat="server" Text="시어버터" />
-                </td>
-            </tr>
-            <tr>
-                <td class="auto-style91"></td>
-                <td class="auto-style91">
-                    <asp:CheckBox ID="CheckBox21" runat="server" Text="한방" />
-                </td>
-                <td class="auto-style91"></td>
-                <td class="auto-style92"></td>
-                <td class="auto-style92"></td>
-            </tr>
-            <tr>
-                <td class="auto-style41" colspan="5"></td>
-            </tr>
-            <tr>
-                <td class="auto-style41" colspan="5"></td>
-            </tr>
-            <tr>
-                <td class="auto-style88">현재</td>
-                <td colspan="4">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style88">
-                    <img class="auto-style93" src="images/Shopping/Cleansing/Shopping_Cleansing2_NEW.png" /></td>
-                <td class="auto-style88">
-                    <img class="auto-style94" src="images/Shopping/Cleansing/Shopping_Cleansing2_SELL.png" /></td>
-                <td class="auto-style88">
-                    <img class="auto-style94" src="images/Shopping/Cleansing/Shopping_Cleansing2_COM.png" /></td>
-                <td class="auto-style89">
-                    <img class="auto-style94" src="images/Shopping/Cleansing/Shopping_Cleansing2_AEC.png" /></td>
-                <td class="auto-style89">
-                    <img class="auto-style94" src="images/Shopping/Cleansing/Shopping_Cleansing2_DEC.png" /></td>
-            </tr>
-            </table>
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style96" rowspan="6">&nbsp;</td>
-                <td class="auto-style101">
-                    <asp:ImageButton ID="ImageButton1" runat="server" Height="260px" ImageUrl="~/images/Item/Cleansing/00001/item.png" OnClick="ImageButton1_Click" Width="306px" />
-                </td>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style102">&nbsp;</td>
-                <td class="auto-style98" rowspan="6">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style102">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style102">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style102">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style102">&nbsp;</td>
-            </tr>
-            <tr>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style101">&nbsp;</td>
-                <td class="auto-style102">&nbsp;</td>
-            </tr>
-        </table>
     </form>
 </body>
 </html>

@@ -196,7 +196,7 @@
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="imgButtonJoin" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Signup.png" />
+                        ImageUrl="~/Images/Common/staticBanner_Top_Signup.png" OnClick="JoinButton_Click" />
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="ImageButton3" runat="server" 

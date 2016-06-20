@@ -86,7 +86,7 @@ public partial class ShoppingNew : System.Web.UI.Page
         return false;
     }
 
-    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    protected void imageButtonFirst_Click(object sender, ImageClickEventArgs e)
     {
         Response.Redirect(string.Format("Shopping_Item.aspx?itemNumber=00001"));
     }

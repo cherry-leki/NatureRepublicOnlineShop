@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,6 +23,51 @@ public partial class Login : System.Web.UI.Page
                 CheckboxID.Checked = true;
             }
         }
+    }
+
+    // Join Or Logout
+    protected void JoinButton_Click(object sender, ImageClickEventArgs e)
+    {
+        if (SessionRemove("MemberID"))
+        {
+            Response.Redirect("Home.aspx");
+        }
+
+        Response.Redirect("SignUpAgreement.aspx");
+    }
+
+
+    protected void imgButtonShopping_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Shopping.aspx");
+    }
+
+    private bool SessionExist(string SV)
+    {
+        IEnumerator SL = Session.GetEnumerator();
+        while (SL.MoveNext())
+        {
+            if (SL.Current.ToString() == SV)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private bool SessionRemove(string SV)
+    {
+        int i = 0;
+        IEnumerator SL = Session.GetEnumerator();
+        while (SL.MoveNext())
+        {
+            if (SL.Current.ToString() == SV)
+            {
+                Session.RemoveAll();
+                return true;
+            }
+        }
+        return false;
     }
 
     protected void ImgButtonLogin_Click(object sender, ImageClickEventArgs e)

@@ -34,19 +34,20 @@ public partial class Item : System.Web.UI.Page
         if (RecordData.ResultExist)
         {
             labelTitle.Text = sqlResult[0];
-            mainImage.ImageUrl = sqlResult[1] + "/" + Request["itemNumber"] + "/" + "item.png";
+            mainImage.ImageUrl = sqlResult[1] + "/main.jpg";
             labelPrice.Text = sqlResult[2];
             labelSize.Text = sqlResult[3];
             labelType.Text = sqlResult[4];
             labelPoint.Text = sqlResult[5];
 
-            imageCenter.ImageUrl = sqlResult[1] + "/" + Request["itemNumber"] + "/" + "center.jpg";
-            ImageBottom.ImageUrl = sqlResult[1] + "/" + Request["itemNumber"] + "/" + "bottom.jpg";
+            imageCenter.ImageUrl = sqlResult[1] + "/center.jpg";
+            ImageBottom.ImageUrl = sqlResult[1] + "/bottom.jpg";
 
 
             labelTitle_sumary.Text = labelTitle.Text;
             labelSize_samary.Text = labelSize.Text;
             labelDeadline.Text = sqlResult[6];
+            labelType_sumary.Text = sqlResult[4];
             labelMadeby.Text = sqlResult[7];
             labelmadeIn.Text = sqlResult[8];
         }
@@ -176,12 +177,20 @@ public partial class Item : System.Web.UI.Page
 
     protected void ImageButtonInInterest_Click(object sender, ImageClickEventArgs e)
     {
+        int counter = 0;
         DateTime time = DateTime.Now + new TimeSpan(30, 0, 0, 0);
 
         string sql;
+        sql = "SELECT interestNumber FROM tableInterest";
+        sql = sql + string.Format(" WHERE memberID = '{0}'", Session["MemberID"].ToString());
+
+        OleDbSqlServerQueryReader counterMethod = new OleDbSqlServerQueryReader(sql, 10);
+        counterMethod.RunQueryRow();
+        counter = counterMethod.Counter();
+
         sql = " INSERT INTO [NatureRepublicDB].[dbo].[tableInterest] ";
         sql = sql + " ([interestNumber], [memberID], [itemNumber], [itemDeadLine]) ";
-        sql = sql + string.Format(" VALUES ('{0}', '{1}', '{2}', '{3}')", "I1001", Session["MemberID"], Request["itemNumber"], time.ToString("yyyy-MM-dd"));
+        sql = sql + string.Format(" VALUES ('{0}', '{1}', '{2}', '{3}')", "I000" + (counter + 1), Session["MemberID"], Request["itemNumber"], time.ToString("yyyy-MM-dd"));
 
         OleDbSqlServerQueryRun recordData = new OleDbSqlServerQueryRun(sql);
         recordData.RunNonQuery();
@@ -196,5 +205,15 @@ public partial class Item : System.Web.UI.Page
             MessageBox.Show("관심상품 등록에 오류가 발생했습니다.", this);
             return;
         }
+    }
+
+    protected void imgButtonPurchase_Click(object sender, ImageClickEventArgs e)
+    {
+        string buf = "";
+
+        buf = labelTitle.Text + "-" + labelPrice.Text + "-" + textBoxCounter.Text + "@";
+
+        Session.Add("PurchaseItem", buf);
+        Response.Redirect("Purchase.aspx");
     }
 }

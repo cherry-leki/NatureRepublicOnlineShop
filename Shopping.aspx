@@ -420,7 +420,7 @@
                         </td>
                         <td class="Itemtd">
                             <div>
-                                <asp:ImageButton ID="imgButtonSecond" runat="server"  OnClick="imageButtonFirst_Click" />
+                                <asp:ImageButton ID="imgButtonSecond" runat="server"  OnClick="imageButtonSecond_Click" />
                                 <br/>
 
                                 <br />
@@ -441,7 +441,7 @@
                         </td>
                         <td class="Itemtd">
                             <div>
-                                <asp:ImageButton ID="imgButtonThird" runat="server"  OnClick="imageButtonFirst_Click" />
+                                <asp:ImageButton ID="imgButtonThird" runat="server"  OnClick="imageButtonThird_Click" />
                                 <br/>
 
                                 <br />
@@ -462,7 +462,7 @@
                         </td>
                         <td class="Itemtd">
                             <div>
-                                <asp:ImageButton ID="imgButtonForth" runat="server"  OnClick="imageButtonFirst_Click" />
+                                <asp:ImageButton ID="imgButtonForth" runat="server"  OnClick="imageButtonForth_Click" />
                                 <br/>
 
                                 <br />

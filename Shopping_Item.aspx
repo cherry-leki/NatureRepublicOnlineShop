@@ -96,12 +96,6 @@
         .auto-style31 {
             width: 90px;
         }
-        .auto-style32 {
-            width: 82px;
-        }
-        .auto-style33 {
-            width: 1254px;
-        }
         .style1
         {
             width: 100%;
@@ -137,6 +131,9 @@
         .auto-style37 {
             width: 170px;
             height: 20px;
+        }
+        .auto-style39 {
+            height: 45px;
         }
     </style>
 </head>
@@ -219,7 +216,7 @@
         <tr>
             <td class="auto-style3" colspan="4" style="text-align:center">
                 <asp:ImageButton ID="imgButtonInBacket" runat="server" ImageUrl="~/images/Item/item_inBaket.png" OnClick="imgButtonInBacket_Click" />
-&nbsp;<asp:ImageButton ID="imgButtonPurchase" runat="server" ImageUrl="~/images/Item/item_inBuy.png" />
+&nbsp;<asp:ImageButton ID="imgButtonPurchase" runat="server" ImageUrl="~/images/Item/item_inBuy.png" OnClick="imgButtonPurchase_Click" />
 &nbsp;<asp:ImageButton ID="ImageButtonInInterest" runat="server" ImageUrl="~/images/Item/item_inInterest.png" OnClick="ImageButtonInInterest_Click" />
             </td>
         </tr>
@@ -431,6 +428,17 @@
             </tr>
         </table>
         <br />
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style30" rowspan="3">&nbsp;</td>
+                
+                <td class="auto-style39" style="text-align:center">
+                    <asp:Image ID="Image2" runat="server" Height="232px" ImageUrl="~/images/Item/Exfire.png" Width="1166px" />
+                </td>
+                <td class="auto-style18" rowspan="3">&nbsp;</td>
+            </tr>
+        </table>
+        <br />
         <br />
         <table class="auto-style1">
             <tr>
@@ -496,6 +504,19 @@
                 <td class="auto-style18" rowspan="3">&nbsp;</td>
             </tr>
         </table>
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style30" rowspan="3">&nbsp;</td>
+                <td class="auto-style39" style="text-align:center">
+                    <asp:Image ID="Image1" runat="server" Width="1009px" Height="799px" ImageUrl="~/images/Item/purchase.png" />
+                </td>
+                <td class="auto-style18" rowspan="3">&nbsp;</td>
+            </tr>
+        </table>
     </form>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
 </body>
 </html>

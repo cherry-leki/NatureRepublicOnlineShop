@@ -262,17 +262,35 @@
             </tr>
             <tr>
             <td class="auto-style1">
+<<<<<<< HEAD
                 <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px" BorderColor="White" BorderStyle="None" BorderWidth="0px" Height="107px">
+=======
+                <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" 
+                    CssClass="auto-style2" Width="782px" BorderColor="White" BorderStyle="None" 
+                    BorderWidth="0px">
+>>>>>>> d876d7eacc8ac79008a1fba1091c955438ec3e1b
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:CheckBox ID="checkBox" runat="server" />
                             </ItemTemplate>
+<<<<<<< HEAD
                             <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="50px" />
+=======
+                            <ItemStyle Width="54px" />
+>>>>>>> d876d7eacc8ac79008a1fba1091c955438ec3e1b
                         </asp:TemplateField>
                         <asp:BoundField DataField="itemName" SortExpression="itemName">
-                        <ItemStyle Width="400px" />
+                        <ItemStyle Width="407px" />
                         </asp:BoundField>
+                        <asp:BoundField DataField="itemPrice" SortExpression="itemPrice" >
+                        <ItemStyle Width="78px" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="basketCount" SortExpression="basketCount" >
+
+                        <ItemStyle Width="78px" />
+                        </asp:BoundField>
+<<<<<<< HEAD
                         <asp:BoundField DataField="itemPrice" SortExpression="itemPrice" >
                         <ItemStyle Font-Size="Small" Width="80px" />
                         </asp:BoundField>
@@ -280,19 +298,29 @@
 
                         <ItemStyle Font-Size="Small" Width="80px" />
                         </asp:BoundField>
+=======
+>>>>>>> d876d7eacc8ac79008a1fba1091c955438ec3e1b
 
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:Label ID="labelTotalPrice" runat="server" Text="Label"></asp:Label>
                             </ItemTemplate>
+<<<<<<< HEAD
                             <ItemStyle Font-Size="Small" Width="80px" />
+=======
+                            <ItemStyle Width="79px" />
+>>>>>>> d876d7eacc8ac79008a1fba1091c955438ec3e1b
                         </asp:TemplateField>
 
                          <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:Label ID="labelPoint" runat="server" Text="Label"></asp:Label>
                             </ItemTemplate>
+<<<<<<< HEAD
                              <ItemStyle Font-Size="Small" Width="80px" />
+=======
+                             <ItemStyle Width="78px" />
+>>>>>>> d876d7eacc8ac79008a1fba1091c955438ec3e1b
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>

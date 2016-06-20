@@ -247,15 +247,21 @@
             <tr>
             <td class="style30">
                 <img alt="" class="style26" src="Images/Interest/Interest_InterestEmpty.png" /><br />
-                <asp:GridView ID="gridViewInterest" runat="server" AutoGenerateColumns="False" DataSourceID="sdsSource">
+                <asp:GridView ID="gridViewInterest" runat="server" AutoGenerateColumns="False" 
+                    DataSourceID="sdsSource" Width="785px">
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:CheckBox ID="CheckBox1" runat="server" />
                             </ItemTemplate>
+                            <ItemStyle Width="59px" />
                         </asp:TemplateField>
-                        <asp:BoundField DataField="itemName" HeaderText="itemName" SortExpression="itemName" />
-                        <asp:BoundField DataField="itemPrice" HeaderText="itemPrice" SortExpression="itemPrice" />
+                        <asp:BoundField DataField="itemName" SortExpression="itemName" >
+                        <ItemStyle Width="435px" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="itemPrice" SortExpression="itemPrice" >
+                        <ItemStyle Width="96px" />
+                        </asp:BoundField>
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:ImageButton ID="ImageButton1" runat="server" />

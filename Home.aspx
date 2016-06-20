@@ -127,7 +127,7 @@
         }
         .style19
         {
-            width: 100%;
+            width: 1583px;
             height:668px;
             background : url("Images/Home/Home_bottom_background.png");
             margin-left:-6px;

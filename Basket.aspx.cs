@@ -24,16 +24,14 @@ public partial class Basket : System.Web.UI.Page
             return;
         }
 
-        
+
         if(!IsPostBack)
         {
-
             gridViewBasket.DataSource = sdsSource;
             gridViewBasket.DataBind();
 
             foreach (GridViewRow row in gridViewBasket.Rows)
             {
-                
                 CheckBox chkRow = (row.Cells[0].FindControl("checkBox") as CheckBox);
                 Label labelTotalPrice = (row.Cells[4].FindControl("labelTotalPrice") as Label);
                 Label labelPoint = (row.Cells[5].FindControl("labelPoint") as Label);
@@ -41,9 +39,7 @@ public partial class Basket : System.Web.UI.Page
                 labelTotalPrice.Text = (Convert.ToInt32(row.Cells[2].Text) * Convert.ToInt32(row.Cells[3].Text)).ToString();
                 labelPoint.Text = (Convert.ToInt32(row.Cells[2].Text) / 10).ToString();
             }
-
         }
-        
     }
 
     protected void LoginButton_Click(object sender, ImageClickEventArgs e)
@@ -132,5 +128,57 @@ public partial class Basket : System.Web.UI.Page
 
         Session.Add("PurchaseItem", buf);
         Response.Redirect("Purchase.aspx");
+    }
+
+    protected void imageButtonDelete_Click(object sender, ImageClickEventArgs e)
+    {
+        int deleteCounter = 0;
+        int counter = 0;
+        string sql;
+
+        foreach (GridViewRow row in gridViewBasket.Rows)
+        {
+            counter++;
+            sql = "";
+            CheckBox chkRow = (row.Cells[0].FindControl("checkBox") as CheckBox);
+
+            if (chkRow.Checked)
+            {
+                sql = "DELETE from tableBasket";
+                sql = sql + string.Format(" WHERE ([memberID] = '{0}' AND[basketNumber] = '{1}') ", Session["MemberID"].ToString(), "B000" + counter);
+
+                OleDbSqlServerQueryRun recorddata = new OleDbSqlServerQueryRun(sql);
+                recorddata.RunNonQuery();
+            }
+        }
+
+        sql = "SELECT basketNumber FROM tableBasket";
+        sql = sql + string.Format(" WHERE memberID = '{0}'", Session["MemberID"].ToString());
+
+        OleDbSqlServerQueryReader counterMethod = new OleDbSqlServerQueryReader(sql, 10);
+        string[] strResult = counterMethod.RunQueryRow();
+        counter = counterMethod.Counter();
+
+        
+        for(int i = 1; i <= counter; i++)
+        {
+            int Ccounter = 0;
+            for(;Ccounter < 10;Ccounter++)
+            {
+                if(strResult[i-1].Equals("B000"+Ccounter))
+                {
+                    sql = " UPDATE [NatureRepublicDB].[dbo].[tableBasket] SET ";
+                    sql = sql + string.Format("[basketNumber] = '{0}'", "B000" + i);
+                    sql = sql + string.Format(" WHERE memberID = '{0}' AND basketNumber = '{1}'", Session["MemberID"].ToString(), strResult[i-1]);
+
+                    OleDbSqlServerQueryRun recordData = new OleDbSqlServerQueryRun(sql);
+                    recordData.RunNonQuery();
+
+                    break;
+                }
+            }
+        }
+
+        Response.Redirect("Basket.aspx");
     }
 }

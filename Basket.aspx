@@ -262,33 +262,41 @@
             </tr>
             <tr>
             <td class="auto-style1">
-                <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px" BorderColor="White" BorderStyle="None" BorderWidth="0px">
+                <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px" BorderColor="White" BorderStyle="None" BorderWidth="0px" Height="107px">
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:CheckBox ID="checkBox" runat="server" />
                             </ItemTemplate>
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="50px" />
                         </asp:TemplateField>
                         <asp:BoundField DataField="itemName" SortExpression="itemName">
                         <ItemStyle Width="400px" />
                         </asp:BoundField>
-                        <asp:BoundField DataField="itemPrice" SortExpression="itemPrice" />
-                        <asp:BoundField DataField="basketCount" SortExpression="basketCount" />
+                        <asp:BoundField DataField="itemPrice" SortExpression="itemPrice" >
+                        <ItemStyle Font-Size="Small" Width="80px" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="basketCount" SortExpression="basketCount" >
+
+                        <ItemStyle Font-Size="Small" Width="80px" />
+                        </asp:BoundField>
 
                         <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:Label ID="labelTotalPrice" runat="server" Text="Label"></asp:Label>
                             </ItemTemplate>
+                            <ItemStyle Font-Size="Small" Width="80px" />
                         </asp:TemplateField>
 
                          <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:Label ID="labelPoint" runat="server" Text="Label"></asp:Label>
                             </ItemTemplate>
+                             <ItemStyle Font-Size="Small" Width="80px" />
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
-                <asp:SqlDataSource ID="sdsSource" runat="server" ConnectionString="<%$ ConnectionStrings:NatureRepublicDBConnectionString %>" SelectCommand="SELECT tableItem.itemPrice, tableItem.itemName, tableBasket.memberID, tableBasket.basketCount FROM tableItem INNER JOIN tableBasket ON tableItem.itemNumber = tableBasket.itemNumber WHERE (tableBasket.memberID = @Param1)">
+                <asp:SqlDataSource ID="sdsSource" runat="server" ConnectionString="<%$ ConnectionStrings:NatureRepublicDBConnectionString %>" SelectCommand="SELECT tableItem.itemPrice, tableItem.itemName, tableBasket.memberID, tableBasket.basketCount, tableBasket.basketNumber FROM tableItem INNER JOIN tableBasket ON tableItem.itemNumber = tableBasket.itemNumber WHERE (tableBasket.memberID = @Param1)" >
                     <SelectParameters>
                         <asp:SessionParameter Name="Param1" SessionField="MemberID" />
                     </SelectParameters>
@@ -302,7 +310,7 @@
             <tr>
             <td class="bottombutton">
                 <asp:ImageButton ID="imageButtonDelete" runat="server" 
-                    ImageUrl="~/Images/Basket/Basket_DeleteButton.png" style="text-align: right" />
+                    ImageUrl="~/Images/Basket/Basket_DeleteButton.png" style="text-align: right" OnClick="imageButtonDelete_Click" />
 &nbsp;&nbsp;
                 <asp:ImageButton ID="imageButtonPurchaseAll" runat="server" 
                     ImageUrl="~/Images/Basket/Basket_PurchaseAll.png" />

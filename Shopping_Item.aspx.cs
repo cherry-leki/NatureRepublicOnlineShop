@@ -123,12 +123,21 @@ public partial class Item : System.Web.UI.Page
 
     protected void imgButtonInBacket_Click(object sender, ImageClickEventArgs e)
     {
+        int counter = 0;
         DateTime time = DateTime.Now + new TimeSpan(7, 0, 0, 0);
-     
+
         string sql;
+
+        sql = "SELECT basketNumber FROM tableBasket";
+        sql = sql + string.Format(" WHERE memberID = '{0}'", Session["MemberID"].ToString());
+
+        OleDbSqlServerQueryReader counterMethod = new OleDbSqlServerQueryReader(sql, 10);
+        counterMethod.RunQueryRow();
+        counter = counterMethod.Counter();
+
         sql = " INSERT INTO [NatureRepublicDB].[dbo].[tableBasket] ";
         sql = sql + " ([basketNumber], [memberID], [itemNumber], [basketCount], [basketDeadline]) ";
-        sql = sql + string.Format(" VALUES ('{0}', '{1}', '{2}', {3}, '{4}')", "B1001", Session["MemberID"], Request["itemNumber"], textBoxCounter.Text, time.ToString("yyyy-MM-dd"));
+        sql = sql + string.Format(" VALUES ('{0}', '{1}', '{2}', {3}, '{4}')", "B000" + (counter + 1), Session["MemberID"], Request["itemNumber"], textBoxCounter.Text, time.ToString("yyyy-MM-dd"));
 
         OleDbSqlServerQueryRun recordData = new OleDbSqlServerQueryRun(sql);
         recordData.RunNonQuery();

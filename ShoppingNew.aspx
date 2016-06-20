@@ -391,7 +391,8 @@
                     <tr>
                         <td class="Itemtd">
                             <div>
-                                <img src="Images/Shopping/Cleansing/Shopping_Cleansing_Item_JejuSparklingFoamCleanser.png" />
+                                <asp:ImageButton ID="imageButton00001" runat="server" 
+                                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Cleansing_Item_JejuSparklingFoamCleanser.png" />
                                 <br/>
 
                                 <br />

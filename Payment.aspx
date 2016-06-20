@@ -184,6 +184,9 @@
             top:65px;
             left:-5px;
         }
+        .auto-style2 {
+            margin-left: 6px;
+        }
         </style>
 </head>
 <body>
@@ -284,7 +287,28 @@
             </tr>
             <tr>
             <td>
-                <img alt="" class="style26" src="Images/Payment/Payment_Orderlist.png" /></td>
+                <br />
+                <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px">
+                    <Columns>
+                         <asp:BoundField DataField="Name" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                         </asp:BoundField>
+                         <asp:BoundField DataField="Price" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                         </asp:BoundField>
+                         <asp:BoundField DataField="Count" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                         </asp:BoundField>
+                         <asp:BoundField DataField="TotalPrice" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                         </asp:BoundField>
+                         <asp:BoundField DataField="Point" ItemStyle-Width="150" >
+<ItemStyle Width="150px"></ItemStyle>
+                         </asp:BoundField>
+                    </Columns>
+                </asp:GridView>
+                <br />
+                </td>
             </tr>
             <tr>
             <td>
@@ -296,14 +320,14 @@
             <td>
                 <img alt="" class="style28" src="Images/Payment/Payment_OrderInfo.png" /><br />
                 <div class="bottombutton">
-                <asp:ImageButton ID="ImageButton12" runat="server" 
-                    ImageUrl="~/Images/Payment/Payment_Paybutton.png" />
-&nbsp;<asp:ImageButton ID="ImageButton13" runat="server" 
-                    ImageUrl="~/Images/Payment/Payment_Backbutton.png" />
+                <asp:ImageButton ID="imgButtonPay" runat="server" 
+                    ImageUrl="~/Images/Payment/Payment_Paybutton.png" OnClick="imgButtonPay_Click" />
+&nbsp;<asp:ImageButton ID="imgButtonBefore" runat="server" 
+                    ImageUrl="~/Images/Payment/Payment_Backbutton.png" OnClick="imgButtonBefore_Click" />
                     </div>
                 <br />
                 <div class="paymentform">
-                <asp:TextBox ID="textBoxUsePoint" runat="server"></asp:TextBox>
+                <asp:TextBox ID="textBoxUsePoint" runat="server" AutoPostBack="True" OnTextChanged="textBoxUsePoint_TextChanged"></asp:TextBox>
                 <asp:Label ID="labelPoint" runat="server" Text="1000" ForeColor="#E89748"></asp:Label>
                 <br />
                 <div class="Price">
@@ -313,7 +337,7 @@
                 <br />
                 <div class="radiobutton">
                     <asp:RadioButton ID="radioButtonCard" runat="server" GroupName="Payment" 
-                        Text="신용카드"/>
+                        Text="신용카드" Checked="True"/>
 &nbsp;
                     <asp:RadioButton ID="radioButtonVirtual" runat="server" GroupName="Payment" 
                         Text="무통장입금(가상계좌)" />

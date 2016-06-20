@@ -24,24 +24,6 @@ public partial class Basket : System.Web.UI.Page
             return;
         }
 
-        //string sql1;
-        //sql1 = " SELECT basketNumber";
-        //sql1 = sql1 + " FROM tableBasket";
-        //sql1 = sql1 + string.Format(" WHERE  (memberID = '{0}')", Session["MemberID"].ToString());
-        //OleDbSqlServerQueryReader writing = new OleDbSqlServerQueryReader(sql1, 10);
-        //writing.RunQueryRow();
-        //int counter = writing.Counter();
-
-
-        //string sql;
-        //sql = " SELECT itemImage, itemName, itemPrice, basketCount, basketDeadline";
-        //sql = sql + " FROM tableBasket INNER JOIN tableItem ON tableBasket.itemNumber = tableItem.itemNumber";
-        //sql = sql + string.Format(" WHERE  (tableBasket.memberID = '{0}')", Session["MemberID"].ToString());
-
-        //string[] sqlResult;
-
-        //OleDbSqlServerQueryReader RecordData = new OleDbSqlServerQueryReader(sql, 5);
-        //sqlResult = RecordData.RunQueryCol();
         
         if(!IsPostBack)
         {
@@ -147,6 +129,7 @@ public partial class Basket : System.Web.UI.Page
                  buf = buf + row.Cells[1].Text + "-" + row.Cells[2].Text + "-" +row.Cells[3].Text + "@";
             }
         }
+
         Session.Add("PurchaseItem", buf);
         Response.Redirect("Purchase.aspx");
     }

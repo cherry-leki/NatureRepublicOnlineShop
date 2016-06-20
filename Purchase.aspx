@@ -220,6 +220,9 @@
         .auto-style2 {
             margin-left: 6px;
         }
+        .auto-style3 {
+            height: 22px;
+        }
         </style>
 </head>
 <body>
@@ -322,7 +325,7 @@
             </tr>
             <tr>
             <td>
-                <img alt="" class="style26" src="Images/Purchase/Purchase_Demo.png" /><br />
+                <br />
                 <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px">
                     <Columns>
                          <asp:BoundField DataField="Name" ItemStyle-Width="150" >
@@ -362,12 +365,12 @@
                 <br />
                 <table class="DeliveryAddressRadioButton">
                     <tr>
-                        <td>
+                        <td class="auto-style3">
                             <asp:RadioButton ID="radioButtonIdentical" runat="server" 
-                                GroupName="DeliveryAddress" Text="주문 고객과 동일한 주소" checked/>
+                                GroupName="DeliveryAddress" Text="주문 고객과 동일한 주소"  OnCheckedChanged ="Delivery_checkedChanged" checked AutoPostBack="True"/>
 &nbsp;&nbsp;
                             <asp:RadioButton ID="radioButtonNew" runat="server" GroupName="DeliveryAddress" 
-                                Text="새로운 배송지" />
+                                Text="새로운 배송지" OnCheckedChanged ="Delivery_checkedChanged" AutoPostBack="True"/>
                         </td>
                     </tr>
                 </table>
@@ -418,7 +421,7 @@
             <tr>
             <td class="PurchaseButton">
                 <asp:ImageButton ID="imageButtonPay" runat="server" 
-                    ImageUrl="~/Images/Purchase/Purchase_Paybutton.png" />
+                    ImageUrl="~/Images/Purchase/Purchase_Paybutton.png" OnClick="imageButtonPay_Click" />
                 &nbsp;<asp:ImageButton ID="imageButtonBack" runat="server" 
                     ImageUrl="~/Images/Purchase/Purchase_Backbutton.png" />
             </td>

@@ -262,9 +262,7 @@
             </tr>
             <tr>
             <td class="auto-style1">
-                <img alt="" class="style26" src="Images/Basket/Basket_BasketEmpty.png" id="basketBlank" /><br />
-                <br />
-                <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px">
+                <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px" BorderColor="White" BorderStyle="None" BorderWidth="0px">
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
@@ -290,7 +288,6 @@
                         </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
-                <br />
                 <asp:SqlDataSource ID="sdsSource" runat="server" ConnectionString="<%$ ConnectionStrings:NatureRepublicDBConnectionString %>" SelectCommand="SELECT tableItem.itemPrice, tableItem.itemName, tableBasket.memberID, tableBasket.basketCount FROM tableItem INNER JOIN tableBasket ON tableItem.itemNumber = tableBasket.itemNumber WHERE (tableBasket.memberID = @Param1)">
                     <SelectParameters>
                         <asp:SessionParameter Name="Param1" SessionField="MemberID" />

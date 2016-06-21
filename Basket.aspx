@@ -318,11 +318,11 @@
                     ImageUrl="~/Images/Basket/Basket_DeleteButton.png" style="text-align: right" OnClick="imageButtonDelete_Click" />
 &nbsp;&nbsp;
                 <asp:ImageButton ID="imageButtonPurchaseAll" runat="server" 
-                    ImageUrl="~/Images/Basket/Basket_PurchaseAll.png" />
+                    ImageUrl="~/Images/Basket/Basket_PurchaseAll.png" OnClick="imageButtonPurchaseAll_Click" />
                 <span class="style29">&nbsp;</span><asp:ImageButton ID="imageButtonPurchaseSelected" runat="server" 
                     ImageUrl="~/Images/Basket/Basket_PurchaseSelected.png" OnClick="imageButtonPurchaseSelected_Click" />
                 <span class="style29">&nbsp;</span><asp:ImageButton ID="imageButtonShopping" runat="server" 
-                    ImageUrl="~/Images/Basket/Basket_ShoppingButton.png" />
+                    ImageUrl="~/Images/Basket/Basket_ShoppingButton.png" OnClick="imageButtonShopping_Click" />
                 </td>
             </tr>
             </table>

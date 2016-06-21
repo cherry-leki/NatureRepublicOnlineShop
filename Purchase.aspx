@@ -292,7 +292,7 @@
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="ImageButton8" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Menu_Shopping.png" />
+                        ImageUrl="~/Images/Common/staticBanner_Menu_Shopping.png" OnClick="ImageButton8_Click" />
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="ImageButton9" runat="server" 
@@ -326,22 +326,23 @@
             <tr>
             <td>
                 <br />
-                <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px">
+                <asp:GridView ID="gridViewBasket" runat="server" AutoGenerateColumns="False" CssClass="auto-style2" Width="787px" BorderColor="White" BorderStyle="None" 
+                    BorderWidth="0px" >
                     <Columns>
                          <asp:BoundField DataField="Name" ItemStyle-Width="150" >
-<ItemStyle Width="150px"></ItemStyle>
+<ItemStyle Width="447px" HorizontalAlign="Right"></ItemStyle>
                          </asp:BoundField>
-                         <asp:BoundField DataField="Price" ItemStyle-Width="150" >
-<ItemStyle Width="150px"></ItemStyle>
+                         <asp:BoundField DataField="Price" ItemStyle-Width="150"  ItemStyle-HorizontalAlign="Right" >
+<ItemStyle Width="78px" Font-Size="Small" ></ItemStyle>
                          </asp:BoundField>
-                         <asp:BoundField DataField="Count" ItemStyle-Width="150" >
-<ItemStyle Width="150px"></ItemStyle>
+                         <asp:BoundField DataField="Count" ItemStyle-Width="150">
+<ItemStyle Width="78px" Font-Size="Small" HorizontalAlign="Right"></ItemStyle>
                          </asp:BoundField>
-                         <asp:BoundField DataField="TotalPrice" ItemStyle-Width="150" >
-<ItemStyle Width="150px"></ItemStyle>
+                         <asp:BoundField DataField="TotalPrice" ItemStyle-Width="150">
+<ItemStyle Width="78px" Font-Size="Small" HorizontalAlign="Right"></ItemStyle>
                          </asp:BoundField>
-                         <asp:BoundField DataField="Point" ItemStyle-Width="150" >
-<ItemStyle Width="150px"></ItemStyle>
+                         <asp:BoundField DataField="Point" ItemStyle-Width="150">
+<ItemStyle Width="78px" Font-Size="Small" HorizontalAlign="Right"></ItemStyle>
                          </asp:BoundField>
                     </Columns>
                 </asp:GridView>

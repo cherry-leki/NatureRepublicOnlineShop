@@ -37,30 +37,84 @@ public partial class ShoppingNew : System.Web.UI.Page
 
         if(Session["ShoppingList"].ToString().Equals("Cleansing"))
         {
+            imageButtonMenu1Cleansing.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_CleansingOn.png";
+            imageButtonMenu1SkinCare.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_SkinCareOff.png";
+            imageButtonMenu1PackMask.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_PackMaskOff.png";
+            imageButtonMenu1Makeup.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_MakeupOff.png";
+            imageButtonMenu1Bodyhair.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_BodyHairOff.png";
+            imageButtonMenu1Man.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_ManOff.png";
+            imageButtonMenu1Blo.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_bloOff.png";
+
             judge = "C";
         }
-        if (Session["ShoppingList"].ToString().Equals("Skin"))
+        else if(Session["ShoppingList"].ToString().Equals("Skin"))
         {
+            imageButtonMenu1Cleansing.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_CleansingOff.png";
+            imageButtonMenu1SkinCare.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_SkinCareOn.png";
+            imageButtonMenu1PackMask.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_PackMaskOff.png";
+            imageButtonMenu1Makeup.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_MakeupOff.png";
+            imageButtonMenu1Bodyhair.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_BodyHairOff.png";
+            imageButtonMenu1Man.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_ManOff.png";
+            imageButtonMenu1Blo.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_bloOff.png";
             judge = "S";
         }
-        if (Session["ShoppingList"].ToString().Equals("Pack"))
+        else if (Session["ShoppingList"].ToString().Equals("Pack"))
         {
+            imageButtonMenu1Cleansing.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_CleansingOff.png";
+            imageButtonMenu1SkinCare.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_SkinCareOff.png";
+            imageButtonMenu1PackMask.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_PackMaskOn.png";
+            imageButtonMenu1Makeup.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_MakeupOff.png";
+            imageButtonMenu1Bodyhair.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_BodyHairOff.png";
+            imageButtonMenu1Man.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_ManOff.png";
+            imageButtonMenu1Blo.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_bloOff.png";
+
             judge = "P";
         }
-        if (Session["ShoppingList"].ToString().Equals("Makeup"))
+        else if (Session["ShoppingList"].ToString().Equals("Makeup"))
         {
+            imageButtonMenu1Cleansing.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_CleansingOff.png";
+            imageButtonMenu1SkinCare.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_SkinCareOff.png";
+            imageButtonMenu1PackMask.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_PackMaskOff.png";
+            imageButtonMenu1Makeup.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_MakeupOn.png";
+            imageButtonMenu1Bodyhair.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_BodyHairOff.png";
+            imageButtonMenu1Man.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_ManOff.png";
+            imageButtonMenu1Blo.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_bloOff.png";
+
             judge = "U";
         }
-        if (Session["ShoppingList"].ToString().Equals("Body"))
+        else if (Session["ShoppingList"].ToString().Equals("Body"))
         {
+            imageButtonMenu1Cleansing.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_CleansingOff.png";
+            imageButtonMenu1SkinCare.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_SkinCareOff.png";
+            imageButtonMenu1PackMask.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_PackMaskOff.png";
+            imageButtonMenu1Makeup.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_MakeupOff.png";
+            imageButtonMenu1Bodyhair.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_BodyHairOn.png";
+            imageButtonMenu1Man.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_ManOff.png";
+            imageButtonMenu1Blo.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_bloOff.png";
+
             judge = "B";
         }
-        if (Session["ShoppingList"].ToString().Equals("Man"))
+        else if (Session["ShoppingList"].ToString().Equals("Man"))
         {
+            imageButtonMenu1Cleansing.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_CleansingOff.png";
+            imageButtonMenu1SkinCare.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_SkinCareOff.png";
+            imageButtonMenu1PackMask.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_PackMaskOff.png";
+            imageButtonMenu1Makeup.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_MakeupOff.png";
+            imageButtonMenu1Bodyhair.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_BodyHairOff.png";
+            imageButtonMenu1Man.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_ManOn.png";
+            imageButtonMenu1Blo.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_bloOff.png";
             judge = "M";
         }
-        if (Session["ShoppingList"].ToString().Equals("Blo"))
+        else if (Session["ShoppingList"].ToString().Equals("Blo"))
         {
+            imageButtonMenu1Cleansing.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_CleansingOff.png";
+            imageButtonMenu1SkinCare.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_SkinCareOff.png";
+            imageButtonMenu1PackMask.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_PackMaskOff.png";
+            imageButtonMenu1Makeup.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_MakeupOff.png";
+            imageButtonMenu1Bodyhair.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_BodyHairOff.png";
+            imageButtonMenu1Man.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_ManOff.png";
+            imageButtonMenu1Blo.ImageUrl = "./images/Shopping/Shop/Shopping_Menu_bloOn.png";
+
             judge = "V";
         }
 
@@ -198,6 +252,7 @@ public partial class ShoppingNew : System.Web.UI.Page
 
     protected void imageButtonMenu1Cleansing_Click(object sender, ImageClickEventArgs e)
     {
+        
         Session.Add("ShoppingList", "Cleansing");
         Response.Redirect("Shopping.aspx");
     }
@@ -210,30 +265,38 @@ public partial class ShoppingNew : System.Web.UI.Page
 
     protected void imageButtonMenu1PackMask_Click(object sender, ImageClickEventArgs e)
     {
+       
+
         Session.Add("ShoppingList", "Pack");
         Response.Redirect("Shopping.aspx");
     }
 
     protected void imageButtonMenu1Makeup_Click(object sender, ImageClickEventArgs e)
     {
+       
+
         Session.Add("ShoppingList", "Makeup");
         Response.Redirect("Shopping.aspx");
     }
 
     protected void imageButtonMenu1Bodyhair_Click(object sender, ImageClickEventArgs e)
     {
+        
         Session.Add("ShoppingList", "Body");
         Response.Redirect("Shopping.aspx");
     }
 
     protected void imageButtonMenu1Man_Click(object sender, ImageClickEventArgs e)
     {
+       
+
         Session.Add("ShoppingList", "Man");
         Response.Redirect("Shopping.aspx");
     }
 
     protected void imageButtonMenu1Blo_Click(object sender, ImageClickEventArgs e)
     {
+       
         Session.Add("ShoppingList", "Blo");
         Response.Redirect("Shopping.aspx");
     }

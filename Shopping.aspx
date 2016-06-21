@@ -273,7 +273,7 @@
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="ImageButton8" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Menu_Shopping.png" />
+                        ImageUrl="~/Images/Common/staticBanner_Menu_Shopping.png" OnClick="ImageButton8_Click" />
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="ImageButton9" runat="server" 
@@ -312,25 +312,25 @@
             <tr>
             <td class="style20">
                 <asp:ImageButton ID="imageButtonMenu1Cleansing" runat="server" 
-                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_CleansingOn.png" OnClick="imageButtonMenu1Cleansing_Click" />
+                    ImageUrl="~/images/Shopping/Shop/Shopping_Menu_CleansingOn.png" OnClick="imageButtonMenu1Cleansing_Click" />
                 &nbsp;&nbsp;
                 <asp:ImageButton ID="imageButtonMenu1SkinCare" runat="server" 
-                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_SkinCareOff.png" OnClick="imageButtonMenu1SkinCare_Click" />
+                    ImageUrl="~/images/Shopping/Shop/Shopping_Menu_SkinCareOff.png" OnClick="imageButtonMenu1SkinCare_Click" />
                 &nbsp;&nbsp;
                 <asp:ImageButton ID="imageButtonMenu1PackMask" runat="server" 
-                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_PackMaskOff.png" OnClick="imageButtonMenu1PackMask_Click" />
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_Menu_PackMaskOff.png" OnClick="imageButtonMenu1PackMask_Click" />
                 &nbsp;&nbsp;
                 <asp:ImageButton ID="imageButtonMenu1Makeup" runat="server" 
-                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_MakeupOff.png" OnClick="imageButtonMenu1Makeup_Click" />
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_Menu_MakeupOff.png" OnClick="imageButtonMenu1Makeup_Click" />
                 &nbsp;&nbsp;
                 <asp:ImageButton ID="imageButtonMenu1Bodyhair" runat="server" 
-                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_BodyHairOff.png" OnClick="imageButtonMenu1Bodyhair_Click" />
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_Menu_BodyHairOff.png" OnClick="imageButtonMenu1Bodyhair_Click" />
                 &nbsp;&nbsp;
                 <asp:ImageButton ID="imageButtonMenu1Man" runat="server" 
-                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_ManOff.png" OnClick="imageButtonMenu1Man_Click" />
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_Menu_ManOff.png" OnClick="imageButtonMenu1Man_Click" />
                 &nbsp;&nbsp;
                 <asp:ImageButton ID="imageButtonMenu1Blo" runat="server" 
-                    ImageUrl="~/Images/Shopping/Cleansing/Shopping_Menu_bloOff.png" OnClick="imageButtonMenu1Blo_Click" />
+                    ImageUrl="~/Images/Shopping/Shop/Shopping_Menu_bloOff.png" OnClick="imageButtonMenu1Blo_Click" />
                 </td>
             </tr>
             <tr>

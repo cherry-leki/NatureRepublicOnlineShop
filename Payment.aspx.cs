@@ -42,7 +42,16 @@ public partial class Payment : System.Web.UI.Page
 
         orderNumber = item[item.Length - 1];
         labelPrice.Text = totalPrice.ToString();
-        
+
+        string sql;
+        sql = "SELECT memberPoint";
+        sql = sql + " FROM tableMember";
+        sql = sql + string.Format(" WHERE memberID = '{0}'", Session["MemberID"].ToString());
+
+        OleDbSqlServerQueryReader point = new OleDbSqlServerQueryReader(sql, 1);
+        string[] stlresult = point.RunQueryCol();
+
+        labelPoint.Text = stlresult[0];
     }
 
     protected void LoginButton_Click(object sender, ImageClickEventArgs e)
@@ -111,27 +120,25 @@ public partial class Payment : System.Web.UI.Page
 
     protected void textBoxUsePoint_TextChanged(object sender, EventArgs e)
     {
-        int point = 0;
-        string sql;
-        sql = "SELECT memberPoint";
-        sql = sql + " FROM tableMember";
-        sql = sql + string.Format(" WHERE  (memberID = '{0}')", Session["MemberID"].ToString());
+        int point = Convert.ToInt32(labelPoint.Text);
+        int usePoint = Convert.ToInt32(textBoxUsePoint.Text);
 
-        string[] sqlResult;
 
-        OleDbSqlServerQueryReader RecordData = new OleDbSqlServerQueryReader(sql, 1);
-        sqlResult = RecordData.RunQueryCol();
-
-        if (Convert.ToInt32(sqlResult[0]) - Convert.ToInt32(textBoxUsePoint.Text) >= 0)
+        if (point - usePoint >= 0)
         {
-            point = Convert.ToInt32(textBoxUsePoint.Text);
+            if(usePoint < 2000)
+            {
+                MessageBox.Show("2000 포인트이상 사용하실 수 있습니다.", this);
+                return;
+            }
         }
         else
         {
             MessageBox.Show("가지고 있는 포인트보다 사용하고자는 포인트가 많습니다.", this);
+            return;
         }
         
-        labelPayPrice.Text = (totalPrice - point).ToString();
+        labelPayPrice.Text = (totalPrice - usePoint).ToString();
     }
 
     protected void imgButtonBefore_Click(object sender, ImageClickEventArgs e)
@@ -190,5 +197,11 @@ public partial class Payment : System.Web.UI.Page
     protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
     {
         Response.Redirect("Shopping.aspx");
+    }
+
+    protected void ImageButton5_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Home.aspx");
+
     }
 }

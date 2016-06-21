@@ -199,4 +199,38 @@ public partial class Basket : System.Web.UI.Page
         }
 
     }
+
+    protected void imageButtonPurchaseAll_Click(object sender, ImageClickEventArgs e)
+    {
+        string buf = "";
+        string sql;
+        int counter = 0;
+        Session.Remove("PurchaseItem");
+
+        foreach (GridViewRow row in gridViewBasket.Rows)
+        {
+            CheckBox chkRow = (row.Cells[0].FindControl("checkBox") as CheckBox);
+
+            counter++;
+
+                buf = buf + row.Cells[1].Text + "-" + row.Cells[2].Text + "-" + row.Cells[3].Text + "@";
+
+                sql = "DELETE from tableBasket";
+                sql = sql + string.Format(" WHERE ([memberID] = '{0}' AND[basketNumber] = '{1}') ", Session["MemberID"].ToString(), "B000" + counter);
+
+                OleDbSqlServerQueryRun recorddata = new OleDbSqlServerQueryRun(sql);
+                recorddata.RunNonQuery();
+           
+        }
+
+        DBSort();
+
+        Session.Add("PurchaseItem", buf);
+        Response.Redirect("Purchase.aspx");
+    }
+
+    protected void imageButtonShopping_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Shopping.aspx");
+    }
 }

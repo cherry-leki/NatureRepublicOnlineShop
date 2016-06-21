@@ -235,7 +235,7 @@
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="ImageButton8" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Menu_Shopping.png" />
+                        ImageUrl="~/Images/Common/staticBanner_Menu_Shopping.png" OnClick="ImageButton8_Click" />
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="ImageButton9" runat="server" 

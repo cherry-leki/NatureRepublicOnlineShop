@@ -161,6 +161,14 @@
         .auto-style2 {
             margin-left: 6px;
         }
+        #buttonOrderSearch
+        {
+            position:absolute;
+            top:267px;
+            left:312px;
+            width:157px;
+            height:25px;
+        }
         </style>
 </head>
 <body>
@@ -254,7 +262,10 @@
             <table class="context_table">
             <tr>
             <td class="menu" rowspan="4">
-                <img alt="" class="style24" src="Images/Basket/Basket_Menu.png" /></td>
+                <img alt="" class="style24" src="Images/Basket/Basket_Menu.png" />
+                <asp:ImageButton ID="buttonOrderSearch" runat="server"
+                    ImageUrl="~/Images/Mypage/Mypage_OrderSearchButton.png"/>
+            </td>
             <td>
                 <img alt="" class="style25" src="Images/Basket/Basket_Basket.png" /></td>
             <td rowspan="4">

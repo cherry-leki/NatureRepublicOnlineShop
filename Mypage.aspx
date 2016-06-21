@@ -185,6 +185,14 @@
             width: 279px;
             height: 610px;
         }
+        #buttonOrderSearch
+        {
+            position:absolute;
+            top:267px;
+            left:312px;
+            width:157px;
+            height:25px;
+        }
         </style>
 </head>
 <body>
@@ -277,7 +285,10 @@
             <table class="contents">
             <tr>
             <td class="tdfix">
-                <img alt="" class="style24" src="Images/Mypage/Mypage_Menu.png" /></td>
+                <img alt="" class="style24" src="Images/Mypage/Mypage_Menu.png" /><br />
+                <asp:ImageButton ID="buttonOrderSearch" runat="server"
+                    ImageUrl="~/Images/Mypage/Mypage_OrderSearchButton.png"/>
+                </td>
             <td>
                 <img alt="" class="style25" src="Images/Mypage/Mypage_Information.png" /><br />
                 <asp:ImageButton ID="imageButtonModify" runat="server" 

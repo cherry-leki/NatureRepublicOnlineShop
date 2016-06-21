@@ -35,6 +35,12 @@ public partial class SignupInfo : System.Web.UI.Page
             return;
         }
 
+        if(labelIDDuplicate.Text.Equals(""))
+        {
+            MessageBox.Show("회원 아이디 중복확인을 해주세요.", this);
+            return;
+        }
+
         if((textBoxPW.Text.Length < 6) || (textBoxPW.Text.Length > 20))
         {
             MessageBox.Show("비밀번호 길이는 영문, 숫자, 특수문자 포함 6 ~ 20자 입니다.", this);
@@ -138,10 +144,11 @@ public partial class SignupInfo : System.Web.UI.Page
         if (RecordData.ResultExist)
         {
             MessageBox.Show("중복된 아이디 입니다.", this);
-
+            labelIDDuplicate.Text = "";
             return;
         }
 
         MessageBox.Show("사용 가능한 아이디 입니다.", this);
+        labelIDDuplicate.Text = "사용가능";
     }
 }

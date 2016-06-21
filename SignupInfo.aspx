@@ -389,7 +389,7 @@
                     <asp:TextBox ID="textBoxID" runat="server" MaxLength="20"></asp:TextBox>
                     <asp:ImageButton ID="imageButtonDuplicate" runat="server" 
                             ImageUrl="~/Images/Signup_Info/Signup_Info_DuplicateConfirm.png" OnClick="imageButtonDuplicate_Click" />
-                    <asp:Label ID="labelIDDuplicate" runat="server" Text="aa"></asp:Label> 
+                    <asp:Label ID="labelIDDuplicate" runat="server"></asp:Label> 
                     <br />
                     <asp:TextBox ID="textBoxPW" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>
                     <asp:TextBox ID="textBoxPWConfigure" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>

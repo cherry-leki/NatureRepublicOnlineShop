@@ -269,6 +269,12 @@
             position:relative;
             top:37px;
         }
+        #imageButtonOrderCancel
+        {
+            position:relative;
+            top:-155px;
+            left:-20px;
+        }
         </style>
 </head>
 <body>
@@ -426,7 +432,9 @@
             <tr>
             <td>
                 <img alt="" class="style20" 
-                    src="Images/Order_Search/Order_Search_BlankCenter2.png" /></td>
+                    src="Images/Order_Search/Order_Search_BlankCenter2.png" />
+                <asp:ImageButton ID="imageButtonOrderCancel" runat="server" 
+                    ImageUrl="~/Images/Order_Search/Order_Search_OrderCancel.png" /></td>
             </tr>
             </table>
     <img alt="" class="style14" src="Images/Common/staticBanner_Bottom.png" />

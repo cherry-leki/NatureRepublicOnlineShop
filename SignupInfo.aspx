@@ -168,8 +168,14 @@
         #imageButtonDuplicate
         {
             position:relative;
-            top:100px;
+            top:55px;
             left:5px;
+        }
+        #labelIDDuplicate
+        {
+            position:relative;
+            top:50px;
+            left:10px;
         }
         #textBoxPW
         {
@@ -376,13 +382,14 @@
                     <br />
                     <div class="SignupForm">
                     <asp:TextBox ID="textBoxName" runat="server" MaxLength="20"></asp:TextBox>
-                    <asp:ImageButton ID="imageButtonDuplicate" runat="server" 
-                            ImageUrl="~/Images/Signup_Info/Signup_Info_DuplicateConfirm.png" OnClick="imageButtonDuplicate_Click" />
                     <br />
                     <asp:TextBox ID="textBoxBirth" runat="server" MaxLength="10"></asp:TextBox>
                     <asp:Label ID="labelBirth" runat="server" Text="예) 1999-01-01"></asp:Label>
                     <br />
                     <asp:TextBox ID="textBoxID" runat="server" MaxLength="20"></asp:TextBox>
+                    <asp:ImageButton ID="imageButtonDuplicate" runat="server" 
+                            ImageUrl="~/Images/Signup_Info/Signup_Info_DuplicateConfirm.png" OnClick="imageButtonDuplicate_Click" />
+                    <asp:Label ID="labelIDDuplicate" runat="server" Text="aa"></asp:Label> 
                     <br />
                     <asp:TextBox ID="textBoxPW" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>
                     <asp:TextBox ID="textBoxPWConfigure" runat="server" MaxLength="20" TextMode="Password"></asp:TextBox>

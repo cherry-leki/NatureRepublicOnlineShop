@@ -15,36 +15,6 @@ public partial class SignupInfo : System.Web.UI.Page
         //    IDCheck = true;
     }
 
-    protected void buttonDupCheck_Click(object sender, EventArgs e)
-    {
-        //if (textBoxID.Text == "")
-        //{
-        //    labelDupCheck.Text = "아이디를 입력해 주세요.";
-        //    return;
-        //}
-
-
-        //string sql;
-        //string[] sqlResult;
-
-        //sql = " SELECT memberID";
-        //sql = sql + " FROM tableMemeber ";
-        //sql = sql + string.Format(" WHERE  (memberID = '{0}')", textBoxID.Text);
-
-
-        //OleDbSqlServerQueryReader RecordData = new OleDbSqlServerQueryReader(sql, 2);
-        //sqlResult = RecordData.RunQueryCol();
-
-
-        //if (RecordData.ResultExist)
-        //{
-        //    labelDupCheck.Text = "중복된 아이디 입니다.";
-        //    return;
-        //}
-
-        //labelDupCheck.Text = "사용가능한 아이디 입니다.";
-    }
-
     protected void ButtonSignup_Click(object sender, ImageClickEventArgs e)
     {
         string sql;
@@ -143,5 +113,35 @@ public partial class SignupInfo : System.Web.UI.Page
     protected void imgButtonLogo_Click(object sender, ImageClickEventArgs e)
     {
         Response.Redirect("Home.aspx");
+    }
+
+    protected void imageButtonDuplicate_Click(object sender, ImageClickEventArgs e)
+    {
+        if (textBoxID.Text == "")
+        {
+            MessageBox.Show("아이디를 입력해 주세요.",this);
+            return;
+        }
+
+
+        string sql;
+        string[] sqlResult;
+
+        sql = " SELECT memberID";
+        sql = sql + " FROM tableMember ";
+        sql = sql + string.Format(" WHERE  (memberID = '{0}')", textBoxID.Text);
+
+
+        OleDbSqlServerQueryReader RecordData = new OleDbSqlServerQueryReader(sql, 2);
+        sqlResult = RecordData.RunQueryCol();
+
+
+        if (RecordData.ResultExist)
+        {
+            MessageBox.Show("중복된 아이디 입니다.", this);
+            return;
+        }
+
+        MessageBox.Show("사용 가능한 아이디 입니다.", this);
     }
 }

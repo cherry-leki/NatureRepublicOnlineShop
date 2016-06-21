@@ -366,7 +366,7 @@
             </table>
             <table class="contents">
             <tr>
-            <td rowspan="7" class="tdfix">
+            <td rowspan="5" class="tdfix">
                 <img alt="" class="style15" src="Images/Order_Search/Order_Search_Menu.png" /></td>
             <td>
                 <img alt="" class="style16" 
@@ -377,7 +377,7 @@
                         상세 주문 내역입니다.
                 </div>
             </td>
-            <td rowspan="7" class="tdfix">
+            <td rowspan="5" class="tdfix">
                 <img alt="" class="style17" src="Images/Order_Search/Order_Search_Blank.png" /></td>
             </tr>
             <tr>
@@ -432,31 +432,6 @@
                 <asp:Label ID="labelSumPrice" runat="server" Text="9900" ForeColor="#197B30"></asp:Label>
                 </div>
             </td>
-            </tr>
-            <tr>
-            <td class="style21">
-            <div class="Paymentlabel">
-                <asp:Label ID="labelPaymentOrderDate" runat="server" Text="2016-06-21"></asp:Label>
-                <asp:Label ID="labelPaymentPayWay" runat="server" Text="카카오페이"></asp:Label>
-                <br />
-                <asp:Label ID="labelPaymentPayPrice" runat="server" Text="9,900" 
-                    ForeColor="#197B30"></asp:Label>
-                <asp:Label ID="labelPaymentPoint" runat="server" ForeColor="Orange" Text="990"></asp:Label>
-                </div>
-                </td>
-            </tr>
-            <tr>
-            <td class="style22">
-            <div class="Deliverylabel">
-                <asp:Label ID="labelDeliveryName" runat="server" Text="염광호"></asp:Label>
-                <br />
-                <asp:Label ID="labelDeliveryPhone" runat="server" Text="010-5636-4312"></asp:Label>
-                <br />
-                <asp:Label ID="labelDeliveryAddress" runat="server" Text="서울 노원구"></asp:Label>
-                <br />
-                <asp:Label ID="labelDeliveryComment" runat="server" Text="경비실보관"></asp:Label>
-                </div>
-                </td>
             </tr>
             <tr>
             <td>

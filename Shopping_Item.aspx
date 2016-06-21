@@ -63,26 +63,6 @@
         .auto-style22 {
             width: 244px;
         }
-        .auto-style23 {
-            width: 199px;
-            height: 45px;
-        }
-        .auto-style24 {
-            width: 188px;
-            height: 45px;
-        }
-        .auto-style25 {
-            width: 169px;
-            height: 45px;
-        }
-        .auto-style26 {
-            width: 190px;
-            height: 45px;
-        }
-        .auto-style27 {
-            height: 45px;
-            width: 250px;
-        }
         .auto-style28 {
             width: 1007px;
         }
@@ -258,29 +238,12 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style30" rowspan="3">&nbsp;</td>
-                <td class="auto-style23">
+                <td class="auto-style39" style="text-align:center">
                     <a href="#imageButtonFirstSpecific">
-                    <img alt="" id="imageButtonFirstSpecific" src="Images/Item/menu_specificOn.png" width="247px"/>
-                    </a>
-                </td>
-                <td class="auto-style24">
+                    <img alt="" id="imageButtonFirstSpecific" src="Images/Item/menu_specificOn.png" width="247px"/></a>&nbsp;
                     <a href="#imageButtonSecondSummary">
-                    <img alt="" id="imageButtonFirstSummary" src="Images/Item/menu_SummaryOff.png" width="246px"/>
-                    </a>
-                </td>
-                <td class="auto-style25">
-                    <a href="#imageButtonThirdDuration">
+                    <img alt="" id="imageButtonFirstSummary" src="Images/Item/menu_SummaryOff.png" width="246px"/></a>&nbsp; <a href="#imageButtonThirdDuration">
                     <img alt="" id="imageButtonFirstDuration" src="Images/Item/menu_DeadlineOff.png" width="246px"/>
-                    </a>
-                </td>
-                <td class="auto-style26">
-                    <a href="#imageButtonFourthPhoto">
-                    <img alt="" id="imageButtonFirstPhoto" src="Images/Item/menu_PhotoOff.png" width="247px"/>
-                    </a>
-                </td>
-                <td class="auto-style27">
-                    <a href="#imageButtonFifthComment">
-                    <img alt="" id="imageButtonFirstComment" src="Images/Item/menu_CommentOff.png" width="249px"/>
                     </a>
                 </td>
                 <td class="auto-style18" rowspan="3">&nbsp;</td>
@@ -305,29 +268,18 @@
         <table class="auto-style1">
             <tr>
                 <td class="auto-style30" rowspan="3">&nbsp;</td>
-                <td class="auto-style23">
+                <td class="auto-style39" style="text-align:center">
                     <a href="#imageButtonFirstSpecific">
                     <img alt="" id="imageButtonSecondSpecific" src="Images/Item/menu_specificOff.png" width="247px"/>
                     </a>
-                </td>
-                <td class="auto-style24">
                     <a href="#imageButtonSecondSummary">
                     <img alt="" id="imageButtonSecondSummary" src="Images/Item/menu_SummaryOn.png" width="246px"/>
                     </a>
-                </td>
-                <td class="auto-style25">
                     <a href="#imageButtonThirdDuration">
                     <img alt="" id="imageButtonSecondDuration" src="Images/Item/menu_DeadlineOff.png" width="246px"/>
                     </a>
-                </td>
-                <td class="auto-style26">
                     <a href="#imageButtonFourthPhoto">
-                    <img alt="" id="imageButtonSecondPhoto" src="Images/Item/menu_PhotoOff.png" width="247px"/>
-                    </a>
-                </td>
-                <td class="auto-style27">
-                    <a href="#imageButtonFifthComment">
-                    <img alt="" id="imageButtonSecondComment" src="Images/Item/menu_CommentOff.png" width="249px"/>
+                    &nbsp;</a><a href="#imageButtonFifthComment">
                     </a>
                 </td>
                 <td class="auto-style18" rowspan="3">&nbsp;</td>
@@ -396,32 +348,21 @@
         </table>
         <br />
         <br />
-        <table class="auto-style1">
+        <table class="auto-style1" style="text-align:center">
             <tr>
                 <td class="auto-style30" rowspan="3">&nbsp;</td>
-                <td class="auto-style23">
+                <td class="auto-style39">
                     <a href="#imageButtonFirstSpecific">
                     <img alt="" id="imageButtonThirdSpecific" src="Images/Item/menu_specificOff.png" width="247px"/>
                     </a>
-                </td>
-                <td class="auto-style24">
                     <a href="#imageButtonSecondSummary">
                     <img alt="" id="imageButtonThirdSummary" src="Images/Item/menu_SummaryOff.png" width="246px"/>
                     </a>
-                </td>
-                <td class="auto-style25">
                     <a href="#imageButtonThirdDuration">
                     <img alt="" id="imageButtonThirdDuration" src="Images/Item/menu_DeadlineOn.png" width="246px"/>
                     </a>
-                </td>
-                <td class="auto-style26">
                     <a href="#imageButtonFourthPhoto">
-                    <img alt="" id="imageButtonThirdPhoto" src="Images/Item/menu_PhotoOff.png" width="247px"/>
-                    </a>
-                </td>
-                <td class="auto-style27">
-                    <a href="#imageButtonFifthComment">
-                    <img alt="" id="imageButtonThirdComment" src="Images/Item/menu_CommentOff.png" width="249px"/>
+                    &nbsp;</a><a href="#imageButtonFifthComment">
                     </a>
                 </td>
                 <td class="auto-style18" rowspan="3">&nbsp;</td>
@@ -439,71 +380,6 @@
             </tr>
         </table>
         <br />
-        <br />
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style30" rowspan="3">&nbsp;</td>
-                <td class="auto-style23">
-                    <a href="#imageButtonFirstSpecific">
-                    <img alt="" id="imageButtonFourthSpecific" src="Images/Item/menu_specificOff.png" width="247px"/>
-                    </a>
-                </td>
-                <td class="auto-style24">
-                    <a href="#imageButtonSecondSummary">
-                    <img alt="" id="imageButtonFourthSummary" src="Images/Item/menu_SummaryOff.png" width="246px"/>
-                    </a>
-                </td>
-                <td class="auto-style25">
-                    <a href="#imageButtonThirdDuration">
-                    <img alt="" id="imageButtonFourthDuration" src="Images/Item/menu_DeadlineOff.png" width="246px"/>
-                    </a>
-                </td>
-                <td class="auto-style26">
-                    <a href="#imageButtonFourthPhoto">
-                    <img alt="" id="imageButtonFourthPhoto" src="Images/Item/menu_PhotoOn.png" width="247px"/>
-                    </a>
-                </td>
-                <td class="auto-style27">
-                    <a href="#imageButtonFifthComment">
-                    <img alt="" id="imageButtonFourthComment" src="Images/Item/menu_CommentOff.png" width="249px"/>
-                    </a>
-                </td>
-                <td class="auto-style18" rowspan="3">&nbsp;</td>
-            </tr>
-        </table>
-        <br />
-        <br />
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style30" rowspan="3">&nbsp;</td>
-                <td class="auto-style23">
-                    <a href="#imageButtonFirstSpecific">
-                    <img alt="" id="imageButtonFifthSpecific" src="Images/Item/menu_specificOff.png" width="247px"/>
-                    </a>
-                </td>
-                <td class="auto-style24">
-                    <a href="#imageButtonSecondSummary">
-                    <img alt="" id="imageButtonFifthSummary" src="Images/Item/menu_SummaryOff.png" width="246px"/>
-                    </a>
-                </td>
-                <td class="auto-style25">
-                    <a href="#imageButtonThirdDuration">
-                    <img alt="" id="imageButtonFifthDuration" src="Images/Item/menu_DeadlineOff.png" width="246px"/>
-                    </a>
-                </td>
-                <td class="auto-style26">
-                    <a href="#imageButtonFourthPhoto">
-                    <img alt="" id="imageButtonFifthPhoto" src="Images/Item/menu_PhotoOff.png" width="247px"/>
-                    </a>
-                </td>
-                <td class="auto-style27">
-                    <a href="#imageButtonFifthComment">
-                    <img alt="" id="imageButtonFifthComment" src="Images/Item/menu_CommentOn.png" width="249px"/>
-                    </a>
-                </td>
-                <td class="auto-style18" rowspan="3">&nbsp;</td>
-            </tr>
-        </table>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style30" rowspan="3">&nbsp;</td>

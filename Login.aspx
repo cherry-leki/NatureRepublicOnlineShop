@@ -277,7 +277,7 @@
             <div class="LoginForm">
                 <asp:TextBox ID="textBoxID" runat="server"></asp:TextBox>
                 <br />
-                <asp:TextBox ID="textBoxPW" runat="server"></asp:TextBox>
+                <asp:TextBox ID="textBoxPW" runat="server" TextMode="Password"></asp:TextBox>
                 <br />
                 <asp:ImageButton ID="ImgButtonLogin" runat="server" 
                     ImageUrl="~/Images/Login/LoginButton.png" OnClick="ImgButtonLogin_Click" />
@@ -288,7 +288,7 @@
                 <br />
                 </div>
                 <asp:ImageButton ID="ImgButtonSignup" runat="server" 
-                    ImageUrl="~/Images/Login/SignupButton.png" />
+                    ImageUrl="~/Images/Login/SignupButton.png" OnClick="ImgButtonSignup_Click" />
                 <asp:ImageButton ID="ImgButtonFindID" runat="server" 
                     ImageUrl="~/Images/Login/FindIDButton.png" />
                 <asp:ImageButton ID="ImgButtonFindPW" runat="server" 

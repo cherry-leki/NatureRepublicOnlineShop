@@ -33,4 +33,9 @@ public partial class SignupAgreement : System.Web.UI.Page
 
         Response.Redirect("Signupinfo.aspx");
     }
+
+    protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Shopping.aspx");
+    }
 }

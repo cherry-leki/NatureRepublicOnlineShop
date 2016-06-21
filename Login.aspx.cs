@@ -123,4 +123,14 @@ public partial class Login : System.Web.UI.Page
     {
         Response.Redirect("Home.aspx");
     }
+
+    protected void ImgButtonSignup_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("SignupAAgreement.aspx");
+    }
+
+    protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Shopping.aspx");
+    }
 }

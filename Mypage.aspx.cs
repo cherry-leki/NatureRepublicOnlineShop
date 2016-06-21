@@ -182,4 +182,9 @@ public partial class Mypage : System.Web.UI.Page
     {
         Response.Redirect("Home.aspx");
     }
+
+    protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Shopping.aspx");
+    }
 }

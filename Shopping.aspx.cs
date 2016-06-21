@@ -237,4 +237,9 @@ public partial class ShoppingNew : System.Web.UI.Page
         Session.Add("ShoppingList", "Blo");
         Response.Redirect("Shopping.aspx");
     }
+
+    protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Shopping.aspx");
+    }
 }

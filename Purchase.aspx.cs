@@ -218,4 +218,9 @@ public partial class Purchase : System.Web.UI.Page
         Session.Add("PurchaseItem", Session["PurchaseItem"].ToString() + "@" + "O000" + orderCounter);
         Response.Redirect("Payment.aspx");
     }
+
+    protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Shopping.aspx");
+    }
 }

@@ -14,6 +14,7 @@
         th, td
         {
             padding: 0px;
+            text-align: center;
         }
         .margin_left
         {
@@ -135,6 +136,13 @@
         .style20
         {
             width: 100%;
+            position:relative;
+            top:-185px;
+        }
+        .style21
+        {
+            width: 990px;
+            height: 295px;
         }
     </style>
 </head>
@@ -278,15 +286,7 @@
                     <table class="style20">
                         <tr>
                             <td>
-                                &nbsp;</td>
-                            <td>
-                                &nbsp;</td>
-                            <td>
-                                &nbsp;</td>
-                            <td>
-                                &nbsp;</td>
-                            <td>
-                                &nbsp;</td>
+                                <img alt="" class="style21" src="Images/Home/Home_contents.png" /></td>
                         </tr>
                     </table>
                 </td>

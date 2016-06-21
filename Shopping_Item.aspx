@@ -108,12 +108,12 @@
         }
         .style15
         {
-            width: 302px;
+            width: 280px;
             height: 606px;
         }
         .contents
         {
-            margin-left:-7px;
+            margin-left:-10px;
         } 
         .style16
         {
@@ -122,40 +122,43 @@
         }
         .style17
         {
-            width: 298px;
+            width: 260px;
             height: 596px;
         }
         .MainImage
         {
-            width:427px;
+            width:380px;
             text-align:center;
         }
         .MainTable
         {
-            width:556px;
+            width:570px;
             height:394px;
             background: url('Images/Item/Item_MainTable.png') no-repeat;
-            
+            position:relative;
+            left:-65px;
         }
         #labelItemName
         {
             font-size:25px;
             font-weight:bold;
             position:relative;
-            top:-80px;
+            top:-135px;
             left:40px;
         }
         .MainTableContext
         {
             width:65%;
             position:relative;
-            top:-65px;
+            top:-125px;
             left:30px;
             height: 100px;
         }
         .MainTableButton
         {
             text-align: center;
+            position:relative;
+            top:-80px;
         }
         .ItemSummary
         {

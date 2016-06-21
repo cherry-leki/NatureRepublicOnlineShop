@@ -193,6 +193,22 @@
             width:157px;
             height:25px;
         }
+        #buttonInterest
+        {
+            position:absolute;
+            top:293px;
+            left:312px;
+            width:157px;
+            height:25px;
+        }
+        #buttonBasket
+        {
+            position:absolute;
+            top:319px;
+            left:312px;
+            width:157px;
+            height:25px;
+        }
         </style>
 </head>
 <body>
@@ -288,6 +304,10 @@
                 <img alt="" class="style24" src="Images/Mypage/Mypage_Menu.png" /><br />
                 <asp:ImageButton ID="buttonOrderSearch" runat="server"
                     ImageUrl="~/Images/Mypage/Mypage_OrderSearchButton.png" OnClick="buttonOrderSearch_Click"/>
+                <asp:ImageButton ID="buttonInterest" runat="server"
+                    ImageUrl="~/Images/Mypage/Mypage_Interest.png"/>
+                <asp:ImageButton ID="buttonBasket" runat="server"
+                    ImageUrl="~/Images/Mypage/Mypage_Basket.png"/>
                 </td>
             <td>
                 <img alt="" class="style25" src="Images/Mypage/Mypage_Information.png" /><br />

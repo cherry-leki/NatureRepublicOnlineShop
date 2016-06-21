@@ -145,6 +145,30 @@
         {
             text-align: justify;
         }
+        #buttonOrderSearch
+        {
+            position:absolute;
+            top:267px;
+            left:312px;
+            width:157px;
+            height:25px;
+        }
+        #buttonInterest
+        {
+            position:absolute;
+            top:293px;
+            left:312px;
+            width:157px;
+            height:25px;
+        }
+        #buttonBasket
+        {
+            position:absolute;
+            top:319px;
+            left:312px;
+            width:157px;
+            height:25px;
+        }
         </style>
 </head>
 <body>
@@ -238,7 +262,14 @@
             <table>
             <tr>
             <td class="menu" rowspan="5">
-                <img alt="" class="style24" src="Images/Interest/Interest_Menu.png" /></td>
+                <img alt="" class="style24" src="Images/Interest/Interest_Menu.png" />
+                <asp:ImageButton ID="buttonOrderSearch" runat="server"
+                    ImageUrl="~/Images/Mypage/Mypage_OrderSearchButton.png" OnClick="buttonOrderSearch_Click"/>
+                <asp:ImageButton ID="buttonInterest" runat="server"
+                    ImageUrl="~/Images/Mypage/Mypage_Interest.png"/>
+                <asp:ImageButton ID="buttonBasket" runat="server"
+                    ImageUrl="~/Images/Mypage/Mypage_Basket.png"/>
+            </td>
             <td class="context_interest">
                 <img alt="" class="style25" src="Images/Interest/Interest_Interest.png" /></td>
             <td rowspan="5">

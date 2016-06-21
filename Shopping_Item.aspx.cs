@@ -233,4 +233,9 @@ public partial class Shopping_ItemNew : System.Web.UI.Page
     {
         Response.Redirect("Home.aspx");
     }
+
+    protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Shopping.aspx");
+    }
 }

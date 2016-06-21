@@ -139,24 +139,6 @@ public partial class OrderSearch : System.Web.UI.Page
     }
     protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
     {
-
-    }
-
-    protected void checkButton_CheckedChanged(object sender, EventArgs e)
-    {
-        foreach (GridViewRow row in gridViewInfomation.Rows)
-        {
-            CheckBox chkRow = (row.Cells[0].FindControl("checkButton") as CheckBox);
-
-            if (chkRow.Checked)
-            {
-
-                Session.Add("OrderData", row.Cells[2].Text);
-                //MessageBox.Show(row.Cells[2].Text.);
-
-                Response.Redirect("OrderSearch.aspx");
-                return;
-            }
-        }
+        Response.Redirect("Shopping.aspx");
     }
 }

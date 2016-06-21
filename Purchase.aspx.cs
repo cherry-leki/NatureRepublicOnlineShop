@@ -9,8 +9,10 @@ using System.Web.UI.WebControls;
 
 public partial class Purchase : System.Web.UI.Page
 {
+    string firstItem;
     int totalPrice = 0;
     int orderCounter = 0;
+
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -34,6 +36,11 @@ public partial class Purchase : System.Web.UI.Page
             string[] unitance = System.Text.RegularExpressions.Regex.Split(item[i], "-");
             dt.Rows.Add(unitance[0], unitance[1], unitance[2], (Convert.ToInt32(unitance[1]) * Convert.ToInt32(unitance[2])).ToString(), (Convert.ToInt32(unitance[1]) / 10).ToString());
             totalPrice += (Convert.ToInt32(unitance[1]) * Convert.ToInt32(unitance[2]));
+
+            if (i == 0 && (item.Length > 2))
+            {
+                firstItem = unitance[0] + " 외 " + (item.Length - 2).ToString();
+            }
         }
 
         gridViewBasket.DataSource = dt;
@@ -57,7 +64,6 @@ public partial class Purchase : System.Web.UI.Page
             labelEmail.Text = sqlResult[3];
             labelPhone.Text = sqlResult[2];
             labelAddress.Text = sqlResult[1];
-
 
 
             if (radioButtonIdentical.Checked)
@@ -208,9 +214,9 @@ public partial class Purchase : System.Web.UI.Page
         
 
         sql = " INSERT INTO [NatureRepublicDB].[dbo].[tableOrder] ";
-        sql = sql + " ([orderNumber], [memberID], [orderDate], [orderAddr], [orderReceiver], [orderPhone], [orderMemo], [orderPrice]) ";
-        sql = sql + string.Format(" VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}')", "O000"+ orderCounter, Session["MemberID"].ToString(), DateTime.Now.ToString("yyyy-MM-dd"), textBoxAddress.Text, textBoxReceiverName.Text,
-            dropdownlistPhone.SelectedValue.ToString() + "-" + textBoxPhone1.Text + "-" + textBoxPhone2.Text, textBoxMemo.Text, totalPrice.ToString());
+        sql = sql + " ([orderNumber], [memberID], [orderDate], [orderAddr], [orderReceiver], [orderPhone], [orderMemo], [orderPrice], [orderItem]) ";
+        sql = sql + string.Format(" VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}')", "O000"+ orderCounter, Session["MemberID"].ToString(), DateTime.Now.ToString("yyyy-MM-dd"), textBoxAddress.Text, textBoxReceiverName.Text,
+            dropdownlistPhone.SelectedValue.ToString() + "-" + textBoxPhone1.Text + "-" + textBoxPhone2.Text, textBoxMemo.Text, totalPrice.ToString(), firstItem);
 
         OleDbSqlServerQueryRun recordData = new OleDbSqlServerQueryRun(sql);
         recordData.RunNonQuery();

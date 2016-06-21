@@ -242,9 +242,9 @@
                     src="Images/Payment_Complete/Payment_Complete_Main.png" /><br />
                     <div class="bottombutton">
                 <asp:ImageButton ID="imageButtonOrderConfirm" runat="server" 
-                    ImageUrl="~/Images/Payment_Complete/Payment_Complete_OrderConfirm.png" />
+                    ImageUrl="~/Images/Payment_Complete/Payment_Complete_OrderConfirm.png" OnClick="imageButtonOrderConfirm_Click" />
 &nbsp;<asp:ImageButton ID="imageButtonShopping" runat="server" 
-                    ImageUrl="~/Images/Payment_Complete/Payment_Complete_Shopping.png" />
+                    ImageUrl="~/Images/Payment_Complete/Payment_Complete_Shopping.png" OnClick="imageButtonShopping_Click" />
                     </div>
                 </td>
             <td rowspan="2" class="tdfix">

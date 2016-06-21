@@ -20,6 +20,9 @@ public partial class Interest : System.Web.UI.Page
             imgButtonLogin.ImageUrl = "./images/Common/staticBanner_Top_Login.png";
             imgButtonJoin.ImageUrl = "./images/Common/staticBanner_Top_Signup.png";
         }
+
+        gridViewInterest.DataSource = sdsSource;
+        gridViewInterest.DataBind();
     }
 
     protected void LoginButton_Click(object sender, ImageClickEventArgs e)

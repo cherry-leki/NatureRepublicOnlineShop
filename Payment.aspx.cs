@@ -197,7 +197,7 @@ public partial class Payment : System.Web.UI.Page
         OleDbSqlServerQueryRun recordPoint = new OleDbSqlServerQueryRun(sql);
         recordPoint.RunNonQuery();
 
-        Response.Redirect("Home.aspx");
+        Response.Redirect("PayComplete.aspx");
     }
 
     protected void ImageButton8_Click(object sender, ImageClickEventArgs e)

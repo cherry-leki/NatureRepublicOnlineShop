@@ -7,12 +7,10 @@ using System.Web.UI.WebControls;
 
 public partial class SignupInfo : System.Web.UI.Page
 {
-    bool IDCheck = false;
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if (labelDupCheck.Text.Equals("사용가능한 아이디 입니다."))
-        //    IDCheck = true;
+
     }
 
     protected void ButtonSignup_Click(object sender, ImageClickEventArgs e)
@@ -96,6 +94,7 @@ public partial class SignupInfo : System.Web.UI.Page
         if (recordData.ChangeRecordCount > 0)
         {
             MessageBox.Show("회원가입에 성공하셨습니다.", this);
+            Response.Redirect("SignUpComplete.aspx");
             return;
         }
         else
@@ -139,6 +138,7 @@ public partial class SignupInfo : System.Web.UI.Page
         if (RecordData.ResultExist)
         {
             MessageBox.Show("중복된 아이디 입니다.", this);
+
             return;
         }
 

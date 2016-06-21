@@ -168,7 +168,7 @@ public partial class Shopping_ItemNew : System.Web.UI.Page
     protected void imgButtonDecrease_Click(object sender, ImageClickEventArgs e)
     {
         int counter = Convert.ToInt32(textBoxCount.Text);
-        if (counter > 0)
+        if (counter > 1)
         {
             counter--;
             textBoxCount.Text = counter.ToString();

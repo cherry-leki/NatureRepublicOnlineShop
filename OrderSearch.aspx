@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="OrderSearch.aspx.cs" Inherits="OrderSearch" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="OrderSearch.aspx.cs" Inherits="OrderSearch"  Debug="true"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -373,8 +373,8 @@
                     src="Images/Order_Search/Order_Search_BlankCenter1.png" /><br />
                     <div class="style23">
                 <asp:Label ID="labelOrderTopName" runat="server" Text=""></asp:Label>님의
-                <asp:Label ID="labelOrderTopDate" runat="server" Text=""></asp:Label> 주문하신
-                <asp:Label ID="labelOrderTopNumber" runat="server" Text=""></asp:Label> 상세 주문 내역입니다.
+                <asp:Label ID="labelOrderTopDate" runat="server" Text=""></asp:Label> 까지주문하신
+                        상세 주문 내역입니다.
                 </div>
             </td>
             <td rowspan="7" class="tdfix">
@@ -388,15 +388,44 @@
             </tr>
             <tr>
             <td>
-                <img alt="" class="style19" 
-                    src="Images/Order_Search/Order_Search_OrderSample.png" /></td>
+                <asp:GridView ID="gridViewInfomation" runat="server" AutoGenerateColumns="False" Width="787px" BorderColor="White" BorderStyle="None" 
+                    BorderWidth="0px">
+                    <Columns>
+                        <asp:TemplateField>
+                            <ItemTemplate>
+                                
+                            </ItemTemplate>
+                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="50px" />
+                            <ItemStyle Width="54px" />
+                        </asp:TemplateField>
+
+                        <asp:BoundField DataField="orderItem" SortExpression="orderItem">
+                        <ItemStyle Width="370px" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="orderNumber" SortExpression="orderNumber">
+                        <ItemStyle Width="78px" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="orderPrice" SortExpression="orderPrice">
+                        <ItemStyle Width="78px" />
+                        </asp:BoundField>
+                        <asp:BoundField DataField="orderDate" SortExpression="orderDate">
+                        <ItemStyle Width="78px" />
+                        </asp:BoundField>
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="sdsSource" runat="server" ConnectionString="<%$ ConnectionStrings:NatureRepublicDBConnectionString %>" SelectCommand="SELECT orderNumber, orderDate, orderPrice, orderItem FROM tableOrder WHERE (memberID = @Param1)">
+                    <SelectParameters>
+                        <asp:SessionParameter Name="Param1" SessionField="MemberID" />
+                    </SelectParameters>
+                </asp:SqlDataSource>
+                </td>
             </tr>
             <tr>
             <td class="OrderPriceTable">
                 <div class="OrderPriceLabel">
                 <asp:Label ID="labelOrderItemCount" runat="server" Text="1"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Label ID="labelOrderItemAllPrice" runat="server" Text="9,900"></asp:Label><br />
+                <br />
                 <asp:Label ID="labelOrderItemPrice" runat="server" Text="9,900"></asp:Label><br />
                 <asp:Label ID="labelDeliveryFee" runat="server" Text="0"></asp:Label><br />
                 <asp:Label ID="labelPoint" runat="server" ForeColor="#FFAF00" Text="990"></asp:Label><br />
@@ -433,8 +462,7 @@
             <td>
                 <img alt="" class="style20" 
                     src="Images/Order_Search/Order_Search_BlankCenter2.png" />
-                <asp:ImageButton ID="imageButtonOrderCancel" runat="server" 
-                    ImageUrl="~/Images/Order_Search/Order_Search_OrderCancel.png" /></td>
+                </td>
             </tr>
             </table>
     <img alt="" class="style14" src="Images/Common/staticBanner_Bottom.png" />

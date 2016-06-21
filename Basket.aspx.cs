@@ -233,4 +233,9 @@ public partial class Basket : System.Web.UI.Page
     {
         Response.Redirect("Shopping.aspx");
     }
+
+    protected void buttonOrderSearch_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("OrderSearch.aspx");
+    }
 }

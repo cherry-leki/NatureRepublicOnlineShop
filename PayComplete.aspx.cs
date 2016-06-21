@@ -99,8 +99,19 @@ public partial class PayComplete : System.Web.UI.Page
     {
         Response.Redirect("Home.aspx");
     }
+
     protected void ImageButton8_Click(object sender, ImageClickEventArgs e)
     {
+        Response.Redirect("Shopping.aspx");
+    }
 
+    protected void imageButtonOrderConfirm_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("OrderSearch.aspx");
+    }
+
+    protected void imageButtonShopping_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Shopping.aspx");
     }
 }

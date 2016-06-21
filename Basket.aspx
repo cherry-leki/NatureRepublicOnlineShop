@@ -264,7 +264,7 @@
             <td class="menu" rowspan="4">
                 <img alt="" class="style24" src="Images/Basket/Basket_Menu.png" />
                 <asp:ImageButton ID="buttonOrderSearch" runat="server"
-                    ImageUrl="~/Images/Mypage/Mypage_OrderSearchButton.png"/>
+                    ImageUrl="~/Images/Mypage/Mypage_OrderSearchButton.png" OnClick="buttonOrderSearch_Click"/>
             </td>
             <td>
                 <img alt="" class="style25" src="Images/Basket/Basket_Basket.png" /></td>

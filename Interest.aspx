@@ -246,9 +246,9 @@
             </tr>
             <tr>
             <td class="style30">
-                <img alt="" class="style26" src="Images/Interest/Interest_InterestEmpty.png" /><br />
-                <asp:GridView ID="gridViewInterest" runat="server" AutoGenerateColumns="False" 
-                    DataSourceID="sdsSource" Width="785px">
+                <br />
+                <asp:GridView ID="gridViewInterest" runat="server" AutoGenerateColumns="False" Width="590px" BorderColor="White" BorderStyle="None" 
+                    BorderWidth="0px">
                     <Columns>
                         <asp:TemplateField>
                             <ItemTemplate>
@@ -262,16 +262,6 @@
                         <asp:BoundField DataField="itemPrice" SortExpression="itemPrice" >
                         <ItemStyle Width="96px" />
                         </asp:BoundField>
-                        <asp:TemplateField>
-                            <ItemTemplate>
-                                <asp:ImageButton ID="ImageButton1" runat="server" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                        <asp:TemplateField>
-                            <ItemTemplate>
-                                <asp:ImageButton ID="ImageButton2" runat="server" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
                     </Columns>
                 </asp:GridView>
                 <asp:SqlDataSource ID="sdsSource" runat="server" ConnectionString="<%$ ConnectionStrings:NatureRepublicDBConnectionString %>" SelectCommand="SELECT tableItem.itemName, tableItem.itemPrice FROM tableInterest INNER JOIN tableItem ON tableInterest.itemNumber = tableItem.itemNumber WHERE (tableInterest.memberID = @Param1)">

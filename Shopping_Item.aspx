@@ -354,10 +354,10 @@
                 <tr>
                 <td>구매수량</td>
                 <td><asp:ImageButton ID="imageButtonDecreaseCounter" runat="server" 
-                        ImageUrl="~/Images/Item/item_decreaseCounter.png" />
-&nbsp;<asp:TextBox ID="textBoxCount" runat="server" Width="22px"></asp:TextBox>
+                        ImageUrl="~/Images/Item/item_decreaseCounter.png" OnClick="imgButtonDecrease_Click" />
+&nbsp;<asp:TextBox ID="textBoxCount" runat="server" Width="22px">1</asp:TextBox>
 &nbsp;<asp:ImageButton ID="imageButtonIncreaseCounter" runat="server" 
-                        ImageUrl="~/Images/Item/item_increaseCounter.png" /></td>
+                        ImageUrl="~/Images/Item/item_increaseCounter.png" OnClick="imgButtonIncrease_Click" /></td>
                 <td></td>
                 <td></td>
                 </tr>
@@ -366,10 +366,10 @@
                 <div class="MainTableButton">
                 
                     <asp:ImageButton ID="ImageButton12" runat="server" 
-                        ImageUrl="~/Images/Item/item_inBaket.png" />
-&nbsp;<asp:ImageButton ID="ImageButton13" runat="server" ImageUrl="~/Images/Item/item_inBuy.png" />
+                        ImageUrl="~/Images/Item/item_inBaket.png" OnClick="imgButtonInBacket_Click"/>
+&nbsp;<asp:ImageButton ID="ImageButton13" runat="server" ImageUrl="~/Images/Item/item_inBuy.png" OnClick="imgButtonPurchase_Click"/>
 &nbsp;<asp:ImageButton ID="ImageButton14" runat="server" 
-                        ImageUrl="~/Images/Item/item_inInterest.png" />
+                        ImageUrl="~/Images/Item/item_inInterest.png" OnClick="ImageButtonInInterest_Click"/>
                 
                 </div>
             </td>

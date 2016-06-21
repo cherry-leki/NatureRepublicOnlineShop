@@ -287,7 +287,7 @@
             <td class="tdfix">
                 <img alt="" class="style24" src="Images/Mypage/Mypage_Menu.png" /><br />
                 <asp:ImageButton ID="buttonOrderSearch" runat="server"
-                    ImageUrl="~/Images/Mypage/Mypage_OrderSearchButton.png"/>
+                    ImageUrl="~/Images/Mypage/Mypage_OrderSearchButton.png" OnClick="buttonOrderSearch_Click"/>
                 </td>
             <td>
                 <img alt="" class="style25" src="Images/Mypage/Mypage_Information.png" /><br />

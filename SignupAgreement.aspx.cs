@@ -17,6 +17,69 @@ public partial class SignupAgreement : System.Web.UI.Page
         Response.Redirect("Home.aspx");
     }
 
+    protected void LoginButton_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Login.aspx");
+    }
+
+    // Join Or Logout
+    protected void JoinButton_Click(object sender, ImageClickEventArgs e)
+    {
+        if (SessionRemove("MemberID"))
+        {
+            Response.Redirect("Home.aspx");
+        }
+
+        Response.Redirect("SignUpAgreement.aspx");
+    }
+
+    protected void BucketButton_Click(object sender, ImageClickEventArgs e)
+    {
+        if (SessionExist("MemberID"))
+        {
+            Response.Redirect("Basket.aspx");
+        }
+
+        Response.Redirect("Login.aspx");
+    }
+
+    protected void MyShopButton_Click(object sender, ImageClickEventArgs e)
+    {
+        if (SessionExist("MemberID"))
+        {
+            Response.Redirect("Mypage.aspx");
+        }
+
+        Response.Redirect("Login.aspx");
+    }
+
+    private bool SessionExist(string SV)
+    {
+        IEnumerator SL = Session.GetEnumerator();
+        while (SL.MoveNext())
+        {
+            if (SL.Current.ToString() == SV)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private bool SessionRemove(string SV)
+    {
+        IEnumerator SL = Session.GetEnumerator();
+        while (SL.MoveNext())
+        {
+            if (SL.Current.ToString() == SV)
+            {
+                Session.RemoveAll();
+                return true;
+            }
+        }
+        return false;
+    }
+
     protected void imageButtonSignupGo_Click(object sender, ImageClickEventArgs e)
     {
         if(!radioButtonAgreement1Ok.Checked)

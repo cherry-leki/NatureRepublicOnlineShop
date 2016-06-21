@@ -1,80 +1,28 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Shopping_Item.aspx.cs" Inherits="Item" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Shopping_Item.aspx.cs" Inherits="Shopping_ItemNew" %>
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
+        body
+        {
+            width:100%;
+            height:100%;
+        }
+        th, td
+        {
+            padding: 0px;
+            text-align: justify;
+        }
         a,a:hover
         {
             border:0px;
         }
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style3 {
-            height: 20px;
-        }
-        .auto-style5 {
-            width: 1442px;
-        }
-        .auto-style6 {
-            width: 87px;
-        }
-        .auto-style7 {
-            width: 88px;
-        }
-        .auto-style10 {
-            width: 200px;
-        }
-        .auto-style11 {
-            width: 201px;
-        }
-        .auto-style13 {
-            width: 170px;
-        }
-        .auto-style14 {
-            width: 1220px;
-        }
-        .auto-style15 {
-            width: 200px;
-            height: 40px;
-        }
-        .auto-style16 {
-            width: 201px;
-            height: 40px;
-        }
-        .auto-style17 {
-            width: 170px;
-            height: 40px;
-        }
-        .auto-style19 {
-            width: 86px;
-        }
-        .auto-style18 {
-            width: 89px;
-        }
-        .auto-style21 {
-            height: 20px;
-            width: 244px;
-        }
-        .auto-style22 {
-            width: 244px;
-        }
-        .auto-style28 {
-            width: 1007px;
-        }
-        .auto-style29 {
-            height: 20px;
-            width: 1007px;
-        }
-        .auto-style30 {
-            width: 85px;
-        }
-        .auto-style31 {
-            width: 90px;
+        .margin_left
+        {
+            margin-left:-2px;
         }
         .style1
         {
@@ -87,312 +35,424 @@
             width: 638px;
             height: 27px;
         }
-        .margin_left
-        {
-            margin-left:-2px;
-        }
         .style3
         {
             width: 662px;
             height: 27px;
             margin-left:-2px;
         }
-        .auto-style34 {
-            padding: 0px;
+        .style4
+        {
+            width: 1583px;
+            height: 17px;
+            margin-top:-2px;
         }
-        .auto-style35 {
-            width: 200px;
-            height: 20px;
+        .style5
+        {
+            width: 100%;
+            margin-left:-7px;
         }
-        .auto-style36 {
-            width: 201px;
-            height: 20px;
+        .style6
+        {
+            width: 326px;
+            height: 65px;
         }
-        .auto-style37 {
-            width: 170px;
-            height: 20px;
+        .style7
+        {
+            width: 624px;
+            height: 65px;
+            margin-left:-2px;
         }
-        .auto-style39 {
-            height: 45px;
+        .style8
+        {
+            width: 115px;
+            height: 65px;
+            margin-left:-2px;
         }
-    </style>
+        .style9
+        {
+            width: 314px;
+            height: 65px;
+            margin-left:-2px;
+        }
+        .style10
+        {
+            width: 1583px;
+            height: 5px;
+            margin-top:-2px;
+            margin-left:-2px;
+        }
+        .style11
+        {
+            width: 304px;
+            height: 41px;
+            margin-left:-2px;
+        }
+        .style12
+        {
+            width: 137px;
+            height: 41px;
+            margin-left:-2px;
+        }
+        .style13
+        {
+            width: 314px;
+            height: 41px;
+            margin-left:-2px;
+        }
+        .style14
+        {
+            width: 1583px;
+            height: 235px;
+            margin-left:-7px;
+        }
+        .style15
+        {
+            width: 302px;
+            height: 606px;
+        }
+        .contents
+        {
+            margin-left:-7px;
+        } 
+        .style16
+        {
+            width: 983px;
+            height: 70px;
+        }
+        .style17
+        {
+            width: 298px;
+            height: 596px;
+        }
+        .MainImage
+        {
+            width:427px;
+            text-align:center;
+        }
+        .MainTable
+        {
+            width:556px;
+            height:394px;
+            background: url('Images/Item/Item_MainTable.png') no-repeat;
+            
+        }
+        #labelItemName
+        {
+            font-size:25px;
+            font-weight:bold;
+            position:relative;
+            top:-80px;
+            left:40px;
+        }
+        .MainTableContext
+        {
+            width:65%;
+            position:relative;
+            top:-65px;
+            left:30px;
+            height: 100px;
+        }
+        .MainTableButton
+        {
+            text-align: center;
+        }
+        .ItemSummary
+        {
+            background: url('Images/Item/item_Summary.png') no-repeat;
+            width:983px;
+            height:356px;
+        }
+        .ItemSummaryContents
+        {
+            position:relative;
+            top:-110px;
+            left:217px;
+        }
+        #labelSummaryItemDuration
+        {
+            position:relative;
+            top:10px;
+        }
+        #labelSummaryItemSkinType
+        {
+            position:relative;
+            top:20px;
+        }
+        #labelSummaryItemSize
+        {
+            position:relative;
+            top:30px;
+        }
+        #labelSummaryItemCompany
+        {
+            position:relative;
+            top:40px;
+        }
+        #labelSummaryItemCountry
+        {
+            position:relative;
+            top:50px;
+        }
+        .style18
+        {
+            width: 983px;
+            height: 142px;
+        }
+        .style19
+        {
+            width: 199px;
+            height: 32px;
+        }
+        .style20
+        {
+            width: 193px;
+            height: 32px;
+        }
+        .style21
+        {
+            width: 197px;
+            height: 32px;
+        }
+        .style22
+        {
+            width: 238px;
+            height: 769px;
+        }
+        .style23
+        {
+            width: 983px;
+            height: 246px;
+        }
+        .style24
+        {
+            width: 983px;
+            height: 614px;
+        }
+        .style25
+        {
+            width: 983px;
+            height: 112px;
+        }
+     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <p>
+    <div>
     
         <table class="style1">
             <tr>
                 <td>
                     <img alt="" class="style2" src="Images/Common/staticBanner_Top_1.png" /></td>
-                <td class="auto-style34">
+                <td class="test">
                     <asp:ImageButton class="margin_left" ID="imgButtonLogin" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Login.png" OnClick="LoginButton_Click"/>
+                        ImageUrl="~/Images/Common/staticBanner_Top_Login.png" OnClick ="LoginButton_Click"/>
                 </td>
                 <td>
                     <asp:ImageButton class="margin_left" ID="imgButtonJoin" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Signup.png" OnClick="JoinButton_Click" />
+                        ImageUrl="~/Images/Common/staticBanner_Top_Signup.png" OnClick="JoinButton_Click"/>
                 </td>
                 <td>
-                    <asp:ImageButton class="margin_left" ID="imgButtonBucket" runat="server" 
-                        ImageUrl="~/Images/Common/staticBanner_Top_Basket.png" OnClick="BucketButton_Click" />
+                    <asp:ImageButton class="margin_left" ID="ImageButton3" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Top_Basket.png" OnClick="BucketButton_Click"/>
                 </td>
                 <td>
-                    <asp:ImageButton class="margin_left" ID="imgButtonMyshop" runat="server" 
+                    <asp:ImageButton class="margin_left" ID="ImageButton4" runat="server" 
                         ImageUrl="~/Images/Common/staticBanner_Top_Myshop.png" OnClick="MyShopButton_Click" />
                 </td>
                 <td>
                     <img alt="" class="style3" src="Images/Common/staticBanner_Top_2.png" /></td>
             </tr>
-            </table>
+            <tr>
+                <td colspan="6">
+                    <img alt="" class="style4" src="Images/Common/staticBanner_First.png" /></td>
+            </tr>
+        </table>
     
-        <br />
-    </p>
-    <table class="auto-style5">
-        <tr>
-            <td class="auto-style6" rowspan="11">&nbsp;</td>
-            <td colspan="9">
-                <img class="auto-style14" src="images/Item/item_Title.png" /></td>
-            <td class="auto-style7" rowspan="11">&nbsp;</td>
-        </tr>
-        <tr>
-            <td colspan="5" rowspan="9">
-                <asp:Image ID="mainImage" runat="server" />
-            </td>
-            <td class="auto-style3" colspan="4">
-                <asp:Label ID="labelTitle" runat="server" Text="Title"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style10">판매가</td>
-            <td class="auto-style10">
-                <asp:Label ID="labelPrice" runat="server" Text="Price"></asp:Label>
-            </td>
-            <td class="auto-style11">피부타입</td>
-            <td class="auto-style13">
-                <asp:Label ID="labelType" runat="server" Text="Skin"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style10">회원가</td>
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style11">용량/사이즈</td>
-            <td class="auto-style13">
-                <asp:Label ID="labelSize" runat="server" Text="Size"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style35">적립금</td>
-            <td class="auto-style35">
-                <asp:Label ID="labelPoint" runat="server" Text="Point"></asp:Label>
-            </td>
-            <td class="auto-style36">구매수량</td>
-            <td class="auto-style37">
-                <asp:ImageButton ID="imgButtonDecrease" runat="server" ImageUrl="~/images/Item/item_decreaseCounter.png" OnClick="imgButtonDecrease_Click" style="width: 7px" />
-&nbsp;<asp:TextBox ID="textBoxCounter" runat="server" Enabled="False" Width="20px">1</asp:TextBox>
-&nbsp;<asp:ImageButton ID="imgButtonIncrease" runat="server" ImageUrl="~/images/Item/item_increaseCounterCounter.png" OnClick="imgButtonIncrease_Click" style="width: 8px" />
-            </td>
-        </tr>
-        <tr>
-            <td class="auto-style3" colspan="4" style="text-align:center">
-                <asp:ImageButton ID="imgButtonInBacket" runat="server" ImageUrl="~/images/Item/item_inBaket.png" OnClick="imgButtonInBacket_Click" />
-&nbsp;<asp:ImageButton ID="imgButtonPurchase" runat="server" ImageUrl="~/images/Item/item_inBuy.png" OnClick="imgButtonPurchase_Click" />
-&nbsp;<asp:ImageButton ID="ImageButtonInInterest" runat="server" ImageUrl="~/images/Item/item_inInterest.png" OnClick="ImageButtonInInterest_Click" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style15"></td>
-            <td class="auto-style15"></td>
-            <td class="auto-style16"></td>
-            <td class="auto-style17"></td>
-        </tr>
-        <tr>
-            <td class="auto-style35"></td>
-            <td class="auto-style35"></td>
-            <td class="auto-style36"></td>
-            <td class="auto-style37"></td>
-        </tr>
-        <tr>
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style11">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
-        </tr>
-        <tr>
-            <td class="auto-style6">&nbsp;</td>
-            <td class="auto-style6">&nbsp;</td>
-            <td class="auto-style6">&nbsp;</td>
-            <td class="auto-style6">&nbsp;</td>
-            <td class="auto-style6">&nbsp;</td>
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style10">&nbsp;</td>
-            <td class="auto-style11">&nbsp;</td>
-            <td class="auto-style13">&nbsp;</td>
-        </tr>
-    </table>
-        <p>
-            &nbsp;</p>
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style30" rowspan="3">&nbsp;</td>
-                <td class="auto-style39" style="text-align:center">
-                    <a href="#imageButtonFirstSpecific">
-                    <img alt="" id="imageButtonFirstSpecific" src="Images/Item/menu_specificOn.png" width="247px"/></a>&nbsp;
-                    <a href="#imageButtonSecondSummary">
-                    <img alt="" id="imageButtonFirstSummary" src="Images/Item/menu_SummaryOff.png" width="246px"/></a>&nbsp; <a href="#imageButtonThirdDuration">
-                    <img alt="" id="imageButtonFirstDuration" src="Images/Item/menu_DeadlineOff.png" width="246px"/>
-                    </a>
-                </td>
-                <td class="auto-style18" rowspan="3">&nbsp;</td>
-            </tr>
-        </table>
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style19" rowspan="2">&nbsp;</td>
-                <td>
-                    <asp:Image ID="imageCenter" runat="server" />
-                </td>
-                <td class="auto-style18" rowspan="2">&nbsp;</td>
-            </tr>
+        <table class="style5">
             <tr>
                 <td>
-                    <asp:Image ID="ImageBottom" runat="server" />
+                    <img alt="" class="style6" src="Images/Common/staticBanner_Second_1.png" /></td>
+                <td>
+                    <asp:ImageButton ID="imgButtonLogo" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Second_Logo.png" OnClick="imgButtonLogo_Click" />
                 </td>
+                <td>
+                    <img alt="" class="style7" src="Images/Common/staticBanner_Second_Search.png" /></td>
+                <td>
+                    <img alt="" class="style8" src="Images/Common/staticBanner_Second_Video.png" /></td>
+                <td>
+                    <img alt="" class="style9" src="Images/Common/staticBanner_Second_2.png" /></td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <img alt="" class="style10" src="Images/Common/staticBanner_Third.png" /></td>
             </tr>
         </table>
-        <br />
-        <br />
-        <table class="auto-style1">
+        <table class="style5">
             <tr>
-                <td class="auto-style30" rowspan="3">&nbsp;</td>
-                <td class="auto-style39" style="text-align:center">
-                    <a href="#imageButtonFirstSpecific">
-                    <img alt="" id="imageButtonSecondSpecific" src="Images/Item/menu_specificOff.png" width="247px"/>
-                    </a>
-                    <a href="#imageButtonSecondSummary">
-                    <img alt="" id="imageButtonSecondSummary" src="Images/Item/menu_SummaryOn.png" width="246px"/>
-                    </a>
-                    <a href="#imageButtonThirdDuration">
-                    <img alt="" id="imageButtonSecondDuration" src="Images/Item/menu_DeadlineOff.png" width="246px"/>
-                    </a>
-                    <a href="#imageButtonFourthPhoto">
-                    &nbsp;</a><a href="#imageButtonFifthComment">
-                    </a>
+                <td>
+                    <img alt="" class="style11" src="Images/Common/staticBanner_Menu_1.png" /></td>
+                <td>
+                    <asp:ImageButton class="margin_left" ID="ImageButton6" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Menu_Brand.png" />
                 </td>
-                <td class="auto-style18" rowspan="3">&nbsp;</td>
+                <td>
+                    <asp:ImageButton class="margin_left" ID="ImageButton7" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Menu_Journey.png" />
+                </td>
+                <td>
+                    <asp:ImageButton class="margin_left" ID="ImageButton8" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Menu_Shopping.png" />
+                </td>
+                <td>
+                    <asp:ImageButton class="margin_left" ID="ImageButton9" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Menu_Event.png" />
+                </td>
+                <td>
+                    <asp:ImageButton class="margin_left" ID="ImageButton10" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Menu_Community.png" />
+                </td>
+                <td>
+                    <img alt="" class="style12" src="Images/Common/staticBanner_Menu_Best1.png" /></td>
+                <td>
+                    <asp:ImageButton class="margin_left" ID="ImageButton11" runat="server" 
+                        ImageUrl="~/Images/Common/staticBanner_Menu_Best2.png" />
+                </td>
+                <td>
+                    <img alt="" class="style13" src="Images/Common/staticBanner_Menu_2.png" /></td>
             </tr>
-        </table>
-        <table class="auto-style1">
+            </table>
+            <table class="contents">
             <tr>
-                <td class="auto-style6" rowspan="11">&nbsp;</td>
-                <td class="auto-style21" style="border: 1px solid #000000; background-color: #f8f8f8">제품명</td>
-                <td class="auto-style29" style="border: 1px solid #000000; background-color: #f8f8f8">
-                    <asp:Label ID="labelTitle_sumary" runat="server" Text="Title" ></asp:Label>
-                </td>
-                <td class="auto-style31" rowspan="11">&nbsp;</td>
+            <td rowspan="15">
+                <img alt="" class="style15" src="Images/Item/Item_BlankLeft.png" /></td>
+            <td colspan="2">
+                <img alt="" class="style16" src="Images/Item/item_Title_Cleansing.png" /></td>
+            <td rowspan="15">
+                <img alt="" class="style17" src="Images/Item/Item_BlankRight.png" /></td>
             </tr>
-            <tr style="border: 1px solid #000000; background-color: #f8f8f8">
-                <td class="auto-style21">사용기간 또는 개봉후 사용기간</td>
-                <td class="auto-style29">
-                    <asp:Label ID="labelDeadline" runat="server" Text="Deadline"></asp:Label>
-                </td>
-            </tr>
-            <tr style="border: 1px solid #000000; background-color: #f8f8f8">
-                <td class="auto-style21">피부타입</td>
-                <td class="auto-style29">
-                    <asp:Label ID="labelType_sumary" runat="server" Text="Skin"></asp:Label>
-                </td>
-            </tr>
-            <tr style="border: 1px solid #000000; background-color: #f8f8f8">
-                <td class="auto-style22">용량</td>
-                <td class="auto-style28">
-                    <asp:Label ID="labelSize_samary" runat="server" Text="Size"></asp:Label>
-                </td>
-            </tr>
-            <tr style="border: 1px solid #000000; background-color: #f8f8f8">
-                <td class="auto-style22">제조사</td>
-                <td class="auto-style28">
-                    <asp:Label ID="labelMadeby" runat="server" Text="Madeby"></asp:Label>
-                </td>
-            </tr>
-            <tr style="border: 1px solid #000000; background-color: #f8f8f8">
-                <td class="auto-style22">제조국</td>
-                <td class="auto-style28">
-                    <asp:Label ID="labelmadeIn" runat="server" Text="madeIn"></asp:Label>
-                </td>
-            </tr>
-            <tr style="border: 1px solid #000000; background-color: #f8f8f8">
-                <td class="auto-style22">식품의약품안전청 심사 필 유무<br />
-                    (미백, 주름개선, 자외선 차단등)</td>
-                <td class="auto-style28">상세페이지 참조</td>
-            </tr>
-            <tr style="border: 1px solid #000000; background-color: #f8f8f8">
-                <td class="auto-style22">전성분</td>
-                <td class="auto-style28">상세페이지 참조</td>
-            </tr>
-            <tr style="border: 1px solid #000000; background-color: #f8f8f8">
-                <td class="auto-style21">사용상의 주의사항</td>
-                <td class="auto-style29">상세페이지 참조</td>
-            </tr>
-            <tr style="border: 1px solid #000000; background-color: #f8f8f8">
-                <td class="auto-style22">품질보증기준</td>
-                <td class="auto-style28">본 제품에 이상이 있을 경우 공정거래위원회 고시 소비자분쟁해결기준에 의거하여 보상해 드립니다.</td>
-            </tr>
-            <tr style="border: 1px solid #000000; background-color: #f8f8f8">
-                <td class="auto-style22">소비자상담관련 전화번호</td>
-                <td class="auto-style28"><b>네이처리퍼블릭 고객센터 080-890-6000</b></td>
-            </tr>
-        </table>
-        <br />
-        <br />
-        <table class="auto-style1" style="text-align:center">
             <tr>
-                <td class="auto-style30" rowspan="3">&nbsp;</td>
-                <td class="auto-style39">
-                    <a href="#imageButtonFirstSpecific">
-                    <img alt="" id="imageButtonThirdSpecific" src="Images/Item/menu_specificOff.png" width="247px"/>
-                    </a>
-                    <a href="#imageButtonSecondSummary">
-                    <img alt="" id="imageButtonThirdSummary" src="Images/Item/menu_SummaryOff.png" width="246px"/>
-                    </a>
-                    <a href="#imageButtonThirdDuration">
-                    <img alt="" id="imageButtonThirdDuration" src="Images/Item/menu_DeadlineOn.png" width="246px"/>
-                    </a>
-                    <a href="#imageButtonFourthPhoto">
-                    &nbsp;</a><a href="#imageButtonFifthComment">
-                    </a>
-                </td>
-                <td class="auto-style18" rowspan="3">&nbsp;</td>
-            </tr>
-        </table>
-        <br />
-        <table class="auto-style1">
-            <tr>
-                <td class="auto-style30" rowspan="3">&nbsp;</td>
+            <td class="MainImage">
+                <asp:Image ID="ImageMain" runat="server" />
+            </td>
+            <td class="MainTable">
+                <asp:Label ID="labelItemName" runat="server" Text="AAA"></asp:Label>
+                <table class="MainTableContext" cellpadding="5">
+                <tr>
+                <td>판매가</td>
+                <td><asp:Label ID="labelItemPrice" runat="server" Text=""></asp:Label></td>
+                <td>피부타입</td>
+                <td><asp:Label ID="labelItemSkinType" runat="server" Text=""></asp:Label></td>
+                </tr>
+                <tr>
+                <td>용량/사이즈</td>
+                <td><asp:Label ID="labelItemSize" runat="server" Text=""></asp:Label></td>
+                <td>적립금</td>
+                <td><asp:Label ID="labelItemPoint" runat="server" Text=""></asp:Label></td>
+                </tr>
+                <tr>
+                <td>구매수량</td>
+                <td><asp:ImageButton ID="imageButtonDecreaseCounter" runat="server" 
+                        ImageUrl="~/Images/Item/item_decreaseCounter.png" />
+&nbsp;<asp:TextBox ID="textBoxCount" runat="server" Width="22px"></asp:TextBox>
+&nbsp;<asp:ImageButton ID="imageButtonIncreaseCounter" runat="server" 
+                        ImageUrl="~/Images/Item/item_increaseCounter.png" /></td>
+                <td></td>
+                <td></td>
+                </tr>
+                </table>
+                <br />
+                <div class="MainTableButton">
                 
-                <td class="auto-style39" style="text-align:center">
-                    <asp:Image ID="Image2" runat="server" Height="232px" ImageUrl="~/images/Item/Exfire.png" Width="1166px" />
-                </td>
-                <td class="auto-style18" rowspan="3">&nbsp;</td>
+                    <asp:ImageButton ID="ImageButton12" runat="server" 
+                        ImageUrl="~/Images/Item/item_inBaket.png" />
+&nbsp;<asp:ImageButton ID="ImageButton13" runat="server" ImageUrl="~/Images/Item/item_inBuy.png" />
+&nbsp;<asp:ImageButton ID="ImageButton14" runat="server" 
+                        ImageUrl="~/Images/Item/item_inInterest.png" />
+                
+                </div>
+            </td>
             </tr>
-        </table>
-        <br />
-        <table class="auto-style1">
             <tr>
-                <td class="auto-style30" rowspan="3">&nbsp;</td>
-                <td class="auto-style39" style="text-align:center">
-                    <asp:Image ID="Image1" runat="server" Width="1009px" Height="799px" ImageUrl="~/images/Item/purchase.png" />
-                </td>
-                <td class="auto-style18" rowspan="3">&nbsp;</td>
+            <td colspan="2">
+                <img alt="" class="style18" src="Images/Item/Item_BlankCenter.png" /></td>
             </tr>
-        </table>
+            <tr>
+            <td colspan="2">
+                <a href="#imageButtonFirstSpecific">
+                    <img alt="" class="style19" id="imageButtonFirstSpecific" src="Images/Item/menu_specificOn.png"/></a><a href="#imageButtonSecondSummary"><img alt="" class="style20" id="imageButtonFirstSummary" src="Images/Item/menu_SummaryOff.png"/></a><a href="#imageButtonThirdDeadline"><img alt="" class="style21" id="imageButtonFirstDeadline" src="Images/Item/menu_DeadlineOff.png"/></a><a href="#imageButtonFourthNotice"><img alt="" class="style21" id="imageButtonFirstNotice" src="Images/Item/menu_NoticeOff.png"/>
+                </a>
+                </td>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <asp:Image ID="ImageCenter" runat="server" />
+                <br />
+                <asp:Image ID="ImageBottom" runat="server" />
+                <img alt="" class="style22" src="Images/Item/Item_BestSeller.png" /></td>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <img alt="" class="style18" src="Images/Item/Item_BlankCenter.png" /></td>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <a href="#imageButtonFirstSpecific">
+                    <img alt="" class="style21" id="imageButtonSecondSpecific" src="Images/Item/menu_specificOff.png"/></a><a href="#imageButtonSecondSummary"><img alt="" class="style21" id="imageButtonSecondSummary" src="Images/Item/menu_SummaryOn.png"/></a><a href="#imageButtonThirdDeadline"><img alt="" class="style21" id="imageButtonSecondDeadline" src="Images/Item/menu_DeadlineOff.png"/></a><a href="#imageButtonFourthNotice"><img alt="" class="style21" id="imageButtonSecondNotice" src="Images/Item/menu_NoticeOff.png"/>
+                </a>
+                </td>
+            </tr>
+            <tr>
+            <td colspan="2" class="ItemSummary">
+            <div class="ItemSummaryContents">
+                <asp:Label ID="labelSummaryItemName" runat="server" Text="제품명"></asp:Label><br />
+                <asp:Label ID="labelSummaryItemDuration" runat="server" Text="사용기한"></asp:Label><br />
+                <asp:Label ID="labelSummaryItemSkinType" runat="server" Text="피부타입"></asp:Label><br />
+                <asp:Label ID="labelSummaryItemSize" runat="server" Text="용량"></asp:Label><br />
+                <asp:Label ID="labelSummaryItemCompany" runat="server" Text="제조사"></asp:Label><br />
+                <asp:Label ID="labelSummaryItemCountry" runat="server" Text="제조국"></asp:Label>
+            </div>
+            </td>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <img alt="" class="style18" src="Images/Item/Item_BlankCenter.png" /></td>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <a href="#imageButtonFirstSpecific">
+                    <img alt="" class="style21" id="imageButtonThirdSpecific" src="Images/Item/menu_specificOff.png"/></a><a href="#imageButtonSecondSummary"><img alt="" class="style20" id="imageButtonThirdSummary" src="Images/Item/menu_SummaryOff.png"/></a><a href="#imageButtonThirdDeadline"><img alt="" class="style21" id="imageButtonThirdDeadline" src="Images/Item/menu_DeadlineOn.png"/></a><a href="#imageButtonFourthNotice"><img alt="" class="style21" id="imageButtonThirdNotice" src="Images/Item/menu_NoticeOff.png"/>
+                </a>
+                </td>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <img alt="" class="style23" src="Images/Item/Item_Expire.png" /></td>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <img alt="" class="style18" src="Images/Item/Item_BlankCenter.png" /></td>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <a href="#imageButtonFirstSpecific">
+                    <img alt="" class="style21" id="imageButtonFourthSpecific" src="Images/Item/menu_specificOff.png"/></a><a href="#imageButtonSecondSummary"><img alt="" class="style20" id="imageButtonFourthSummary" src="Images/Item/menu_SummaryOff.png"/></a><a href="#imageButtonThirdDeadline"><img alt="" class="style21" id="imageButtonFourthDeadline" src="Images/Item/menu_DeadlineOff.png"/></a><a href="#imageButtonFourthNotice"><img alt="" class="style21" id="imageButtonFourthNotice" src="Images/Item/menu_NoticeOn.png"/>
+                </a>
+                </td>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <img alt="" class="style24" src="Images/Item/item_Notice.png" /></td>
+            </tr>
+            <tr>
+            <td colspan="2">
+                <img alt="" class="style25" src="Images/Item/Item_BlankCenterbottom.png" /></td>
+            </tr>
+            </table>
+            <img alt="" class="style14" src="Images/Common/staticBanner_Bottom.png" />
+    
+    </div>
     </form>
-    <p>
-        &nbsp;</p>
-    <p>
-        &nbsp;</p>
 </body>
 </html>

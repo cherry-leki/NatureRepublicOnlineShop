@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Item : System.Web.UI.Page
+public partial class Shopping_ItemNew : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -33,29 +33,24 @@ public partial class Item : System.Web.UI.Page
 
         if (RecordData.ResultExist)
         {
-            labelTitle.Text = sqlResult[0];
-            mainImage.ImageUrl = sqlResult[1] + "/main.jpg";
-            labelPrice.Text = sqlResult[2];
-            labelSize.Text = sqlResult[3];
-            labelType.Text = sqlResult[4];
-            labelPoint.Text = sqlResult[5];
+            labelItemName.Text = sqlResult[0];
+            ImageMain.ImageUrl = sqlResult[1] + "/main.jpg";
+            labelItemPrice.Text = sqlResult[2];
+            labelItemSize.Text = sqlResult[3];
+            labelItemSkinType.Text = sqlResult[4];
+            labelItemPoint.Text = sqlResult[5];
 
-            imageCenter.ImageUrl = sqlResult[1] + "/center.jpg";
+            ImageCenter.ImageUrl = sqlResult[1] + "/center.jpg";
             ImageBottom.ImageUrl = sqlResult[1] + "/bottom.jpg";
 
 
-            labelTitle_sumary.Text = labelTitle.Text;
-            labelSize_samary.Text = labelSize.Text;
-            labelDeadline.Text = sqlResult[6];
-            labelType_sumary.Text = sqlResult[4];
-            labelMadeby.Text = sqlResult[7];
-            labelmadeIn.Text = sqlResult[8];
+            labelSummaryItemName.Text = labelItemName.Text;
+            labelSummaryItemSize.Text = labelItemSize.Text;
+            labelSummaryItemDuration.Text = sqlResult[6];
+            labelSummaryItemSkinType.Text = sqlResult[4];
+            labelSummaryItemCompany.Text = sqlResult[7];
+            labelSummaryItemCountry.Text = sqlResult[8];
         }
-    }
-
-    protected void firstImageButton_Deadline3_Click(object sender, ImageClickEventArgs e)
-    {
-
     }
 
     protected void LoginButton_Click(object sender, ImageClickEventArgs e)
@@ -71,7 +66,7 @@ public partial class Item : System.Web.UI.Page
             Response.Redirect("Home.aspx");
         }
 
-        Response.Redirect("SignUpIntro.aspx");
+        Response.Redirect("SignUpAgreement.aspx");
     }
 
     protected void BucketButton_Click(object sender, ImageClickEventArgs e)
@@ -109,7 +104,6 @@ public partial class Item : System.Web.UI.Page
 
     private bool SessionRemove(string SV)
     {
-        int i = 0;
         IEnumerator SL = Session.GetEnumerator();
         while (SL.MoveNext())
         {
@@ -124,6 +118,12 @@ public partial class Item : System.Web.UI.Page
 
     protected void imgButtonInBacket_Click(object sender, ImageClickEventArgs e)
     {
+        if (Session["MemberID"] == null)
+        {
+            MessageBox.Show("로그인을 해주세요.", this);
+            return;
+        }
+
         int counter = 0;
         DateTime time = DateTime.Now + new TimeSpan(7, 0, 0, 0);
 
@@ -138,7 +138,7 @@ public partial class Item : System.Web.UI.Page
 
         sql = " INSERT INTO [NatureRepublicDB].[dbo].[tableBasket] ";
         sql = sql + " ([basketNumber], [memberID], [itemNumber], [basketCount], [basketDeadline]) ";
-        sql = sql + string.Format(" VALUES ('{0}', '{1}', '{2}', {3}, '{4}')", "B000" + (counter + 1), Session["MemberID"], Request["itemNumber"], textBoxCounter.Text, time.ToString("yyyy-MM-dd"));
+        sql = sql + string.Format(" VALUES ('{0}', '{1}', '{2}', {3}, '{4}')", "B000" + (counter + 1), Session["MemberID"], Request["itemNumber"], textBoxCount.Text, time.ToString("yyyy-MM-dd"));
 
         OleDbSqlServerQueryRun recordData = new OleDbSqlServerQueryRun(sql);
         recordData.RunNonQuery();
@@ -157,26 +157,32 @@ public partial class Item : System.Web.UI.Page
 
     protected void imgButtonIncrease_Click(object sender, ImageClickEventArgs e)
     {
-        int counter = Convert.ToInt32(textBoxCounter.Text);
+        int counter = Convert.ToInt32(textBoxCount.Text);
         if (counter < 99)
         {
             counter++;
-            textBoxCounter.Text = counter.ToString();
+            textBoxCount.Text = counter.ToString();
         }
     }
 
     protected void imgButtonDecrease_Click(object sender, ImageClickEventArgs e)
     {
-        int counter = Convert.ToInt32(textBoxCounter.Text);
-        if(counter > 0)
+        int counter = Convert.ToInt32(textBoxCount.Text);
+        if (counter > 0)
         {
             counter--;
-            textBoxCounter.Text = counter.ToString();
+            textBoxCount.Text = counter.ToString();
         }
     }
 
     protected void ImageButtonInInterest_Click(object sender, ImageClickEventArgs e)
     {
+        if(Session["MemberID"] == null)
+        {
+            MessageBox.Show("로그인을 해주세요.", this);
+            return;
+        }
+
         int counter = 0;
         DateTime time = DateTime.Now + new TimeSpan(30, 0, 0, 0);
 
@@ -209,11 +215,22 @@ public partial class Item : System.Web.UI.Page
 
     protected void imgButtonPurchase_Click(object sender, ImageClickEventArgs e)
     {
+        if (Session["MemberID"] == null)
+        {
+            MessageBox.Show("로그인을 해주세요.", this);
+            return;
+        }
+
         string buf = "";
 
-        buf = labelTitle.Text + "-" + labelPrice.Text + "-" + textBoxCounter.Text + "@";
+        buf = labelItemName.Text + "-" + labelItemPrice.Text + "-" + textBoxCount.Text + "@";
 
         Session.Add("PurchaseItem", buf);
         Response.Redirect("Purchase.aspx");
+    }
+
+    protected void imgButtonLogo_Click(object sender, ImageClickEventArgs e)
+    {
+        Response.Redirect("Home.aspx");
     }
 }

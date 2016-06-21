@@ -10,6 +10,7 @@ using System.Web.UI.WebControls;
 public partial class Payment : System.Web.UI.Page
 {
     int totalPrice = 0;
+    int usePoint = 0;
     string orderNumber;
 
     protected void Page_Load(object sender, EventArgs e)
@@ -121,7 +122,7 @@ public partial class Payment : System.Web.UI.Page
     protected void textBoxUsePoint_TextChanged(object sender, EventArgs e)
     {
         int point = Convert.ToInt32(labelPoint.Text);
-        int usePoint = Convert.ToInt32(textBoxUsePoint.Text);
+        usePoint = Convert.ToInt32(textBoxUsePoint.Text);
 
 
         if (point - usePoint >= 0)
@@ -173,11 +174,11 @@ public partial class Payment : System.Web.UI.Page
         }
 
         string sql;
-        sql = " SELECT orderNumber";
-        sql = sql + " FROM tableOrder";
-        OleDbSqlServerQueryReader readCount = new OleDbSqlServerQueryReader(sql, 9);
+        sql = " SELECT paymentNumber";
+        sql = sql + " FROM tablePayment";
+        sql = sql + string.Format(" WHERE memberID = '{0}' ", Session["MemberID"].ToString());
+        OleDbSqlServerQueryReader readCount = new OleDbSqlServerQueryReader(sql, 10);
         readCount.RunQueryRow();
-
         paymentCounter = readCount.Counter() + 1;
 
 
@@ -189,7 +190,12 @@ public partial class Payment : System.Web.UI.Page
         OleDbSqlServerQueryRun recordData = new OleDbSqlServerQueryRun(sql);
         recordData.RunNonQuery();
 
-        
+
+        sql = " UPDATE [NatureRepublicDB].[dbo].[tableMember] SET ";
+        sql = sql + string.Format("[memberPoint] = '{0}'", Convert.ToInt32(labelPoint.Text) - usePoint + Convert.ToInt32(labelPrice.Text) / 100);
+        sql = sql + string.Format(" WHERE memberID = '{0}'", Session["MemberID"].ToString());
+        OleDbSqlServerQueryRun recordPoint = new OleDbSqlServerQueryRun(sql);
+        recordPoint.RunNonQuery();
 
         Response.Redirect("Home.aspx");
     }

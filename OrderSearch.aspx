@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="OrderSearch.aspx.cs" Inherits="OrderSearch"  Debug="true"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="OrderSearch.aspx.cs" Inherits="OrderSearch" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -366,18 +366,18 @@
             </table>
             <table class="contents">
             <tr>
-            <td rowspan="7" class="tdfix">
+            <td rowspan="5" class="tdfix">
                 <img alt="" class="style15" src="Images/Order_Search/Order_Search_Menu.png" /></td>
             <td>
                 <img alt="" class="style16" 
                     src="Images/Order_Search/Order_Search_BlankCenter1.png" /><br />
                     <div class="style23">
                 <asp:Label ID="labelOrderTopName" runat="server" Text=""></asp:Label>님의
-                <asp:Label ID="labelOrderTopDate" runat="server" Text=""></asp:Label> 까지주문하신
-                        상세 주문 내역입니다.
+                <asp:Label ID="labelOrderTopDate" runat="server" Text=""></asp:Label> 주문하신
+                <asp:Label ID="labelOrderTopNumber" runat="server" Text=""></asp:Label> 상세 주문 내역입니다.
                 </div>
             </td>
-            <td rowspan="7" class="tdfix">
+            <td rowspan="5" class="tdfix">
                 <img alt="" class="style17" src="Images/Order_Search/Order_Search_Blank.png" /></td>
             </tr>
             <tr>
@@ -388,44 +388,15 @@
             </tr>
             <tr>
             <td>
-                <asp:GridView ID="gridViewInfomation" runat="server" AutoGenerateColumns="False" Width="787px" BorderColor="White" BorderStyle="None" 
-                    BorderWidth="0px">
-                    <Columns>
-                        <asp:TemplateField>
-                            <ItemTemplate>
-                                
-                            </ItemTemplate>
-                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="50px" />
-                            <ItemStyle Width="54px" />
-                        </asp:TemplateField>
-
-                        <asp:BoundField DataField="orderItem" SortExpression="orderItem">
-                        <ItemStyle Width="370px" />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="orderNumber" SortExpression="orderNumber">
-                        <ItemStyle Width="78px" />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="orderPrice" SortExpression="orderPrice">
-                        <ItemStyle Width="78px" />
-                        </asp:BoundField>
-                        <asp:BoundField DataField="orderDate" SortExpression="orderDate">
-                        <ItemStyle Width="78px" />
-                        </asp:BoundField>
-                    </Columns>
-                </asp:GridView>
-                <asp:SqlDataSource ID="sdsSource" runat="server" ConnectionString="<%$ ConnectionStrings:NatureRepublicDBConnectionString %>" SelectCommand="SELECT orderNumber, orderDate, orderPrice, orderItem FROM tableOrder WHERE (memberID = @Param1)">
-                    <SelectParameters>
-                        <asp:SessionParameter Name="Param1" SessionField="MemberID" />
-                    </SelectParameters>
-                </asp:SqlDataSource>
-                </td>
+                <img alt="" class="style19" 
+                    src="Images/Order_Search/Order_Search_OrderSample.png" /></td>
             </tr>
             <tr>
             <td class="OrderPriceTable">
                 <div class="OrderPriceLabel">
                 <asp:Label ID="labelOrderItemCount" runat="server" Text="1"></asp:Label>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <br />
+                <asp:Label ID="labelOrderItemAllPrice" runat="server" Text="9,900"></asp:Label><br />
                 <asp:Label ID="labelOrderItemPrice" runat="server" Text="9,900"></asp:Label><br />
                 <asp:Label ID="labelDeliveryFee" runat="server" Text="0"></asp:Label><br />
                 <asp:Label ID="labelPoint" runat="server" ForeColor="#FFAF00" Text="990"></asp:Label><br />
@@ -434,35 +405,11 @@
             </td>
             </tr>
             <tr>
-            <td class="style21">
-            <div class="Paymentlabel">
-                <asp:Label ID="labelPaymentOrderDate" runat="server" Text="2016-06-21"></asp:Label>
-                <asp:Label ID="labelPaymentPayWay" runat="server" Text="카카오페이"></asp:Label>
-                <br />
-                <asp:Label ID="labelPaymentPayPrice" runat="server" Text="9,900" 
-                    ForeColor="#197B30"></asp:Label>
-                <asp:Label ID="labelPaymentPoint" runat="server" ForeColor="Orange" Text="990"></asp:Label>
-                </div>
-                </td>
-            </tr>
-            <tr>
-            <td class="style22">
-            <div class="Deliverylabel">
-                <asp:Label ID="labelDeliveryName" runat="server" Text="염광호"></asp:Label>
-                <br />
-                <asp:Label ID="labelDeliveryPhone" runat="server" Text="010-5636-4312"></asp:Label>
-                <br />
-                <asp:Label ID="labelDeliveryAddress" runat="server" Text="서울 노원구"></asp:Label>
-                <br />
-                <asp:Label ID="labelDeliveryComment" runat="server" Text="경비실보관"></asp:Label>
-                </div>
-                </td>
-            </tr>
-            <tr>
             <td>
                 <img alt="" class="style20" 
                     src="Images/Order_Search/Order_Search_BlankCenter2.png" />
-                </td>
+                <asp:ImageButton ID="imageButtonOrderCancel" runat="server" 
+                    ImageUrl="~/Images/Order_Search/Order_Search_OrderCancel.png" /></td>
             </tr>
             </table>
     <img alt="" class="style14" src="Images/Common/staticBanner_Bottom.png" />

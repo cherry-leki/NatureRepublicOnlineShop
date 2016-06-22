@@ -275,6 +275,38 @@
             top:-155px;
             left:-20px;
         }
+        #buttonMemberInfo
+        {
+            position:absolute;
+            top:241px;
+            left:312px;
+            width:157px;
+            height:25px;
+        }
+        #buttonOrderSearch
+        {
+            position:absolute;
+            top:267px;
+            left:312px;
+            width:157px;
+            height:25px;
+        }
+        #buttonInterest
+        {
+            position:absolute;
+            top:293px;
+            left:312px;
+            width:157px;
+            height:25px;
+        }
+        #buttonBasket
+        {
+            position:absolute;
+            top:319px;
+            left:312px;
+            width:157px;
+            height:25px;
+        }
         </style>
 </head>
 <body>
@@ -367,7 +399,16 @@
             <table class="contents">
             <tr>
             <td rowspan="5" class="tdfix">
-                <img alt="" class="style15" src="Images/Order_Search/Order_Search_Menu.png" /></td>
+                <img alt="" class="style15" src="Images/Order_Search/Order_Search_Menu.png" />
+                <asp:ImageButton ID="buttonMemberInfo" runat="server"
+                    ImageUrl="~/Images/Mypage/Mypage_MemberInfo.png"/>
+                <asp:ImageButton ID="buttonOrderSearch" runat="server"
+                    ImageUrl="~/Images/Mypage/Mypage_OrderSearchButton.png"/>
+                <asp:ImageButton ID="buttonInterest" runat="server"
+                    ImageUrl="~/Images/Mypage/Mypage_Interest.png"/>
+                <asp:ImageButton ID="buttonBasket" runat="server"
+                    ImageUrl="~/Images/Mypage/Mypage_Basket.png"/>
+            </td>
             <td>
                 <img alt="" class="style16" 
                     src="Images/Order_Search/Order_Search_BlankCenter1.png" /><br />
